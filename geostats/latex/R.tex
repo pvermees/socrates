@@ -626,34 +626,29 @@ fraction of pH values that are less than 4.5:
 \end{console}
 
 \item\label{it:mode} \texttt{R} does not come with a function to
-  calculate the mode\footnote{There does exist a \texttt{mode}
-  function but it does something different.\label{fn:mode}} so we have
-  to write our own.  For categorical data, the mode is the most
-  frequently occurring value. Using the stratigraphic age data of
-  Figure~\ref{fig:discrete}.b as an example:
+  calculate the mode. However, the \texttt{geostats} package comes to
+  the rescue by providing the \texttt{Mode} function\footnote{Note the
+  uppercase `\texttt{M}' in \texttt{Mode}, which aims to avoid the
+  conflict with the \texttt{mode} function, which does something
+  different. \texttt{R} is case sensitive.}. For categorical data, the
+  mode is the most frequently occurring value. Using the stratigraphic
+  age data of Figure~\ref{fig:discrete}.b as an example:
 
-\begin{script}
-agetab <- table(catchments$age)
-mod <- which.max(agetab)
-\end{script}
+\begin{console}
+> Mode(catchments$age,categorical=TRUE)
+[1] "Mesozoic"
+\end{console}
 
-\noindent where \texttt{which.max} returns the index and/or name of
-the maximum value. For continuous variables, in which there are no
-duplicate values, we use a KDE to determine the mode:
+For continuous variables, in which there are no duplicate values, we
+use a KDE to determine the mode:
 
-\begin{script}
-dens <- density(catchments$pH)
-mod <- dens$x[which.max(dens$y)]
-\end{script}
+\begin{console}
+> Mode(catchments$pH,categorical=FALSE)
+[1] 5.372393
+\end{console}
 
-A more sophisticated implementation is included in a \texttt{geostats}
-function called \texttt{Mode}\footnote{Note the uppercase `\texttt{M}'
-in \texttt{Mode}, which aims to avoid the conflict with the
-\texttt{mode} function mentioned in footnote~\ref{fn:mode}. \texttt{R}
-is case sensitive.}.\medskip
-
-The skewness is not implemented in \texttt{R} either. But it is easy to
-write a function for that as well, based on Equation~\ref{eq:skew}:
+Skewness is not implemented in base \texttt{R} either. But it is easy
+to write a function for it, based on Equation~\ref{eq:skew}:
 
 \begin{script}
 skew <- function(x){
@@ -670,9 +665,9 @@ skew <- function(x){
 
 \item A box plot for the Ca/Mg data:
 
-\begin{console}
+\begin{script}
 boxplot(catchments$CaMg)
-\end{console}
+\end{script}
 
 \end{enumerate}
 
@@ -1169,7 +1164,7 @@ qqline(dat)
 
 \begin{script}
 gold1 <- c(19.09,19.17,19.31,19.07,19.18)
-h <- t.test(gold1,mu=19.30,alternative='less')
+h <- t.test(x=gold1,mu=19.30,alternative='less')
 \end{script}
 
 The p-value of this test is
@@ -1195,86 +1190,54 @@ null hypothesis.
 
 \begin{script}[firstnumber=2]
 gold2 <- c(19.30,19.33,19.15,19.32)
-h <- t.test(gold1,gold2)
+h <- t.test(x=gold1,y=gold2,var.equal=TRUE)
 \end{script}
 
 Inspecting the p-value and two-sided 95\% confidence interval:
 
 \begin{console}
 > h$p.value
-[1] 0.1064068
+[1] 0.1099177
 > h$conf.int
-[1] -0.25285536  0.03085536
+[1] -0.25441458  0.03241458
 \end{console}
 
-We cannot reject $H_0: \mu_1=\mu_2$ because $0.1064068>0.05$, and
-because $\{-0.25285536\leq{0}\leq{0.03085536}\}$.
+We cannot reject $H_0: \mu_1=\mu_2$ because $0.1099177>0.05$, and
+because $\{-0.25441458\leq{0}\leq{0.03241458}\}$.
 
-\item To carry out the $\chi^2$-test of Section~\ref{sec:chi2}, we
-  first calculate the declustered earthquake frequencies.
+\item To carry out the $\chi^2$-test of Section~\ref{sec:contingency},
+  we simply supply a contingency table of petrographic observations to
+  the \texttt{chisq.test()} function:
 
 \begin{script}
-quakesperyear <- countQuakes(declustered,minmag=5.0,from=1917,to=2016)
-obs <- table(quakesperyear)
+petrography <- rbind(sampleA=c(Q=10,P=5,A=6,L=20),
+                     sampleB=c(Q=25,P=12,A=10,L=35))
+h <- chisq.test(x=petrography)
 \end{script}
 
-Printing the table of earthquake counts per year at the console
+\noindent where \texttt{rbind} binds the two named rows together into
+one matrix. Querying the results of the test at the console:
 
 \begin{console}
-> obs
- 1  2  3  4  5  6  7  8  9 10 11 12 
- 3  8 13 17 13 14 13  5  8  3  1  2 
+> h
+	Pearson's Chi-squared test
+
+data:  petrography
+X-squared = 0.82706, df = 3, p-value = 0.843
 \end{console}
 
-The corresponding predicted probabilities are obtained using a Poisson
-distribution with parameter given by the mean of the earthquake
-counts:
-
-\begin{script}[firstnumber=3]
-lam <- mean(quakesperyear)
-# expected probabilities:
-p <- c(ppois(q=1,lambda=lam),                   # lower tail
-       dpois(x=2:11,lambda=lam),                # central segment
-       ppois(q=11,lambda=lam,lower.tail=FALSE)) # upper tail
-names(p) <- c('<2',2:11,'>11')
-\end{script}
-
-\noindent which produces the following set of expected counts:
-
-\begin{script}[firstnumber=9]
-pred <- p*length(quakesperyear)       
-\end{script}
+$0.843>0.05$, hence $H_0$ is not rejected. Note that the
+$\chi^2$-statistic is not exactly the same as value that was
+calculated by hand in Section~\ref{sec:contingency}. This is due to
+rounding errors of the expected counts ($E_i$ in
+Equation~\ref{eq:chi2}). Here are the exact values:
 
 \begin{console}
-> signif(pred,2)
-  <2    2    3    4    5    6    7    8     9   10   11  >11 
- 2.8  6.5 12.0 16.0 17.0 16.0 12.0  8.2  4.96  2.7  1.3  0.4
+> h$expected
+               Q         P         A        L
+sampleA 11.66667  5.666667  5.333333 18.33333
+sampleB 23.33333 11.333333 10.666667 36.66667
 \end{console}
-
-There are five bins with fewer than 5 items. In order for the
-$\chi^2$-approximation to be valid, we must merge some of the
-categories:
-
-\begin{script}[firstnumber=10]
-O <- c(sum(obs[1:2]),obs[3:8],sum(obs[9:12]))
-E <- c(sum(pred[1:2]),pred[3:8],sum(pred[9:12]))
-\end{script}
-
-Calculating the $\chi^2$-statistic and p-value:
-
-\begin{script}[firstnumber=12]
-X2 <- sum((O-E)^2/E)
-pval <- pchisq(X2,df=length(E)-2,lower.tail=FALSE)
-\end{script}
-
-\begin{console}
-> X2
-[1] 4.697049
-> pval
-[1] 0.5832134
-\end{console}
-
-$0.5832134>0.05$, hence $H_0$ is not rejected.
 
 \item Comparing the two collections of gold coins from
   item~\ref{it:2sided2samplettest} above but this time using a
@@ -1326,16 +1289,16 @@ $4.500822\times{10}^{-5}\ll{0.05}$ and hence $H_0$ is clearly rejected.
   \texttt{rbsr}.  Plot the columns \texttt{RbSr} and \texttt{SrSr} of
   this dataset as a scatter plot:
 
-\begin{console}
+\begin{script}
 plot(x=rbsr$RbSr,y=rbsr$SrSr)
-\end{console}
+\end{script}
 
 Calculate the correlation coefficient of \texttt{RbSr} and
 \texttt{SrSr}:
 
-\begin{console}
+\begin{script}[firstnumber=2]
 r <- cor(x=rbsr$RbSr,y=rbsr$SrSr)
-\end{console}
+\end{script}
 
 \noindent which yields:
 
@@ -1349,7 +1312,7 @@ r <- cor(x=rbsr$RbSr,y=rbsr$SrSr)
 \item Compute the t-statistic for the correlation coefficient using
   Equation~\ref{eq:tr}:
 
-\begin{script}
+\begin{script}[firstnumber=3]
 n <- nrow(rbsr)
 tstat <- r*sqrt(n-2)/sqrt(1-r^2)
 \end{script}
@@ -1382,7 +1345,7 @@ rejection of $H_0$.
   correlation, we can now fit a line to the data using the method of
   least squares:
 
-\begin{script}
+\begin{script}[firstnumber=2]
 fit <- lm(SrSr ~ RbSr, data=rbsr)
 \end{script}
 
@@ -1425,13 +1388,13 @@ Equivalently:
 
 \item Add the best fit line to the existing scatter plot:
 
-\begin{script}[firstnumber=2]
+\begin{script}[firstnumber=3]
 abline(fit)
 \end{script}
 
 Construct a 95\% confidence envelope for the linear fit:
 
-\begin{script}[firstnumber=3]
+\begin{script}[firstnumber=4]
 x <- seq(from=min(rbsr$RbSr),to=max(rbsr$RbSr),length.out=20)
 pred <- predict(fit,newdata=data.frame(RbSr=x),
                 interval="confidence",level=0.95)
@@ -1441,7 +1404,7 @@ matlines(x,pred,lty=1,col='black')
 \noindent where \texttt{matlines} simultaneously plots multiple lines.
 Adding a prediction interval to the existing plot:
 
-\begin{script}[firstnumber=7]
+\begin{script}[firstnumber=8]
 pred <- predict(fit,newdata=data.frame(RbSr=x),
                 interval="prediction",level=0.95)
 matlines(x,pred,lty=2,col='black')
@@ -1469,9 +1432,9 @@ Section~\ref{sec:weightedregression} is not trivial in base
 \texttt{R}. Fortunately, the \texttt{geostats} package comes to the
 rescue:
 
-\begin{console}
+\begin{script}
 yfit <- york(dat=rbsr)
-\end{console}
+\end{script}
 
 The name of the weighted least squares regression refers to
 geophysicist Derek York, who developed an early version of the
@@ -1502,9 +1465,9 @@ lines(x=sf$size,y=exp(predict(fit)))
 \item Create a Gutenberg-Richter plot for the recent earthquake data
   (Figure~\ref{fig:gutenberg}):
 
-\begin{console}
+\begin{script}
 gutenberg(earthquakes$mag)
-\end{console}
+\end{script}
 
 \noindent where \texttt{gutenberg()} is a \texttt{geostats} function
 that is similar to the Finnish lake code of step~\ref{it:finland}. You
@@ -1539,13 +1502,9 @@ of 1.2.
   Figures~\ref{fig:PCA2D1}--\ref{fig:PCA2D3}:
 
 \begin{script}
-X <- rbind(c(-1,7),c(3,2),c(4,3))
-colnames(X) <- c('a','b')
+X <- cbind(a=c(0,17,19),b=c(9,0,6))
 PCA2D(X)
 \end{script}
-
-\noindent where \texttt{rbind} binds three rows together into one
-matrix.
 
 \item Verifying the equivalence of PCA and classical MDS:
 
@@ -1568,7 +1527,7 @@ This script produces the same output as the first panel of
   produce the biplot shown in Figure~\ref{fig:USArrests}:
 
 \begin{script}
-pc <- prcomp(USArrests,scale.=TRUE)
+pc <- prcomp(USArrests,scale=TRUE)
 biplot(pc)
 \end{script}
 

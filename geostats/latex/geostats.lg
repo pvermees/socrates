@@ -38,7 +38,6 @@ File: geostats23.html
 File: geostats24.html
 File: geostats25.html
 File: geostats26.html
-File: geostats27.html
 Css: p{margin-top:0;margin-bottom:0}
 Css: p.indent{text-indent:0;}
 Css: p + p{margin-top:1em;}
@@ -206,32 +205,32 @@ l. 266 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha 
 File: ../figures/rectKDE-.png
 --- needs --- geostats.idv[6] ==> geostats2x.svg ---
 --- needs --- geostats.idv[8] ==> geostats3x.svg ---
-l. 299 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/pHrectKDE-.png" "../figures/pHrectKDE.pdf" " ---
+l. 300 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/pHrectKDE-.png" "../figures/pHrectKDE.pdf" " ---
 File: ../figures/pHrectKDE-.png
 --- needs --- geostats.idv[10] ==> geostats4x.svg ---
-l. 321 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/gaussKDE-.png" "../figures/gaussKDE.pdf" " ---
+l. 322 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/gaussKDE-.png" "../figures/gaussKDE.pdf" " ---
 File: ../figures/gaussKDE-.png
-l. 334 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/pHgaussKDE-.png" "../figures/pHgaussKDE.pdf" " ---
+l. 335 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/pHgaussKDE-.png" "../figures/pHgaussKDE.pdf" " ---
 File: ../figures/pHgaussKDE-.png
-l. 351 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/bandwidth-.png" "../figures/bandwidth.pdf" " ---
+l. 352 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/bandwidth-.png" "../figures/bandwidth.pdf" " ---
 File: ../figures/bandwidth-.png
-l. 377 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/negativeKDE-.png" "../figures/negativeKDE.pdf" " ---
+l. 378 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/negativeKDE-.png" "../figures/negativeKDE.pdf" " ---
 File: ../figures/negativeKDE-.png
 --- needs --- geostats.idv[12] ==> geostats5x.svg ---
 --- needs --- geostats.idv[14] ==> geostats6x.svg ---
 --- needs --- geostats.idv[15] ==> geostats7x.svg ---
-l. 403 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/logKDE-.png" "../figures/logKDE.pdf" " ---
+l. 404 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/logKDE-.png" "../figures/logKDE.pdf" " ---
 File: ../figures/logKDE-.png
-l. 421 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/vegetationKDE-.png" "../figures/vegetationKDE.pdf" " ---
+l. 422 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/vegetationKDE-.png" "../figures/vegetationKDE.pdf" " ---
 File: ../figures/vegetationKDE-.png
 --- needs --- geostats.idv[17] ==> geostats8x.svg ---
 --- needs --- geostats.idv[19] ==> geostats9x.svg ---
-l. 450 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/logitKDE-.png" "../figures/logitKDE.pdf" " ---
+l. 451 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/logitKDE-.png" "../figures/logitKDE.pdf" " ---
 File: ../figures/logitKDE-.png
-l. 476 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/KDE2D-.png" "../figures/KDE2D.pdf" " ---
+l. 477 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/KDE2D-.png" "../figures/KDE2D.pdf" " ---
 File: ../figures/KDE2D-.png
 --- needs --- geostats.idv[21] ==> geostats10x.svg ---
-l. 529 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/ECDFs-.png" "../figures/ECDFs.pdf" " ---
+l. 530 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/ECDFs-.png" "../figures/ECDFs.pdf" " ---
 File: ../figures/ECDFs-.png
 --- needs --- geostats.idv[23] ==> geostats11x.svg ---
 --- needs --- geostats.idv[25] ==> geostats12x.svg ---
@@ -793,126 +792,137 @@ File: ../figures/QDA-.png
 --- needs --- geostats.idv[467] ==> geostats272x.svg ---
 l. 106 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/LDA-.png" "../figures/LDA.pdf" " ---
 File: ../figures/LDA-.png
-l. 124 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/PCAvsLDA-.png" "../figures/PCAvsLDA.pdf" " ---
-File: ../figures/PCAvsLDA-.png
-l. 148 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/LDAiris-.png" "../figures/LDAiris.pdf" " ---
-File: ../figures/LDAiris-.png
-l. 169 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/LDAnewiris-.png" "../figures/LDAnewiris.pdf" " ---
-File: ../figures/LDAnewiris-.png
-l. 208 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/CARTdata-.png" "../figures/CARTdata.pdf" " ---
-File: ../figures/CARTdata-.png
 --- needs --- geostats.idv[469] ==> geostats273x.svg ---
-l. 239 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/Qtries-.png" "../figures/Qtries.pdf" " ---
-File: ../figures/Qtries-.png
-l. 254 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/Q2-.png" "../figures/Q2.pdf" " ---
-File: ../figures/Q2-.png
-l. 271 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/overfittedCARTscatter-.png" "../figures/overfittedCARTscatter.pdf" " ---
-File: ../figures/overfittedCARTscatter-.png
 --- needs --- geostats.idv[471] ==> geostats274x.svg ---
 --- needs --- geostats.idv[473] ==> geostats275x.svg ---
-l. 333 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/cvCART-.png" "../figures/cvCART.pdf" " ---
+--- needs --- geostats.idv[475] ==> geostats276x.svg ---
+--- needs --- geostats.idv[476] ==> geostats277x.svg ---
+--- needs --- geostats.idv[477] ==> geostats278x.svg ---
+--- needs --- geostats.idv[478] ==> geostats279x.svg ---
+--- needs --- geostats.idv[480] ==> geostats280x.svg ---
+--- needs --- geostats.idv[482] ==> geostats281x.svg ---
+--- needs --- geostats.idv[484] ==> geostats282x.svg ---
+l. 275 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/PCAvsLDA-.png" "../figures/PCAvsLDA.pdf" " ---
+File: ../figures/PCAvsLDA-.png
+l. 302 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/LDAiris-.png" "../figures/LDAiris.pdf" " ---
+File: ../figures/LDAiris-.png
+l. 322 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/LDAnewiris-.png" "../figures/LDAnewiris.pdf" " ---
+File: ../figures/LDAnewiris-.png
+l. 361 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/CARTdata-.png" "../figures/CARTdata.pdf" " ---
+File: ../figures/CARTdata-.png
+--- needs --- geostats.idv[486] ==> geostats283x.svg ---
+l. 392 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/Qtries-.png" "../figures/Qtries.pdf" " ---
+File: ../figures/Qtries-.png
+l. 407 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/Q2-.png" "../figures/Q2.pdf" " ---
+File: ../figures/Q2-.png
+l. 424 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/overfittedCARTscatter-.png" "../figures/overfittedCARTscatter.pdf" " ---
+File: ../figures/overfittedCARTscatter-.png
+--- needs --- geostats.idv[488] ==> geostats284x.svg ---
+--- needs --- geostats.idv[490] ==> geostats285x.svg ---
+l. 486 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/cvCART-.png" "../figures/cvCART.pdf" " ---
 File: ../figures/cvCART-.png
-l. 352 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/optimalCART-.png" "../figures/optimalCART.pdf" " ---
+l. 505 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/optimalCART-.png" "../figures/optimalCART.pdf" " ---
 File: ../figures/optimalCART-.png
-l. 367 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/irisCART-.png" "../figures/irisCART.pdf" " ---
+l. 520 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/irisCART-.png" "../figures/irisCART.pdf" " ---
 File: ../figures/irisCART-.png
 Css: #TBL-63-1{border-right:1px solid black;}
 Css: #TBL-64-1{border-right:1px solid black;}
 Css: #TBL-65-1{border-right:1px solid black;}
 Css: #TBL-66-1{border-right:1px solid black;}
 Css: #TBL-66-11{border-right:1px solid black;}
---- needs --- geostats.idv[475] ==> geostats276x.svg ---
+--- needs --- geostats.idv[492] ==> geostats286x.svg ---
 Css: #TBL-67-1{border-right:1px solid black;}
 Css: #TBL-68-1{border-right:1px solid black;}
 Css: #TBL-68-11{border-right:1px solid black;}
---- needs --- geostats.idv[477] ==> geostats277x.svg ---
---- needs --- geostats.idv[478] ==> geostats278x.svg ---
-l. 144 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/ACNK-.png" "../figures/ACNK.pdf" " ---
-File: ../figures/ACNK-.png
---- needs --- geostats.idv[480] ==> geostats279x.svg ---
-l. 179 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/ACNKarithmeticmean-.png" "../figures/ACNKarithmeticmean.pdf" " ---
-File: ../figures/ACNKarithmeticmean-.png
---- needs --- geostats.idv[482] ==> geostats280x.svg ---
---- needs --- geostats.idv[484] ==> geostats281x.svg ---
-l. 228 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/ACNKnaive-.png" "../figures/ACNKnaive.pdf" " ---
-File: ../figures/ACNKnaive-.png
---- needs --- geostats.idv[486] ==> geostats282x.svg ---
---- needs --- geostats.idv[488] ==> geostats283x.svg ---
---- needs --- geostats.idv[490] ==> geostats284x.svg ---
-Css: #TBL-69-1{border-right:1px solid black;}
---- needs --- geostats.idv[492] ==> geostats285x.svg ---
---- needs --- geostats.idv[493] ==> geostats286x.svg ---
 --- needs --- geostats.idv[494] ==> geostats287x.svg ---
 --- needs --- geostats.idv[495] ==> geostats288x.svg ---
---- needs --- geostats.idv[496] ==> geostats289x.svg ---
---- needs --- geostats.idv[497] ==> geostats290x.svg ---
---- needs --- geostats.idv[498] ==> geostats291x.svg ---
---- needs --- geostats.idv[499] ==> geostats292x.svg ---
---- needs --- geostats.idv[500] ==> geostats293x.svg ---
---- needs --- geostats.idv[501] ==> geostats294x.svg ---
---- needs --- geostats.idv[502] ==> geostats295x.svg ---
---- needs --- geostats.idv[504] ==> geostats296x.svg ---
+l. 144 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/ACNK-.png" "../figures/ACNK.pdf" " ---
+File: ../figures/ACNK-.png
+--- needs --- geostats.idv[497] ==> geostats289x.svg ---
+l. 179 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/ACNKarithmeticmean-.png" "../figures/ACNKarithmeticmean.pdf" " ---
+File: ../figures/ACNKarithmeticmean-.png
+--- needs --- geostats.idv[499] ==> geostats290x.svg ---
+--- needs --- geostats.idv[501] ==> geostats291x.svg ---
+l. 228 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/ACNKnaive-.png" "../figures/ACNKnaive.pdf" " ---
+File: ../figures/ACNKnaive-.png
+--- needs --- geostats.idv[503] ==> geostats292x.svg ---
+--- needs --- geostats.idv[505] ==> geostats293x.svg ---
+--- needs --- geostats.idv[507] ==> geostats294x.svg ---
+Css: #TBL-69-1{border-right:1px solid black;}
+--- needs --- geostats.idv[509] ==> geostats295x.svg ---
+--- needs --- geostats.idv[510] ==> geostats296x.svg ---
+--- needs --- geostats.idv[511] ==> geostats297x.svg ---
+--- needs --- geostats.idv[512] ==> geostats298x.svg ---
+--- needs --- geostats.idv[513] ==> geostats299x.svg ---
+--- needs --- geostats.idv[514] ==> geostats300x.svg ---
+--- needs --- geostats.idv[515] ==> geostats301x.svg ---
+--- needs --- geostats.idv[516] ==> geostats302x.svg ---
+--- needs --- geostats.idv[517] ==> geostats303x.svg ---
+--- needs --- geostats.idv[518] ==> geostats304x.svg ---
+--- needs --- geostats.idv[519] ==> geostats305x.svg ---
+--- needs --- geostats.idv[521] ==> geostats306x.svg ---
 l. 371 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/abc-.png" "../figures/abc.pdf" " ---
 File: ../figures/abc-.png
 l. 387 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/alraxes-.png" "../figures/alraxes.pdf" " ---
 File: ../figures/alraxes-.png
---- needs --- geostats.idv[506] ==> geostats297x.svg ---
---- needs --- geostats.idv[508] ==> geostats298x.svg ---
---- needs --- geostats.idv[510] ==> geostats299x.svg ---
---- needs --- geostats.idv[511] ==> geostats300x.svg ---
---- needs --- geostats.idv[513] ==> geostats301x.svg ---
---- needs --- geostats.idv[514] ==> geostats302x.svg ---
---- needs --- geostats.idv[515] ==> geostats303x.svg ---
---- needs --- geostats.idv[516] ==> geostats304x.svg ---
-l. 512 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/clrPCA-.png" "../figures/clrPCA.pdf" " ---
+--- needs --- geostats.idv[523] ==> geostats307x.svg ---
+--- needs --- geostats.idv[525] ==> geostats308x.svg ---
+--- needs --- geostats.idv[527] ==> geostats309x.svg ---
+--- needs --- geostats.idv[528] ==> geostats310x.svg ---
+--- needs --- geostats.idv[530] ==> geostats311x.svg ---
+--- needs --- geostats.idv[532] ==> geostats312x.svg ---
+--- needs --- geostats.idv[533] ==> geostats313x.svg ---
+--- needs --- geostats.idv[534] ==> geostats314x.svg ---
+--- needs --- geostats.idv[535] ==> geostats315x.svg ---
+l. 518 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/clrPCA-.png" "../figures/clrPCA.pdf" " ---
 File: ../figures/clrPCA-.png
-l. 528 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/majorPCA-.png" "../figures/majorPCA.pdf" " ---
+l. 534 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/majorPCA-.png" "../figures/majorPCA.pdf" " ---
 File: ../figures/majorPCA-.png
-l. 557 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/links-.png" "../figures/links.pdf" " ---
+l. 563 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/links-.png" "../figures/links.pdf" " ---
 File: ../figures/links-.png
-l. 589 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/AFM-.png" "../figures/AFM.pdf" " ---
+l. 595 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/AFM-.png" "../figures/AFM.pdf" " ---
 File: ../figures/AFM-.png
-l. 606 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/lrAFM-.png" "../figures/lrAFM.pdf" " ---
+l. 612 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/lrAFM-.png" "../figures/lrAFM.pdf" " ---
 File: ../figures/lrAFM-.png
-l. 625 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/LDAAFM-.png" "../figures/LDAAFM.pdf" " ---
+l. 631 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/LDAAFM-.png" "../figures/LDAAFM.pdf" " ---
 File: ../figures/LDAAFM-.png
---- needs --- geostats.idv[518] ==> geostats305x.svg ---
---- needs --- geostats.idv[520] ==> geostats306x.svg ---
---- needs --- geostats.idv[522] ==> geostats307x.svg ---
+--- needs --- geostats.idv[537] ==> geostats316x.svg ---
+--- needs --- geostats.idv[539] ==> geostats317x.svg ---
+--- needs --- geostats.idv[541] ==> geostats318x.svg ---
 Css: #TBL-70-1{border-right:1px solid black;}
-l. 707 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/cath-.png" "../figures/cath.pdf" " ---
+l. 713 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/cath-.png" "../figures/cath.pdf" " ---
 File: ../figures/cath-.png
 l. 27 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/circle1-.png" "../figures/circle1.pdf" " ---
 File: ../figures/circle1-.png
 l. 41 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/circle2-.png" "../figures/circle2.pdf" " ---
 File: ../figures/circle2-.png
---- needs --- geostats.idv[524] ==> geostats308x.svg ---
---- needs --- geostats.idv[526] ==> geostats309x.svg ---
---- needs --- geostats.idv[528] ==> geostats310x.svg ---
+--- needs --- geostats.idv[543] ==> geostats319x.svg ---
+--- needs --- geostats.idv[545] ==> geostats320x.svg ---
+--- needs --- geostats.idv[547] ==> geostats321x.svg ---
 l. 92 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/circle3-.png" "../figures/circle3.pdf" " ---
 File: ../figures/circle3-.png
---- needs --- geostats.idv[530] ==> geostats311x.svg ---
+--- needs --- geostats.idv[549] ==> geostats322x.svg ---
 l. 113 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/vectorsum-.png" "../figures/vectorsum.pdf" " ---
 File: ../figures/vectorsum-.png
---- needs --- geostats.idv[532] ==> geostats312x.svg ---
+--- needs --- geostats.idv[551] ==> geostats323x.svg ---
 l. 139 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/lowconcentration-.png" "../figures/lowconcentration.pdf" " ---
 File: ../figures/lowconcentration-.png
---- needs --- geostats.idv[534] ==> geostats313x.svg ---
+--- needs --- geostats.idv[553] ==> geostats324x.svg ---
 l. 167 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/vonMises-.png" "../figures/vonMises.pdf" " ---
 File: ../figures/vonMises-.png
---- needs --- geostats.idv[536] ==> geostats314x.svg ---
+--- needs --- geostats.idv[555] ==> geostats325x.svg ---
 l. 188 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/R2K-.png" "../figures/R2K.pdf" " ---
 File: ../figures/R2K-.png
 l. 204 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/kappastriations-.png" "../figures/kappastriations.pdf" " ---
 File: ../figures/kappastriations-.png
---- needs --- geostats.idv[538] ==> geostats315x.svg ---
---- needs --- geostats.idv[540] ==> geostats316x.svg ---
---- needs --- geostats.idv[542] ==> geostats317x.svg ---
+--- needs --- geostats.idv[557] ==> geostats326x.svg ---
+--- needs --- geostats.idv[559] ==> geostats327x.svg ---
+--- needs --- geostats.idv[561] ==> geostats328x.svg ---
 l. 266 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/wulffschmidt-.png" "../figures/wulffschmidt.pdf" " ---
 File: ../figures/wulffschmidt-.png
---- needs --- geostats.idv[544] ==> geostats318x.svg ---
---- needs --- geostats.idv[546] ==> geostats319x.svg ---
---- needs --- geostats.idv[548] ==> geostats320x.svg ---
+--- needs --- geostats.idv[563] ==> geostats329x.svg ---
+--- needs --- geostats.idv[565] ==> geostats330x.svg ---
+--- needs --- geostats.idv[567] ==> geostats331x.svg ---
 l. 317 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/Africa-.png" "../figures/Africa.pdf" " ---
 File: ../figures/Africa-.png
 Css: #TBL-72-1{border-right:1px solid black;}
@@ -921,102 +931,102 @@ File: ../figures/palaeomag-.png
 Css: #TBL-73-1{border-right:1px solid black;}
 l. 354 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/fault-.png" "../figures/fault.pdf" " ---
 File: ../figures/fault-.png
---- needs --- geostats.idv[550] ==> geostats321x.svg ---
---- needs --- geostats.idv[552] ==> geostats322x.svg ---
---- needs --- geostats.idv[554] ==> geostats323x.svg ---
---- needs --- geostats.idv[556] ==> geostats324x.svg ---
---- needs --- geostats.idv[558] ==> geostats325x.svg ---
---- needs --- geostats.idv[560] ==> geostats326x.svg ---
+--- needs --- geostats.idv[569] ==> geostats332x.svg ---
+--- needs --- geostats.idv[571] ==> geostats333x.svg ---
+--- needs --- geostats.idv[573] ==> geostats334x.svg ---
+--- needs --- geostats.idv[575] ==> geostats335x.svg ---
+--- needs --- geostats.idv[577] ==> geostats336x.svg ---
+--- needs --- geostats.idv[579] ==> geostats337x.svg ---
 l. 443 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/sphericalmean-.png" "../figures/sphericalmean.pdf" " ---
 File: ../figures/sphericalmean-.png
 l. 478 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/pebbles-.png" "../figures/pebbles.pdf" " ---
 File: ../figures/pebbles-.png
 l. 498 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/inertia-.png" "../figures/inertia.pdf" " ---
 File: ../figures/inertia-.png
---- needs --- geostats.idv[562] ==> geostats327x.svg ---
---- needs --- geostats.idv[564] ==> geostats328x.svg ---
---- needs --- geostats.idv[566] ==> geostats329x.svg ---
+--- needs --- geostats.idv[581] ==> geostats338x.svg ---
+--- needs --- geostats.idv[583] ==> geostats339x.svg ---
+--- needs --- geostats.idv[585] ==> geostats340x.svg ---
 Css: #TBL-75-1{border-right:1px solid black;}
 l. 614 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/subhorizontal-.png" "../figures/subhorizontal.pdf" " ---
 File: ../figures/subhorizontal-.png
 Css: #TBL-76-1{border-right:1px solid black;}
---- needs --- geostats.idv[568] ==> geostats330x.svg ---
---- needs --- geostats.idv[569] ==> geostats331x.svg ---
---- needs --- geostats.idv[570] ==> geostats332x.svg ---
---- needs --- geostats.idv[571] ==> geostats333x.svg ---
---- needs --- geostats.idv[572] ==> geostats334x.svg ---
---- needs --- geostats.idv[573] ==> geostats335x.svg ---
---- needs --- geostats.idv[574] ==> geostats336x.svg ---
---- needs --- geostats.idv[575] ==> geostats337x.svg ---
+--- needs --- geostats.idv[587] ==> geostats341x.svg ---
+--- needs --- geostats.idv[588] ==> geostats342x.svg ---
+--- needs --- geostats.idv[589] ==> geostats343x.svg ---
+--- needs --- geostats.idv[590] ==> geostats344x.svg ---
+--- needs --- geostats.idv[591] ==> geostats345x.svg ---
+--- needs --- geostats.idv[592] ==> geostats346x.svg ---
+--- needs --- geostats.idv[593] ==> geostats347x.svg ---
+--- needs --- geostats.idv[594] ==> geostats348x.svg ---
 l. 52 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/meusepoints-.png" "../figures/meusepoints.pdf" " ---
 File: ../figures/meusepoints-.png
 Css: #TBL-77-1{border-right:1px solid black;}
---- needs --- geostats.idv[577] ==> geostats338x.svg ---
---- needs --- geostats.idv[578] ==> geostats339x.svg ---
---- needs --- geostats.idv[579] ==> geostats340x.svg ---
+--- needs --- geostats.idv[596] ==> geostats349x.svg ---
+--- needs --- geostats.idv[597] ==> geostats350x.svg ---
+--- needs --- geostats.idv[598] ==> geostats351x.svg ---
 Css: #TBL-78-1{border-right:1px solid black;}
---- needs --- geostats.idv[580] ==> geostats341x.svg ---
---- needs --- geostats.idv[581] ==> geostats342x.svg ---
---- needs --- geostats.idv[582] ==> geostats343x.svg ---
---- needs --- geostats.idv[583] ==> geostats344x.svg ---
---- needs --- geostats.idv[584] ==> geostats345x.svg ---
---- needs --- geostats.idv[585] ==> geostats346x.svg ---
---- needs --- geostats.idv[586] ==> geostats347x.svg ---
---- needs --- geostats.idv[587] ==> geostats348x.svg ---
---- needs --- geostats.idv[588] ==> geostats349x.svg ---
---- needs --- geostats.idv[589] ==> geostats350x.svg ---
---- needs --- geostats.idv[590] ==> geostats351x.svg ---
---- needs --- geostats.idv[591] ==> geostats352x.svg ---
+--- needs --- geostats.idv[599] ==> geostats352x.svg ---
+--- needs --- geostats.idv[600] ==> geostats353x.svg ---
+--- needs --- geostats.idv[601] ==> geostats354x.svg ---
+--- needs --- geostats.idv[602] ==> geostats355x.svg ---
+--- needs --- geostats.idv[603] ==> geostats356x.svg ---
+--- needs --- geostats.idv[604] ==> geostats357x.svg ---
+--- needs --- geostats.idv[605] ==> geostats358x.svg ---
+--- needs --- geostats.idv[606] ==> geostats359x.svg ---
+--- needs --- geostats.idv[607] ==> geostats360x.svg ---
+--- needs --- geostats.idv[608] ==> geostats361x.svg ---
+--- needs --- geostats.idv[609] ==> geostats362x.svg ---
+--- needs --- geostats.idv[610] ==> geostats363x.svg ---
 Css: #TBL-79-1{border-right:1px solid black;}
---- needs --- geostats.idv[593] ==> geostats353x.svg ---
---- needs --- geostats.idv[594] ==> geostats354x.svg ---
---- needs --- geostats.idv[595] ==> geostats355x.svg ---
---- needs --- geostats.idv[596] ==> geostats356x.svg ---
---- needs --- geostats.idv[597] ==> geostats357x.svg ---
---- needs --- geostats.idv[598] ==> geostats358x.svg ---
---- needs --- geostats.idv[599] ==> geostats359x.svg ---
---- needs --- geostats.idv[600] ==> geostats360x.svg ---
---- needs --- geostats.idv[601] ==> geostats361x.svg ---
---- needs --- geostats.idv[602] ==> geostats362x.svg ---
---- needs --- geostats.idv[603] ==> geostats363x.svg ---
---- needs --- geostats.idv[604] ==> geostats364x.svg ---
---- needs --- geostats.idv[605] ==> geostats365x.svg ---
---- needs --- geostats.idv[607] ==> geostats366x.svg ---
---- needs --- geostats.idv[609] ==> geostats367x.svg ---
+--- needs --- geostats.idv[612] ==> geostats364x.svg ---
+--- needs --- geostats.idv[613] ==> geostats365x.svg ---
+--- needs --- geostats.idv[614] ==> geostats366x.svg ---
+--- needs --- geostats.idv[615] ==> geostats367x.svg ---
+--- needs --- geostats.idv[616] ==> geostats368x.svg ---
+--- needs --- geostats.idv[617] ==> geostats369x.svg ---
+--- needs --- geostats.idv[618] ==> geostats370x.svg ---
+--- needs --- geostats.idv[619] ==> geostats371x.svg ---
+--- needs --- geostats.idv[620] ==> geostats372x.svg ---
+--- needs --- geostats.idv[621] ==> geostats373x.svg ---
+--- needs --- geostats.idv[622] ==> geostats374x.svg ---
+--- needs --- geostats.idv[623] ==> geostats375x.svg ---
+--- needs --- geostats.idv[624] ==> geostats376x.svg ---
+--- needs --- geostats.idv[626] ==> geostats377x.svg ---
+--- needs --- geostats.idv[628] ==> geostats378x.svg ---
 Css: #TBL-80-1{border-right:1px solid black;}
---- needs --- geostats.idv[610] ==> geostats368x.svg ---
---- needs --- geostats.idv[611] ==> geostats369x.svg ---
---- needs --- geostats.idv[612] ==> geostats370x.svg ---
---- needs --- geostats.idv[613] ==> geostats371x.svg ---
---- needs --- geostats.idv[614] ==> geostats372x.svg ---
---- needs --- geostats.idv[615] ==> geostats373x.svg ---
---- needs --- geostats.idv[616] ==> geostats374x.svg ---
---- needs --- geostats.idv[617] ==> geostats375x.svg ---
---- needs --- geostats.idv[618] ==> geostats376x.svg ---
---- needs --- geostats.idv[619] ==> geostats377x.svg ---
---- needs --- geostats.idv[620] ==> geostats378x.svg ---
---- needs --- geostats.idv[621] ==> geostats379x.svg ---
---- needs --- geostats.idv[622] ==> geostats380x.svg ---
---- needs --- geostats.idv[624] ==> geostats381x.svg ---
+--- needs --- geostats.idv[629] ==> geostats379x.svg ---
+--- needs --- geostats.idv[630] ==> geostats380x.svg ---
+--- needs --- geostats.idv[631] ==> geostats381x.svg ---
+--- needs --- geostats.idv[632] ==> geostats382x.svg ---
+--- needs --- geostats.idv[633] ==> geostats383x.svg ---
+--- needs --- geostats.idv[634] ==> geostats384x.svg ---
+--- needs --- geostats.idv[635] ==> geostats385x.svg ---
+--- needs --- geostats.idv[636] ==> geostats386x.svg ---
+--- needs --- geostats.idv[637] ==> geostats387x.svg ---
+--- needs --- geostats.idv[638] ==> geostats388x.svg ---
+--- needs --- geostats.idv[639] ==> geostats389x.svg ---
+--- needs --- geostats.idv[640] ==> geostats390x.svg ---
+--- needs --- geostats.idv[641] ==> geostats391x.svg ---
+--- needs --- geostats.idv[643] ==> geostats392x.svg ---
 l. 200 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/semivariogram-.png" "../figures/semivariogram.pdf" " ---
 File: ../figures/semivariogram-.png
---- needs --- geostats.idv[626] ==> geostats382x.svg ---
---- needs --- geostats.idv[628] ==> geostats383x.svg ---
---- needs --- geostats.idv[630] ==> geostats384x.svg ---
+--- needs --- geostats.idv[645] ==> geostats393x.svg ---
+--- needs --- geostats.idv[647] ==> geostats394x.svg ---
+--- needs --- geostats.idv[649] ==> geostats395x.svg ---
 l. 248 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/semivariogramfit-.png" "../figures/semivariogramfit.pdf" " ---
 File: ../figures/semivariogramfit-.png
 l. 275 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/snr-.png" "../figures/snr.pdf" " ---
 File: ../figures/snr-.png
---- needs --- geostats.idv[632] ==> geostats385x.svg ---
---- needs --- geostats.idv[634] ==> geostats386x.svg ---
---- needs --- geostats.idv[636] ==> geostats387x.svg ---
---- needs --- geostats.idv[638] ==> geostats388x.svg ---
---- needs --- geostats.idv[640] ==> geostats389x.svg ---
+--- needs --- geostats.idv[651] ==> geostats396x.svg ---
+--- needs --- geostats.idv[653] ==> geostats397x.svg ---
+--- needs --- geostats.idv[655] ==> geostats398x.svg ---
+--- needs --- geostats.idv[657] ==> geostats399x.svg ---
+--- needs --- geostats.idv[659] ==> geostats400x.svg ---
 l. 424 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/meusecontour-.png" "../figures/meusecontour.pdf" " ---
 File: ../figures/meusecontour-.png
---- needs --- geostats.idv[642] ==> geostats390x.svg ---
---- needs --- geostats.idv[644] ==> geostats391x.svg ---
---- needs --- geostats.idv[645] ==> geostats392x.svg ---
+--- needs --- geostats.idv[661] ==> geostats401x.svg ---
+--- needs --- geostats.idv[663] ==> geostats402x.svg ---
+--- needs --- geostats.idv[664] ==> geostats403x.svg ---
 l. 457 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/meusecontourerr-.png" "../figures/meusecontourerr.pdf" " ---
 File: ../figures/meusecontourerr-.png
 Css: pre#fancyvrb1{border-width:1.13809pt;}
@@ -1364,7 +1374,7 @@ Css: pre#fancyvrb69{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb69{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb69{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb69{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[647] ==> geostats393x.svg ---
+--- needs --- geostats.idv[666] ==> geostats404x.svg ---
 Css: pre#fancyvrb70{border-width:1.13809pt;}
 Css: pre#fancyvrb70{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb70{ border-left: solid 1.13809pt; }
@@ -1430,7 +1440,7 @@ Css: pre#fancyvrb82{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb82{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb82{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb82{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[649] ==> geostats394x.svg ---
+--- needs --- geostats.idv[668] ==> geostats405x.svg ---
 Css: pre#fancyvrb83{border-width:1.13809pt;}
 Css: pre#fancyvrb83{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb83{ border-left: solid 1.13809pt; }
@@ -1481,7 +1491,7 @@ Css: pre#fancyvrb92{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb92{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb92{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb92{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[651] ==> geostats395x.svg ---
+--- needs --- geostats.idv[670] ==> geostats406x.svg ---
 Css: pre#fancyvrb93{border-width:1.13809pt;}
 Css: pre#fancyvrb93{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb93{ border-left: solid 1.13809pt; }
@@ -1492,7 +1502,7 @@ Css: pre#fancyvrb94{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb94{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb94{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb94{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[653] ==> geostats396x.svg ---
+--- needs --- geostats.idv[672] ==> geostats407x.svg ---
 Css: pre#fancyvrb95{border-width:1.13809pt;}
 Css: pre#fancyvrb95{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb95{ border-left: solid 1.13809pt; }
@@ -1503,7 +1513,7 @@ Css: pre#fancyvrb96{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb96{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb96{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb96{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[655] ==> geostats397x.svg ---
+--- needs --- geostats.idv[674] ==> geostats408x.svg ---
 Css: pre#fancyvrb97{border-width:1.13809pt;}
 Css: pre#fancyvrb97{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb97{ border-left: solid 1.13809pt; }
@@ -1514,7 +1524,7 @@ Css: pre#fancyvrb98{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb98{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb98{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb98{ border-right: solid 1.13809pt; }
-l. 1089 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/LLpois-.png" "../figures/LLpois.pdf" " ---
+l. 1084 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/LLpois-.png" "../figures/LLpois.pdf" " ---
 File: ../figures/LLpois-.png
 Css: pre#fancyvrb99{border-width:1.13809pt;}
 Css: pre#fancyvrb99{ border-top: solid 1.13809pt; }
@@ -1561,7 +1571,7 @@ Css: pre#fancyvrb107{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb107{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb107{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb107{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[657] ==> geostats398x.svg ---
+--- needs --- geostats.idv[676] ==> geostats409x.svg ---
 Css: pre#fancyvrb108{border-width:1.13809pt;}
 Css: pre#fancyvrb108{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb108{ border-left: solid 1.13809pt; }
@@ -1957,11 +1967,34 @@ Css: pre#fancyvrb186{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb186{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb186{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb186{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[678] ==> geostats410x.svg ---
+--- needs --- geostats.idv[679] ==> geostats411x.svg ---
+l. 190 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/e-.png" "../figures/e.pdf" " ---
+File: ../figures/e-.png
+l. 193 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/e-.png" "../figures/e.pdf" " ---
+File: ../figures/e-.png
+l. 199 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/e-.png" "../figures/e.pdf" " ---
+File: ../figures/e-.png
+--- needs --- geostats.idv[681] ==> geostats412x.svg ---
+--- needs --- geostats.idv[682] ==> geostats413x.svg ---
+--- needs --- geostats.idv[684] ==> geostats414x.svg ---
+Css: #TBL-82-1{border-right:1px solid black;}
+--- needs --- geostats.idv[686] ==> geostats415x.svg ---
+--- needs --- geostats.idv[687] ==> geostats416x.svg ---
 Css: pre#fancyvrb187{border-width:1.13809pt;}
 Css: pre#fancyvrb187{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb187{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb187{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb187{ border-right: solid 1.13809pt; }
+Css: #TBL-83-1{border-right:1px solid black;}
+Css: #TBL-84-1{border-right:1px solid black;}
+Css: #TBL-85-1{border-right:1px solid black;}
+--- needs --- geostats.idv[689] ==> geostats417x.svg ---
+Css: #TBL-87-1{border-right:1px solid black;}
+Css: #TBL-88-1{border-right:1px solid black;}
+Css: #TBL-88-5{border-right:1px solid black;}
+Css: td#TBL-88-1-5{border-right:solid black 0.4pt;}
+Css: td#TBL-88-1-5{border-right:solid black 0.4pt;}
 Css: pre#fancyvrb188{border-width:1.13809pt;}
 Css: pre#fancyvrb188{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb188{ border-left: solid 1.13809pt; }
@@ -1982,34 +2015,11 @@ Css: pre#fancyvrb191{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb191{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb191{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb191{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[659] ==> geostats399x.svg ---
---- needs --- geostats.idv[660] ==> geostats400x.svg ---
-l. 190 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/e-.png" "../figures/e.pdf" " ---
-File: ../figures/e-.png
-l. 193 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/e-.png" "../figures/e.pdf" " ---
-File: ../figures/e-.png
-l. 199 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/e-.png" "../figures/e.pdf" " ---
-File: ../figures/e-.png
---- needs --- geostats.idv[662] ==> geostats401x.svg ---
---- needs --- geostats.idv[663] ==> geostats402x.svg ---
---- needs --- geostats.idv[665] ==> geostats403x.svg ---
-Css: #TBL-82-1{border-right:1px solid black;}
---- needs --- geostats.idv[667] ==> geostats404x.svg ---
---- needs --- geostats.idv[668] ==> geostats405x.svg ---
 Css: pre#fancyvrb192{border-width:1.13809pt;}
 Css: pre#fancyvrb192{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb192{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb192{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb192{ border-right: solid 1.13809pt; }
-Css: #TBL-83-1{border-right:1px solid black;}
-Css: #TBL-84-1{border-right:1px solid black;}
-Css: #TBL-85-1{border-right:1px solid black;}
---- needs --- geostats.idv[670] ==> geostats406x.svg ---
-Css: #TBL-87-1{border-right:1px solid black;}
-Css: #TBL-88-1{border-right:1px solid black;}
-Css: #TBL-88-5{border-right:1px solid black;}
-Css: td#TBL-88-1-5{border-right:solid black 0.4pt;}
-Css: td#TBL-88-1-5{border-right:solid black 0.4pt;}
 Css: pre#fancyvrb193{border-width:1.13809pt;}
 Css: pre#fancyvrb193{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb193{ border-left: solid 1.13809pt; }
@@ -2105,11 +2115,17 @@ Css: pre#fancyvrb211{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb211{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb211{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb211{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[691] ==> geostats418x.svg ---
+--- needs --- geostats.idv[692] ==> geostats419x.svg ---
+--- needs --- geostats.idv[693] ==> geostats420x.svg ---
+--- needs --- geostats.idv[694] ==> geostats421x.svg ---
 Css: pre#fancyvrb212{border-width:1.13809pt;}
 Css: pre#fancyvrb212{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb212{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb212{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb212{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[695] ==> geostats422x.svg ---
+--- needs --- geostats.idv[697] ==> geostats423x.svg ---
 Css: pre#fancyvrb213{border-width:1.13809pt;}
 Css: pre#fancyvrb213{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb213{ border-left: solid 1.13809pt; }
@@ -2120,6 +2136,8 @@ Css: pre#fancyvrb214{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb214{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb214{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb214{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[698] ==> geostats424x.svg ---
+--- needs --- geostats.idv[700] ==> geostats425x.svg ---
 Css: pre#fancyvrb215{border-width:1.13809pt;}
 Css: pre#fancyvrb215{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb215{ border-left: solid 1.13809pt; }
@@ -2130,17 +2148,11 @@ Css: pre#fancyvrb216{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb216{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb216{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb216{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[672] ==> geostats407x.svg ---
---- needs --- geostats.idv[673] ==> geostats408x.svg ---
---- needs --- geostats.idv[674] ==> geostats409x.svg ---
---- needs --- geostats.idv[675] ==> geostats410x.svg ---
 Css: pre#fancyvrb217{border-width:1.13809pt;}
 Css: pre#fancyvrb217{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb217{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb217{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb217{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[676] ==> geostats411x.svg ---
---- needs --- geostats.idv[678] ==> geostats412x.svg ---
 Css: pre#fancyvrb218{border-width:1.13809pt;}
 Css: pre#fancyvrb218{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb218{ border-left: solid 1.13809pt; }
@@ -2151,8 +2163,6 @@ Css: pre#fancyvrb219{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb219{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb219{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb219{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[679] ==> geostats413x.svg ---
---- needs --- geostats.idv[681] ==> geostats414x.svg ---
 Css: pre#fancyvrb220{border-width:1.13809pt;}
 Css: pre#fancyvrb220{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb220{ border-left: solid 1.13809pt; }
@@ -2173,11 +2183,16 @@ Css: pre#fancyvrb223{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb223{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb223{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb223{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[702] ==> geostats426x.svg ---
+--- needs --- geostats.idv[703] ==> geostats427x.svg ---
+--- needs --- geostats.idv[705] ==> geostats428x.svg ---
 Css: pre#fancyvrb224{border-width:1.13809pt;}
 Css: pre#fancyvrb224{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb224{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb224{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb224{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[706] ==> geostats429x.svg ---
+--- needs --- geostats.idv[707] ==> geostats430x.svg ---
 Css: pre#fancyvrb225{border-width:1.13809pt;}
 Css: pre#fancyvrb225{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb225{ border-left: solid 1.13809pt; }
@@ -2198,16 +2213,11 @@ Css: pre#fancyvrb228{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb228{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb228{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb228{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[683] ==> geostats415x.svg ---
---- needs --- geostats.idv[684] ==> geostats416x.svg ---
---- needs --- geostats.idv[686] ==> geostats417x.svg ---
 Css: pre#fancyvrb229{border-width:1.13809pt;}
 Css: pre#fancyvrb229{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb229{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb229{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb229{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[687] ==> geostats418x.svg ---
---- needs --- geostats.idv[688] ==> geostats419x.svg ---
 Css: pre#fancyvrb230{border-width:1.13809pt;}
 Css: pre#fancyvrb230{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb230{ border-left: solid 1.13809pt; }
@@ -2248,6 +2258,14 @@ Css: pre#fancyvrb237{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb237{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb237{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb237{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[709] ==> geostats431x.svg ---
+--- needs --- geostats.idv[711] ==> geostats432x.svg ---
+--- needs --- geostats.idv[712] ==> geostats433x.svg ---
+--- needs --- geostats.idv[713] ==> geostats434x.svg ---
+--- needs --- geostats.idv[714] ==> geostats435x.svg ---
+--- needs --- geostats.idv[715] ==> geostats436x.svg ---
+--- needs --- geostats.idv[716] ==> geostats437x.svg ---
+--- needs --- geostats.idv[718] ==> geostats438x.svg ---
 Css: pre#fancyvrb238{border-width:1.13809pt;}
 Css: pre#fancyvrb238{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb238{ border-left: solid 1.13809pt; }
@@ -2263,19 +2281,12 @@ Css: pre#fancyvrb240{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb240{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb240{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb240{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[690] ==> geostats420x.svg ---
---- needs --- geostats.idv[692] ==> geostats421x.svg ---
---- needs --- geostats.idv[693] ==> geostats422x.svg ---
---- needs --- geostats.idv[694] ==> geostats423x.svg ---
---- needs --- geostats.idv[695] ==> geostats424x.svg ---
---- needs --- geostats.idv[696] ==> geostats425x.svg ---
---- needs --- geostats.idv[697] ==> geostats426x.svg ---
---- needs --- geostats.idv[699] ==> geostats427x.svg ---
 Css: pre#fancyvrb241{border-width:1.13809pt;}
 Css: pre#fancyvrb241{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb241{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb241{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb241{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[720] ==> geostats439x.svg ---
 Css: pre#fancyvrb242{border-width:1.13809pt;}
 Css: pre#fancyvrb242{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb242{ border-left: solid 1.13809pt; }
@@ -2286,12 +2297,23 @@ Css: pre#fancyvrb243{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb243{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb243{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb243{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[721] ==> geostats440x.svg ---
+--- needs --- geostats.idv[723] ==> geostats441x.svg ---
+--- needs --- geostats.idv[724] ==> geostats442x.svg ---
+--- needs --- geostats.idv[725] ==> geostats443x.svg ---
+--- needs --- geostats.idv[726] ==> geostats444x.svg ---
+--- needs --- geostats.idv[728] ==> geostats445x.svg ---
+--- needs --- geostats.idv[729] ==> geostats446x.svg ---
+--- needs --- geostats.idv[730] ==> geostats447x.svg ---
+--- needs --- geostats.idv[731] ==> geostats448x.svg ---
+--- needs --- geostats.idv[733] ==> geostats449x.svg ---
 Css: pre#fancyvrb244{border-width:1.13809pt;}
 Css: pre#fancyvrb244{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb244{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb244{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb244{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[701] ==> geostats428x.svg ---
+--- needs --- geostats.idv[734] ==> geostats450x.svg ---
+--- needs --- geostats.idv[735] ==> geostats451x.svg ---
 Css: pre#fancyvrb245{border-width:1.13809pt;}
 Css: pre#fancyvrb245{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb245{ border-left: solid 1.13809pt; }
@@ -2302,45 +2324,26 @@ Css: pre#fancyvrb246{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb246{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb246{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb246{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[702] ==> geostats429x.svg ---
---- needs --- geostats.idv[704] ==> geostats430x.svg ---
---- needs --- geostats.idv[705] ==> geostats431x.svg ---
---- needs --- geostats.idv[706] ==> geostats432x.svg ---
---- needs --- geostats.idv[707] ==> geostats433x.svg ---
---- needs --- geostats.idv[709] ==> geostats434x.svg ---
---- needs --- geostats.idv[710] ==> geostats435x.svg ---
---- needs --- geostats.idv[711] ==> geostats436x.svg ---
---- needs --- geostats.idv[712] ==> geostats437x.svg ---
---- needs --- geostats.idv[714] ==> geostats438x.svg ---
 Css: pre#fancyvrb247{border-width:1.13809pt;}
 Css: pre#fancyvrb247{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb247{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb247{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb247{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[715] ==> geostats439x.svg ---
---- needs --- geostats.idv[716] ==> geostats440x.svg ---
+--- needs --- geostats.idv[737] ==> geostats452x.svg ---
+--- needs --- geostats.idv[739] ==> geostats453x.svg ---
+--- needs --- geostats.idv[740] ==> geostats454x.svg ---
+--- needs --- geostats.idv[741] ==> geostats455x.svg ---
 Css: pre#fancyvrb248{border-width:1.13809pt;}
 Css: pre#fancyvrb248{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb248{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb248{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb248{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[718] ==> geostats441x.svg ---
---- needs --- geostats.idv[719] ==> geostats442x.svg ---
---- needs --- geostats.idv[720] ==> geostats443x.svg ---
---- needs --- geostats.idv[722] ==> geostats444x.svg ---
---- needs --- geostats.idv[723] ==> geostats445x.svg ---
---- needs --- geostats.idv[724] ==> geostats446x.svg ---
---- needs --- geostats.idv[725] ==> geostats447x.svg ---
---- needs --- geostats.idv[727] ==> geostats448x.svg ---
---- needs --- geostats.idv[728] ==> geostats449x.svg ---
---- needs --- geostats.idv[729] ==> geostats450x.svg ---
+--- needs --- geostats.idv[742] ==> geostats456x.svg ---
 Css: pre#fancyvrb249{border-width:1.13809pt;}
 Css: pre#fancyvrb249{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb249{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb249{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb249{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[731] ==> geostats451x.svg ---
---- needs --- geostats.idv[732] ==> geostats452x.svg ---
 Css: pre#fancyvrb250{border-width:1.13809pt;}
 Css: pre#fancyvrb250{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb250{ border-left: solid 1.13809pt; }
@@ -2356,16 +2359,11 @@ Css: pre#fancyvrb252{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb252{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb252{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb252{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[734] ==> geostats453x.svg ---
---- needs --- geostats.idv[735] ==> geostats454x.svg ---
---- needs --- geostats.idv[736] ==> geostats455x.svg ---
---- needs --- geostats.idv[737] ==> geostats456x.svg ---
 Css: pre#fancyvrb253{border-width:1.13809pt;}
 Css: pre#fancyvrb253{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb253{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb253{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb253{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[739] ==> geostats457x.svg ---
 Css: pre#fancyvrb254{border-width:1.13809pt;}
 Css: pre#fancyvrb254{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb254{ border-left: solid 1.13809pt; }
@@ -2401,6 +2399,7 @@ Css: pre#fancyvrb260{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb260{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb260{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb260{ border-right: solid 1.13809pt; }
+--- needs --- geostats.idv[744] ==> geostats457x.svg ---
 Css: pre#fancyvrb261{border-width:1.13809pt;}
 Css: pre#fancyvrb261{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb261{ border-left: solid 1.13809pt; }
@@ -2426,7 +2425,6 @@ Css: pre#fancyvrb265{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb265{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb265{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb265{ border-right: solid 1.13809pt; }
---- needs --- geostats.idv[741] ==> geostats458x.svg ---
 Css: pre#fancyvrb266{border-width:1.13809pt;}
 Css: pre#fancyvrb266{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb266{ border-left: solid 1.13809pt; }
@@ -2487,6 +2485,8 @@ Css: pre#fancyvrb277{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb277{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb277{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb277{ border-right: solid 1.13809pt; }
+l. 1391 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/PCAiris-.png" "../figures/PCAiris.pdf" " ---
+File: ../figures/PCAiris-.png
 Css: pre#fancyvrb278{border-width:1.13809pt;}
 Css: pre#fancyvrb278{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb278{ border-left: solid 1.13809pt; }
@@ -2497,11 +2497,15 @@ Css: pre#fancyvrb279{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb279{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb279{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb279{ border-right: solid 1.13809pt; }
+l. 1434 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/elbow-.png" "../figures/elbow.pdf" " ---
+File: ../figures/elbow-.png
 Css: pre#fancyvrb280{border-width:1.13809pt;}
 Css: pre#fancyvrb280{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb280{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb280{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb280{ border-right: solid 1.13809pt; }
+l. 1455 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/DZtree-.png" "../figures/DZtree.pdf" " ---
+File: ../figures/DZtree-.png
 Css: pre#fancyvrb281{border-width:1.13809pt;}
 Css: pre#fancyvrb281{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb281{ border-left: solid 1.13809pt; }
@@ -2512,8 +2516,6 @@ Css: pre#fancyvrb282{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb282{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb282{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb282{ border-right: solid 1.13809pt; }
-l. 1435 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/PCAiris-.png" "../figures/PCAiris.pdf" " ---
-File: ../figures/PCAiris-.png
 Css: pre#fancyvrb283{border-width:1.13809pt;}
 Css: pre#fancyvrb283{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb283{ border-left: solid 1.13809pt; }
@@ -2524,15 +2526,11 @@ Css: pre#fancyvrb284{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb284{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb284{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb284{ border-right: solid 1.13809pt; }
-l. 1478 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/elbow-.png" "../figures/elbow.pdf" " ---
-File: ../figures/elbow-.png
 Css: pre#fancyvrb285{border-width:1.13809pt;}
 Css: pre#fancyvrb285{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb285{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb285{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb285{ border-right: solid 1.13809pt; }
-l. 1499 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/DZtree-.png" "../figures/DZtree.pdf" " ---
-File: ../figures/DZtree-.png
 Css: pre#fancyvrb286{border-width:1.13809pt;}
 Css: pre#fancyvrb286{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb286{ border-left: solid 1.13809pt; }
@@ -2613,6 +2611,8 @@ Css: pre#fancyvrb301{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb301{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb301{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb301{ border-right: solid 1.13809pt; }
+l. 1677 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/testPCA-.png" "../figures/testPCA.pdf" " ---
+File: ../figures/testPCA-.png
 Css: pre#fancyvrb302{border-width:1.13809pt;}
 Css: pre#fancyvrb302{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb302{ border-left: solid 1.13809pt; }
@@ -2638,8 +2638,6 @@ Css: pre#fancyvrb306{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb306{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb306{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb306{ border-right: solid 1.13809pt; }
-l. 1721 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/testPCA-.png" "../figures/testPCA.pdf" " ---
-File: ../figures/testPCA-.png
 Css: pre#fancyvrb307{border-width:1.13809pt;}
 Css: pre#fancyvrb307{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb307{ border-left: solid 1.13809pt; }
@@ -2695,6 +2693,8 @@ Css: pre#fancyvrb317{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb317{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb317{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb317{ border-right: solid 1.13809pt; }
+l. 1857 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/hills-.png" "../figures/hills.pdf" " ---
+File: ../figures/hills-.png
 Css: pre#fancyvrb318{border-width:1.13809pt;}
 Css: pre#fancyvrb318{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb318{ border-left: solid 1.13809pt; }
@@ -2720,39 +2720,12 @@ Css: pre#fancyvrb322{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb322{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb322{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb322{ border-right: solid 1.13809pt; }
-l. 1901 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/hills-.png" "../figures/hills.pdf" " ---
-File: ../figures/hills-.png
 Css: pre#fancyvrb323{border-width:1.13809pt;}
 Css: pre#fancyvrb323{ border-top: solid 1.13809pt; }
 Css: pre#fancyvrb323{ border-left: solid 1.13809pt; }
 Css: pre#fancyvrb323{ border-bottom: solid 1.13809pt; }
 Css: pre#fancyvrb323{ border-right: solid 1.13809pt; }
-Css: pre#fancyvrb324{border-width:1.13809pt;}
-Css: pre#fancyvrb324{ border-top: solid 1.13809pt; }
-Css: pre#fancyvrb324{ border-left: solid 1.13809pt; }
-Css: pre#fancyvrb324{ border-bottom: solid 1.13809pt; }
-Css: pre#fancyvrb324{ border-right: solid 1.13809pt; }
-Css: pre#fancyvrb325{border-width:1.13809pt;}
-Css: pre#fancyvrb325{ border-top: solid 1.13809pt; }
-Css: pre#fancyvrb325{ border-left: solid 1.13809pt; }
-Css: pre#fancyvrb325{ border-bottom: solid 1.13809pt; }
-Css: pre#fancyvrb325{ border-right: solid 1.13809pt; }
-Css: pre#fancyvrb326{border-width:1.13809pt;}
-Css: pre#fancyvrb326{ border-top: solid 1.13809pt; }
-Css: pre#fancyvrb326{ border-left: solid 1.13809pt; }
-Css: pre#fancyvrb326{ border-bottom: solid 1.13809pt; }
-Css: pre#fancyvrb326{ border-right: solid 1.13809pt; }
-Css: pre#fancyvrb327{border-width:1.13809pt;}
-Css: pre#fancyvrb327{ border-top: solid 1.13809pt; }
-Css: pre#fancyvrb327{ border-left: solid 1.13809pt; }
-Css: pre#fancyvrb327{ border-bottom: solid 1.13809pt; }
-Css: pre#fancyvrb327{ border-right: solid 1.13809pt; }
-Css: pre#fancyvrb328{border-width:1.13809pt;}
-Css: pre#fancyvrb328{ border-top: solid 1.13809pt; }
-Css: pre#fancyvrb328{ border-left: solid 1.13809pt; }
-Css: pre#fancyvrb328{ border-bottom: solid 1.13809pt; }
-Css: pre#fancyvrb328{ border-right: solid 1.13809pt; }
-l. 1971 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/sphvsexp-.png" "../figures/sphvsexp.pdf" " ---
+l. 1927 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="../figures/sphvsexp-.png" "../figures/sphvsexp.pdf" " ---
 File: ../figures/sphvsexp-.png
 --- characters ---
 Font("cmr","10","10","100")

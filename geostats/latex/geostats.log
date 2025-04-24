@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=latex 2024.3.15)  3 OCT 2024 15:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=latex 2024.8.26)  24 APR 2025 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2869,65 +2869,65 @@ l.266 --- TeX4ht warning --- File `"../figures/rectKDE.xbb"' not found ---
 l.266 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/re
 ctKDE.xbb" (no BoundingBox) ---
 l. 266 --- needs --- ../figures/rectKDE-.png ---
-l. 281 Writing geostats.idv[3] (geostats2x.svg)
-l. 291 Writing geostats.idv[4] (geostats3x.svg)
+l. 282 Writing geostats.idv[3] (geostats2x.svg)
+l. 292 Writing geostats.idv[4] (geostats3x.svg)
 [16]
-l.299 --- TeX4ht warning --- File `"../figures/pHrectKDE.xbb"' not found ---
-l.299 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/pH
+l.300 --- TeX4ht warning --- File `"../figures/pHrectKDE.xbb"' not found ---
+l.300 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/pH
 rectKDE.xbb" (no BoundingBox) ---
-l. 299 --- needs --- ../figures/pHrectKDE-.png ---
-l. 313 Writing geostats.idv[5] (geostats4x.svg)
-l.321 --- TeX4ht warning --- File `"../figures/gaussKDE.xbb"' not found ---
-l.321 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ga
+l. 300 --- needs --- ../figures/pHrectKDE-.png ---
+l. 314 Writing geostats.idv[5] (geostats4x.svg)
+l.322 --- TeX4ht warning --- File `"../figures/gaussKDE.xbb"' not found ---
+l.322 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ga
 ussKDE.xbb" (no BoundingBox) ---
-l. 321 --- needs --- ../figures/gaussKDE-.png ---
-l.334 --- TeX4ht warning --- File `"../figures/pHgaussKDE.xbb"' not found ---
-l.334 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/pH
+l. 322 --- needs --- ../figures/gaussKDE-.png ---
+l.335 --- TeX4ht warning --- File `"../figures/pHgaussKDE.xbb"' not found ---
+l.335 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/pH
 gaussKDE.xbb" (no BoundingBox) ---
-l. 334 --- needs --- ../figures/pHgaussKDE-.png ---
-l.351 --- TeX4ht warning --- File `"../figures/bandwidth.xbb"' not found ---
-l.351 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ba
-ndwidth.xbb" (no BoundingBox) ---
-l. 351 --- needs --- ../figures/bandwidth-.png ---
+l. 335 --- needs --- ../figures/pHgaussKDE-.png ---
 [17]
-l.377 --- TeX4ht warning --- File `"../figures/negativeKDE.xbb"' not found ---
-l.377 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ne
+l.352 --- TeX4ht warning --- File `"../figures/bandwidth.xbb"' not found ---
+l.352 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ba
+ndwidth.xbb" (no BoundingBox) ---
+l. 352 --- needs --- ../figures/bandwidth-.png ---
+l.378 --- TeX4ht warning --- File `"../figures/negativeKDE.xbb"' not found ---
+l.378 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ne
 gativeKDE.xbb" (no BoundingBox) ---
-l. 377 --- needs --- ../figures/negativeKDE-.png ---
-l. 389 Writing geostats.idv[6] (geostats5x.svg)
+l. 378 --- needs --- ../figures/negativeKDE-.png ---
+l. 390 Writing geostats.idv[6] (geostats5x.svg)
 [18]
 --- file geostats4.html ---
-l. 396 Writing geostats.idv[7] (geostats6x.svg)
-l. 398 Writing geostats.idv[8] (geostats7x.svg)
-l.403 --- TeX4ht warning --- File `"../figures/logKDE.xbb"' not found ---
-l.403 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/lo
+l. 397 Writing geostats.idv[7] (geostats6x.svg)
+l. 399 Writing geostats.idv[8] (geostats7x.svg)
+l.404 --- TeX4ht warning --- File `"../figures/logKDE.xbb"' not found ---
+l.404 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/lo
 gKDE.xbb" (no BoundingBox) ---
-l. 403 --- needs --- ../figures/logKDE-.png ---
-l.421 --- TeX4ht warning --- File `"../figures/vegetationKDE.xbb"' not found --
+l. 404 --- needs --- ../figures/logKDE-.png ---
+l.422 --- TeX4ht warning --- File `"../figures/vegetationKDE.xbb"' not found --
 -
-l.421 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ve
+l.422 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ve
 getationKDE.xbb" (no BoundingBox) ---
-l. 421 --- needs --- ../figures/vegetationKDE-.png ---
+l. 422 --- needs --- ../figures/vegetationKDE-.png ---
 [19
 
 ]
-l. 435 Writing geostats.idv[9] (geostats8x.svg)
-l. 444 Writing geostats.idv[10] (geostats9x.svg)
-l.450 --- TeX4ht warning --- File `"../figures/logitKDE.xbb"' not found ---
-l.450 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/lo
+l. 436 Writing geostats.idv[9] (geostats8x.svg)
+l. 445 Writing geostats.idv[10] (geostats9x.svg)
+l.451 --- TeX4ht warning --- File `"../figures/logitKDE.xbb"' not found ---
+l.451 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/lo
 gitKDE.xbb" (no BoundingBox) ---
-l. 450 --- needs --- ../figures/logitKDE-.png ---
+l. 451 --- needs --- ../figures/logitKDE-.png ---
 [20]
-l.476 --- TeX4ht warning --- File `"../figures/KDE2D.xbb"' not found ---
-l.476 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/KD
+l.477 --- TeX4ht warning --- File `"../figures/KDE2D.xbb"' not found ---
+l.477 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/KD
 E2D.xbb" (no BoundingBox) ---
-l. 476 --- needs --- ../figures/KDE2D-.png ---
+l. 477 --- needs --- ../figures/KDE2D-.png ---
 [21]
-l. 518 Writing geostats.idv[11] (geostats10x.svg)
-l.529 --- TeX4ht warning --- File `"../figures/ECDFs.xbb"' not found ---
-l.529 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/EC
+l. 519 Writing geostats.idv[11] (geostats10x.svg)
+l.530 --- TeX4ht warning --- File `"../figures/ECDFs.xbb"' not found ---
+l.530 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/EC
 DFs.xbb" (no BoundingBox) ---
-l. 529 --- needs --- ../figures/ECDFs-.png ---
+l. 530 --- needs --- ../figures/ECDFs-.png ---
 ) (./summary-statistics.tex [22]
 Chapter 3.
 l. 36 Writing geostats.idv[12] (geostats11x.svg)
@@ -3963,105 +3963,118 @@ l.106 --- TeX4ht warning --- File `"../figures/LDA.xbb"' not found ---
 l.106 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/LD
 A.xbb" (no BoundingBox) ---
 l. 106 --- needs --- ../figures/LDA-.png ---
-l.124 --- TeX4ht warning --- File `"../figures/PCAvsLDA.xbb"' not found ---
-l.124 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/PC
-AvsLDA.xbb" (no BoundingBox) ---
-l. 124 --- needs --- ../figures/PCAvsLDA-.png ---
 [195]
-l.148 --- TeX4ht warning --- File `"../figures/LDAiris.xbb"' not found ---
-l.148 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/LD
-Airis.xbb" (no BoundingBox) ---
-l. 148 --- needs --- ../figures/LDAiris-.png ---
-l.169 --- TeX4ht warning --- File `"../figures/LDAnewiris.xbb"' not found ---
-l.169 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/LD
-Anewiris.xbb" (no BoundingBox) ---
-l. 169 --- needs --- ../figures/LDAnewiris-.png ---
+l. 123 Writing geostats.idv[274] (geostats273x.svg)
+l. 141 Writing geostats.idv[275] (geostats274x.svg)
+l. 156 Writing geostats.idv[276] (geostats275x.svg)
 [196]
-l.208 --- TeX4ht warning --- File `"../figures/CARTdata.xbb"' not found ---
-l.208 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/CA
-RTdata.xbb" (no BoundingBox) ---
-l. 208 --- needs --- ../figures/CARTdata-.png ---
-l. 227 Writing geostats.idv[274] (geostats273x.svg)
+l. 183 Writing geostats.idv[277] (geostats276x.svg)
+l. 183 Writing geostats.idv[278] (geostats277x.svg)
+l. 183 Writing geostats.idv[279] (geostats278x.svg)
+l. 186 Writing geostats.idv[280] (geostats279x.svg)
+l. 198 Writing geostats.idv[281] (geostats280x.svg)
 [197]
-l.239 --- TeX4ht warning --- File `"../figures/Qtries.xbb"' not found ---
-l.239 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/Qt
-ries.xbb" (no BoundingBox) ---
-l. 239 --- needs --- ../figures/Qtries-.png ---
-l.254 --- TeX4ht warning --- File `"../figures/Q2.xbb"' not found ---
-l.254 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/Q2
-.xbb" (no BoundingBox) ---
-l. 254 --- needs --- ../figures/Q2-.png ---
-l.271 --- TeX4ht warning --- File `"../figures/overfittedCARTscatter.xbb"' not 
-found ---
-l.271 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ov
-erfittedCARTscatter.xbb" (no BoundingBox) ---
-l. 271 --- needs --- ../figures/overfittedCARTscatter-.png ---
+l. 209 Writing geostats.idv[282] (geostats281x.svg)
+l. 219 Writing geostats.idv[283] (geostats282x.svg)
+l.275 --- TeX4ht warning --- File `"../figures/PCAvsLDA.xbb"' not found ---
+l.275 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/PC
+AvsLDA.xbb" (no BoundingBox) ---
+l. 275 --- needs --- ../figures/PCAvsLDA-.png ---
 [198]
-l. 306 Writing geostats.idv[275] (geostats274x.svg)
+l.302 --- TeX4ht warning --- File `"../figures/LDAiris.xbb"' not found ---
+l.302 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/LD
+Airis.xbb" (no BoundingBox) ---
+l. 302 --- needs --- ../figures/LDAiris-.png ---
+l.322 --- TeX4ht warning --- File `"../figures/LDAnewiris.xbb"' not found ---
+l.322 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/LD
+Anewiris.xbb" (no BoundingBox) ---
+l. 322 --- needs --- ../figures/LDAnewiris-.png ---
 [199]
-l. 319 Writing geostats.idv[276] (geostats275x.svg)
-l.333 --- TeX4ht warning --- File `"../figures/cvCART.xbb"' not found ---
-l.333 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/cv
-CART.xbb" (no BoundingBox) ---
-l. 333 --- needs --- ../figures/cvCART-.png ---
-l.352 --- TeX4ht warning --- File `"../figures/optimalCART.xbb"' not found ---
-l.352 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/op
-timalCART.xbb" (no BoundingBox) ---
-l. 352 --- needs --- ../figures/optimalCART-.png ---
+l.361 --- TeX4ht warning --- File `"../figures/CARTdata.xbb"' not found ---
+l.361 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/CA
+RTdata.xbb" (no BoundingBox) ---
+l. 361 --- needs --- ../figures/CARTdata-.png ---
 [200]
-l.367 --- TeX4ht warning --- File `"../figures/irisCART.xbb"' not found ---
-l.367 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ir
+l. 380 Writing geostats.idv[284] (geostats283x.svg)
+l.392 --- TeX4ht warning --- File `"../figures/Qtries.xbb"' not found ---
+l.392 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/Qt
+ries.xbb" (no BoundingBox) ---
+l. 392 --- needs --- ../figures/Qtries-.png ---
+l.407 --- TeX4ht warning --- File `"../figures/Q2.xbb"' not found ---
+l.407 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/Q2
+.xbb" (no BoundingBox) ---
+l. 407 --- needs --- ../figures/Q2-.png ---
+[201]
+l.424 --- TeX4ht warning --- File `"../figures/overfittedCARTscatter.xbb"' not 
+found ---
+l.424 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ov
+erfittedCARTscatter.xbb" (no BoundingBox) ---
+l. 424 --- needs --- ../figures/overfittedCARTscatter-.png ---
+l. 459 Writing geostats.idv[285] (geostats284x.svg)
+[202]
+l. 472 Writing geostats.idv[286] (geostats285x.svg)
+l.486 --- TeX4ht warning --- File `"../figures/cvCART.xbb"' not found ---
+l.486 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/cv
+CART.xbb" (no BoundingBox) ---
+l. 486 --- needs --- ../figures/cvCART-.png ---
+l.505 --- TeX4ht warning --- File `"../figures/optimalCART.xbb"' not found ---
+l.505 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/op
+timalCART.xbb" (no BoundingBox) ---
+l. 505 --- needs --- ../figures/optimalCART-.png ---
+[203]
+l.520 --- TeX4ht warning --- File `"../figures/irisCART.xbb"' not found ---
+l.520 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ir
 isCART.xbb" (no BoundingBox) ---
-l. 367 --- needs --- ../figures/irisCART-.png ---
-) (./compositional.tex [201] [202
+l. 520 --- needs --- ../figures/irisCART-.png ---
+) (./compositional.tex [204]
+Chapter 14.
+[205
 
 ]
-Chapter 14.
-[203]
-l. 78 Writing geostats.idv[277] (geostats276x.svg)
-[204]
-l. 109 Writing geostats.idv[278] (geostats277x.svg)
-l. 129 Writing geostats.idv[279] (geostats278x.svg)
-[205]
+l. 78 Writing geostats.idv[287] (geostats286x.svg)
+[206]
+l. 109 Writing geostats.idv[288] (geostats287x.svg)
+l. 129 Writing geostats.idv[289] (geostats288x.svg)
+[207]
 l.144 --- TeX4ht warning --- File `"../figures/ACNK.xbb"' not found ---
 l.144 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/AC
 NK.xbb" (no BoundingBox) ---
 l. 144 --- needs --- ../figures/ACNK-.png ---
-l. 164 Writing geostats.idv[280] (geostats279x.svg)
+l. 164 Writing geostats.idv[290] (geostats289x.svg)
 l.179 --- TeX4ht warning --- File `"../figures/ACNKarithmeticmean.xbb"' not fou
 nd ---
 l.179 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/AC
 NKarithmeticmean.xbb" (no BoundingBox) ---
 l. 179 --- needs --- ../figures/ACNKarithmeticmean-.png ---
-[206]
-l. 197 Writing geostats.idv[281] (geostats280x.svg)
-l. 214 Writing geostats.idv[282] (geostats281x.svg)
-[207]
+[208]
+l. 197 Writing geostats.idv[291] (geostats290x.svg)
+l. 214 Writing geostats.idv[292] (geostats291x.svg)
+[209]
 l.228 --- TeX4ht warning --- File `"../figures/ACNKnaive.xbb"' not found ---
 l.228 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/AC
 NKnaive.xbb" (no BoundingBox) ---
 l. 228 --- needs --- ../figures/ACNKnaive-.png ---
-l. 262 Writing geostats.idv[283] (geostats282x.svg)
-[208]
-l. 272 Writing geostats.idv[284] (geostats283x.svg)
-l. 281 Writing geostats.idv[285] (geostats284x.svg)
+l. 262 Writing geostats.idv[293] (geostats292x.svg)
+[210]
+l. 272 Writing geostats.idv[294] (geostats293x.svg)
+l. 281 Writing geostats.idv[295] (geostats294x.svg)
 l.281 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/al
 r.PDF" (no BoundingBox) ---
 File: ../figures/alr.PDF Graphic file (type eps)
-<../figures/alr.PDF> [209]
-l. 329 Writing geostats.idv[286] (geostats285x.svg)
-l. 329 Writing geostats.idv[287] (geostats286x.svg)
-l. 329 Writing geostats.idv[288] (geostats287x.svg)
-l. 329 Writing geostats.idv[289] (geostats288x.svg)
-l. 329 Writing geostats.idv[290] (geostats289x.svg)
-l. 329 Writing geostats.idv[291] (geostats290x.svg)
-l. 330 Writing geostats.idv[292] (geostats291x.svg)
-l. 330 Writing geostats.idv[293] (geostats292x.svg)
-l. 330 Writing geostats.idv[294] (geostats293x.svg)
-l. 330 Writing geostats.idv[295] (geostats294x.svg)
-l. 330 Writing geostats.idv[296] (geostats295x.svg)
-l. 358 Writing geostats.idv[297] (geostats296x.svg)
-[210]
+<../figures/alr.PDF> [211]
+l. 329 Writing geostats.idv[296] (geostats295x.svg)
+l. 329 Writing geostats.idv[297] (geostats296x.svg)
+l. 329 Writing geostats.idv[298] (geostats297x.svg)
+l. 329 Writing geostats.idv[299] (geostats298x.svg)
+l. 329 Writing geostats.idv[300] (geostats299x.svg)
+l. 329 Writing geostats.idv[301] (geostats300x.svg)
+l. 330 Writing geostats.idv[302] (geostats301x.svg)
+l. 330 Writing geostats.idv[303] (geostats302x.svg)
+l. 330 Writing geostats.idv[304] (geostats303x.svg)
+l. 330 Writing geostats.idv[305] (geostats304x.svg)
+l. 330 Writing geostats.idv[306] (geostats305x.svg)
+l. 358 Writing geostats.idv[307] (geostats306x.svg)
+[212]
 l.371 --- TeX4ht warning --- File `"../figures/abc.xbb"' not found ---
 l.371 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ab
 c.xbb" (no BoundingBox) ---
@@ -4070,55 +4083,57 @@ l.387 --- TeX4ht warning --- File `"../figures/alraxes.xbb"' not found ---
 l.387 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/al
 raxes.xbb" (no BoundingBox) ---
 l. 387 --- needs --- ../figures/alraxes-.png ---
-l. 402 Writing geostats.idv[298] (geostats297x.svg)
-[211]
-l. 436 Writing geostats.idv[299] (geostats298x.svg)
-l. 445 Writing geostats.idv[300] (geostats299x.svg)
-l. 453 Writing geostats.idv[301] (geostats300x.svg)
-[212]
-l. 503 Writing geostats.idv[302] (geostats301x.svg)
-l. 503 Writing geostats.idv[303] (geostats302x.svg)
-l. 503 Writing geostats.idv[304] (geostats303x.svg)
-l. 503 Writing geostats.idv[305] (geostats304x.svg)
+l. 402 Writing geostats.idv[308] (geostats307x.svg)
+[213]
+l. 436 Writing geostats.idv[309] (geostats308x.svg)
+l. 444 Writing geostats.idv[310] (geostats309x.svg)
+l. 449 Writing geostats.idv[311] (geostats310x.svg)
+[214]
+l. 459 Writing geostats.idv[312] (geostats311x.svg)
+l. 509 Writing geostats.idv[313] (geostats312x.svg)
+l. 509 Writing geostats.idv[314] (geostats313x.svg)
+l. 509 Writing geostats.idv[315] (geostats314x.svg)
+l. 509 Writing geostats.idv[316] (geostats315x.svg)
 --- file geostats18.html ---
-l.512 --- TeX4ht warning --- File `"../figures/clrPCA.xbb"' not found ---
-l.512 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/cl
+[215]
+l.518 --- TeX4ht warning --- File `"../figures/clrPCA.xbb"' not found ---
+l.518 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/cl
 rPCA.xbb" (no BoundingBox) ---
-l. 512 --- needs --- ../figures/clrPCA-.png ---
-l.528 --- TeX4ht warning --- File `"../figures/majorPCA.xbb"' not found ---
-l.528 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ma
+l. 518 --- needs --- ../figures/clrPCA-.png ---
+l.534 --- TeX4ht warning --- File `"../figures/majorPCA.xbb"' not found ---
+l.534 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ma
 jorPCA.xbb" (no BoundingBox) ---
-l. 528 --- needs --- ../figures/majorPCA-.png ---
-[213
+l. 534 --- needs --- ../figures/majorPCA-.png ---
+l.563 --- TeX4ht warning --- File `"../figures/links.xbb"' not found ---
+l.563 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/li
+nks.xbb" (no BoundingBox) ---
+l. 563 --- needs --- ../figures/links-.png ---
+[216
 
 ]
-l.557 --- TeX4ht warning --- File `"../figures/links.xbb"' not found ---
-l.557 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/li
-nks.xbb" (no BoundingBox) ---
-l. 557 --- needs --- ../figures/links-.png ---
-l.589 --- TeX4ht warning --- File `"../figures/AFM.xbb"' not found ---
-l.589 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/AF
+l.595 --- TeX4ht warning --- File `"../figures/AFM.xbb"' not found ---
+l.595 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/AF
 M.xbb" (no BoundingBox) ---
-l. 589 --- needs --- ../figures/AFM-.png ---
-[214]
-l.606 --- TeX4ht warning --- File `"../figures/lrAFM.xbb"' not found ---
-l.606 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/lr
+l. 595 --- needs --- ../figures/AFM-.png ---
+l.612 --- TeX4ht warning --- File `"../figures/lrAFM.xbb"' not found ---
+l.612 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/lr
 AFM.xbb" (no BoundingBox) ---
-l. 606 --- needs --- ../figures/lrAFM-.png ---
-l.625 --- TeX4ht warning --- File `"../figures/LDAAFM.xbb"' not found ---
-l.625 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/LD
+l. 612 --- needs --- ../figures/lrAFM-.png ---
+l.631 --- TeX4ht warning --- File `"../figures/LDAAFM.xbb"' not found ---
+l.631 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/LD
 AAFM.xbb" (no BoundingBox) ---
-l. 625 --- needs --- ../figures/LDAAFM-.png ---
-[215]
-l. 649 Writing geostats.idv[306] (geostats305x.svg)
-l. 661 Writing geostats.idv[307] (geostats306x.svg)
-[216]
-l. 681 Writing geostats.idv[308] (geostats307x.svg)
-l.707 --- TeX4ht warning --- File `"../figures/cath.xbb"' not found ---
-l.707 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ca
+l. 631 --- needs --- ../figures/LDAAFM-.png ---
+[217]
+l. 655 Writing geostats.idv[317] (geostats316x.svg)
+l. 667 Writing geostats.idv[318] (geostats317x.svg)
+[218]
+l. 687 Writing geostats.idv[319] (geostats318x.svg)
+[219]
+l.713 --- TeX4ht warning --- File `"../figures/cath.xbb"' not found ---
+l.713 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ca
 th.xbb" (no BoundingBox) ---
-l. 707 --- needs --- ../figures/cath-.png ---
-[217]) (./directional.tex [218]
+l. 713 --- needs --- ../figures/cath-.png ---
+) (./directional.tex [220]
 Chapter 15.
 l.27 --- TeX4ht warning --- File `"../figures/circle1.xbb"' not found ---
 l.27 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/cir
@@ -4128,36 +4143,36 @@ l.41 --- TeX4ht warning --- File `"../figures/circle2.xbb"' not found ---
 l.41 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/cir
 cle2.xbb" (no BoundingBox) ---
 l. 41 --- needs --- ../figures/circle2-.png ---
-l. 58 Writing geostats.idv[309] (geostats308x.svg)
-[219
+l. 58 Writing geostats.idv[320] (geostats319x.svg)
+[221
 
 ]
-l. 73 Writing geostats.idv[310] (geostats309x.svg)
-l. 81 Writing geostats.idv[311] (geostats310x.svg)
+l. 73 Writing geostats.idv[321] (geostats320x.svg)
+l. 81 Writing geostats.idv[322] (geostats321x.svg)
 l.92 --- TeX4ht warning --- File `"../figures/circle3.xbb"' not found ---
 l.92 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/cir
 cle3.xbb" (no BoundingBox) ---
 l. 92 --- needs --- ../figures/circle3-.png ---
-[220]
-l. 106 Writing geostats.idv[312] (geostats311x.svg)
+[222]
+l. 106 Writing geostats.idv[323] (geostats322x.svg)
 l.113 --- TeX4ht warning --- File `"../figures/vectorsum.xbb"' not found ---
 l.113 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ve
 ctorsum.xbb" (no BoundingBox) ---
 l. 113 --- needs --- ../figures/vectorsum-.png ---
-l. 129 Writing geostats.idv[313] (geostats312x.svg)
-[221]
+l. 129 Writing geostats.idv[324] (geostats323x.svg)
+[223]
 l.139 --- TeX4ht warning --- File `"../figures/lowconcentration.xbb"' not found
  ---
 l.139 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/lo
 wconcentration.xbb" (no BoundingBox) ---
 l. 139 --- needs --- ../figures/lowconcentration-.png ---
-l. 157 Writing geostats.idv[314] (geostats313x.svg)
+l. 157 Writing geostats.idv[325] (geostats324x.svg)
 l.167 --- TeX4ht warning --- File `"../figures/vonMises.xbb"' not found ---
 l.167 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/vo
 nMises.xbb" (no BoundingBox) ---
 l. 167 --- needs --- ../figures/vonMises-.png ---
-[222]
-l. 178 Writing geostats.idv[315] (geostats314x.svg)
+[224]
+l. 178 Writing geostats.idv[326] (geostats325x.svg)
 l.188 --- TeX4ht warning --- File `"../figures/R2K.xbb"' not found ---
 l.188 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/R2
 K.xbb" (no BoundingBox) ---
@@ -4167,40 +4182,40 @@ l.204 --- TeX4ht warning --- File `"../figures/kappastriations.xbb"' not found
 l.204 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/ka
 ppastriations.xbb" (no BoundingBox) ---
 l. 204 --- needs --- ../figures/kappastriations-.png ---
-[223]
-l. 224 Writing geostats.idv[316] (geostats315x.svg)
+[225]
+l. 224 Writing geostats.idv[327] (geostats326x.svg)
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 230.
 
-l. 236 Writing geostats.idv[317] (geostats316x.svg)
+l. 236 Writing geostats.idv[328] (geostats327x.svg)
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 242.
 
-l. 248 Writing geostats.idv[318] (geostats317x.svg)
+l. 248 Writing geostats.idv[329] (geostats328x.svg)
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 254.
 
-[224]
+[226]
 l.266 --- TeX4ht warning --- File `"../figures/wulffschmidt.xbb"' not found ---
 
 l.266 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/wu
 lffschmidt.xbb" (no BoundingBox) ---
 l. 266 --- needs --- ../figures/wulffschmidt-.png ---
-l. 281 Writing geostats.idv[319] (geostats318x.svg)
+l. 281 Writing geostats.idv[330] (geostats329x.svg)
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 286.
 
-[225]
-l. 291 Writing geostats.idv[320] (geostats319x.svg)
+[227]
+l. 291 Writing geostats.idv[331] (geostats330x.svg)
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 296.
 
-l. 301 Writing geostats.idv[321] (geostats320x.svg)
+l. 301 Writing geostats.idv[332] (geostats331x.svg)
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 306.
@@ -4209,7 +4224,7 @@ l.317 --- TeX4ht warning --- File `"../figures/Africa.xbb"' not found ---
 l.317 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/Af
 rica.xbb" (no BoundingBox) ---
 l. 317 --- needs --- ../figures/Africa-.png ---
-[226]
+[228]
 l.336 --- TeX4ht warning --- File `"../figures/palaeomag.xbb"' not found ---
 l.336 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/pa
 laeomag.xbb" (no BoundingBox) ---
@@ -4218,22 +4233,22 @@ l.354 --- TeX4ht warning --- File `"../figures/fault.xbb"' not found ---
 l.354 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/fa
 ult.xbb" (no BoundingBox) ---
 l. 354 --- needs --- ../figures/fault-.png ---
-l. 376 Writing geostats.idv[322] (geostats321x.svg)
-[227]
-l. 387 Writing geostats.idv[323] (geostats322x.svg)
-l. 399 Writing geostats.idv[324] (geostats323x.svg)
-l. 411 Writing geostats.idv[325] (geostats324x.svg)
+l. 376 Writing geostats.idv[333] (geostats332x.svg)
+[229]
+l. 387 Writing geostats.idv[334] (geostats333x.svg)
+l. 399 Writing geostats.idv[335] (geostats334x.svg)
+l. 411 Writing geostats.idv[336] (geostats335x.svg)
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 416.
 
-[228]
-l. 421 Writing geostats.idv[326] (geostats325x.svg)
+[230]
+l. 421 Writing geostats.idv[337] (geostats336x.svg)
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 426.
 
-l. 431 Writing geostats.idv[327] (geostats326x.svg)
+l. 431 Writing geostats.idv[338] (geostats337x.svg)
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 436.
@@ -4243,7 +4258,7 @@ l.443 --- TeX4ht warning --- File `"../figures/sphericalmean.xbb"' not found --
 l.443 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/sp
 hericalmean.xbb" (no BoundingBox) ---
 l. 443 --- needs --- ../figures/sphericalmean-.png ---
-[229]
+[231]
 l.478 --- TeX4ht warning --- File `"../figures/pebbles.xbb"' not found ---
 l.478 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/pe
 bbles.xbb" (no BoundingBox) ---
@@ -4252,91 +4267,91 @@ l.498 --- TeX4ht warning --- File `"../figures/inertia.xbb"' not found ---
 l.498 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/in
 ertia.xbb" (no BoundingBox) ---
 l. 498 --- needs --- ../figures/inertia-.png ---
-[230]
-l. 515 Writing geostats.idv[328] (geostats327x.svg)
-l. 558 Writing geostats.idv[329] (geostats328x.svg)
-[231]
-l. 570 Writing geostats.idv[330] (geostats329x.svg)
+[232]
+l. 515 Writing geostats.idv[339] (geostats338x.svg)
+l. 558 Writing geostats.idv[340] (geostats339x.svg)
+[233]
+l. 570 Writing geostats.idv[341] (geostats340x.svg)
 l.614 --- TeX4ht warning --- File `"../figures/subhorizontal.xbb"' not found --
 -
 l.614 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/su
 bhorizontal.xbb" (no BoundingBox) ---
 l. 614 --- needs --- ../figures/subhorizontal-.png ---
-) (./spatial.tex [232]
+) (./spatial.tex [234]
 Chapter 16.
-l. 25 Writing geostats.idv[331] (geostats330x.svg)
-l. 25 Writing geostats.idv[332] (geostats331x.svg)
-l. 25 Writing geostats.idv[333] (geostats332x.svg)
-l. 25 Writing geostats.idv[334] (geostats333x.svg)
-l. 27 Writing geostats.idv[335] (geostats334x.svg)
-l. 27 Writing geostats.idv[336] (geostats335x.svg)
-l. 27 Writing geostats.idv[337] (geostats336x.svg)
-l. 27 Writing geostats.idv[338] (geostats337x.svg)
+l. 25 Writing geostats.idv[342] (geostats341x.svg)
+l. 25 Writing geostats.idv[343] (geostats342x.svg)
+l. 25 Writing geostats.idv[344] (geostats343x.svg)
+l. 25 Writing geostats.idv[345] (geostats344x.svg)
+l. 27 Writing geostats.idv[346] (geostats345x.svg)
+l. 27 Writing geostats.idv[347] (geostats346x.svg)
+l. 27 Writing geostats.idv[348] (geostats347x.svg)
+l. 27 Writing geostats.idv[349] (geostats348x.svg)
 --- file geostats19.html ---
 l.52 --- TeX4ht warning --- File `"../figures/meusepoints.xbb"' not found ---
 l.52 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/meu
 sepoints.xbb" (no BoundingBox) ---
 l. 52 --- needs --- ../figures/meusepoints-.png ---
-[233
+[235
 
 
 ]
-l. 84 Writing geostats.idv[339] (geostats338x.svg)
-l. 85 Writing geostats.idv[340] (geostats339x.svg)
-l. 85 Writing geostats.idv[341] (geostats340x.svg)
-l. 108 Writing geostats.idv[342] (geostats341x.svg)
-l. 108 Writing geostats.idv[343] (geostats342x.svg)
-l. 108 Writing geostats.idv[344] (geostats343x.svg)
-l. 108 Writing geostats.idv[345] (geostats344x.svg)
-l. 108 Writing geostats.idv[346] (geostats345x.svg)
-l. 108 Writing geostats.idv[347] (geostats346x.svg)
-l. 109 Writing geostats.idv[348] (geostats347x.svg)
-l. 109 Writing geostats.idv[349] (geostats348x.svg)
-l. 109 Writing geostats.idv[350] (geostats349x.svg)
-l. 109 Writing geostats.idv[351] (geostats350x.svg)
-l. 109 Writing geostats.idv[352] (geostats351x.svg)
-l. 109 Writing geostats.idv[353] (geostats352x.svg)
-[234]
-l. 132 Writing geostats.idv[354] (geostats353x.svg)
-l. 132 Writing geostats.idv[355] (geostats354x.svg)
-l. 132 Writing geostats.idv[356] (geostats355x.svg)
-l. 132 Writing geostats.idv[357] (geostats356x.svg)
-l. 132 Writing geostats.idv[358] (geostats357x.svg)
-l. 132 Writing geostats.idv[359] (geostats358x.svg)
-l. 133 Writing geostats.idv[360] (geostats359x.svg)
-l. 133 Writing geostats.idv[361] (geostats360x.svg)
-l. 133 Writing geostats.idv[362] (geostats361x.svg)
-l. 133 Writing geostats.idv[363] (geostats362x.svg)
-l. 133 Writing geostats.idv[364] (geostats363x.svg)
-l. 133 Writing geostats.idv[365] (geostats364x.svg)
-l. 133 Writing geostats.idv[366] (geostats365x.svg)
-l. 145 Writing geostats.idv[367] (geostats366x.svg)
-[235]
-l. 156 Writing geostats.idv[368] (geostats367x.svg)
-l. 177 Writing geostats.idv[369] (geostats368x.svg)
-l. 177 Writing geostats.idv[370] (geostats369x.svg)
-l. 177 Writing geostats.idv[371] (geostats370x.svg)
-l. 177 Writing geostats.idv[372] (geostats371x.svg)
-l. 177 Writing geostats.idv[373] (geostats372x.svg)
-l. 177 Writing geostats.idv[374] (geostats373x.svg)
-l. 178 Writing geostats.idv[375] (geostats374x.svg)
-l. 178 Writing geostats.idv[376] (geostats375x.svg)
-l. 178 Writing geostats.idv[377] (geostats376x.svg)
-l. 178 Writing geostats.idv[378] (geostats377x.svg)
-l. 178 Writing geostats.idv[379] (geostats378x.svg)
-l. 178 Writing geostats.idv[380] (geostats379x.svg)
-l. 178 Writing geostats.idv[381] (geostats380x.svg)
-l. 190 Writing geostats.idv[382] (geostats381x.svg)
+l. 84 Writing geostats.idv[350] (geostats349x.svg)
+l. 85 Writing geostats.idv[351] (geostats350x.svg)
+l. 85 Writing geostats.idv[352] (geostats351x.svg)
+l. 108 Writing geostats.idv[353] (geostats352x.svg)
+l. 108 Writing geostats.idv[354] (geostats353x.svg)
+l. 108 Writing geostats.idv[355] (geostats354x.svg)
+l. 108 Writing geostats.idv[356] (geostats355x.svg)
+l. 108 Writing geostats.idv[357] (geostats356x.svg)
+l. 108 Writing geostats.idv[358] (geostats357x.svg)
+l. 109 Writing geostats.idv[359] (geostats358x.svg)
+l. 109 Writing geostats.idv[360] (geostats359x.svg)
+l. 109 Writing geostats.idv[361] (geostats360x.svg)
+l. 109 Writing geostats.idv[362] (geostats361x.svg)
+l. 109 Writing geostats.idv[363] (geostats362x.svg)
+l. 109 Writing geostats.idv[364] (geostats363x.svg)
+[236]
+l. 132 Writing geostats.idv[365] (geostats364x.svg)
+l. 132 Writing geostats.idv[366] (geostats365x.svg)
+l. 132 Writing geostats.idv[367] (geostats366x.svg)
+l. 132 Writing geostats.idv[368] (geostats367x.svg)
+l. 132 Writing geostats.idv[369] (geostats368x.svg)
+l. 132 Writing geostats.idv[370] (geostats369x.svg)
+l. 133 Writing geostats.idv[371] (geostats370x.svg)
+l. 133 Writing geostats.idv[372] (geostats371x.svg)
+l. 133 Writing geostats.idv[373] (geostats372x.svg)
+l. 133 Writing geostats.idv[374] (geostats373x.svg)
+l. 133 Writing geostats.idv[375] (geostats374x.svg)
+l. 133 Writing geostats.idv[376] (geostats375x.svg)
+l. 133 Writing geostats.idv[377] (geostats376x.svg)
+l. 145 Writing geostats.idv[378] (geostats377x.svg)
+[237]
+l. 156 Writing geostats.idv[379] (geostats378x.svg)
+l. 177 Writing geostats.idv[380] (geostats379x.svg)
+l. 177 Writing geostats.idv[381] (geostats380x.svg)
+l. 177 Writing geostats.idv[382] (geostats381x.svg)
+l. 177 Writing geostats.idv[383] (geostats382x.svg)
+l. 177 Writing geostats.idv[384] (geostats383x.svg)
+l. 177 Writing geostats.idv[385] (geostats384x.svg)
+l. 178 Writing geostats.idv[386] (geostats385x.svg)
+l. 178 Writing geostats.idv[387] (geostats386x.svg)
+l. 178 Writing geostats.idv[388] (geostats387x.svg)
+l. 178 Writing geostats.idv[389] (geostats388x.svg)
+l. 178 Writing geostats.idv[390] (geostats389x.svg)
+l. 178 Writing geostats.idv[391] (geostats390x.svg)
+l. 178 Writing geostats.idv[392] (geostats391x.svg)
+l. 190 Writing geostats.idv[393] (geostats392x.svg)
 l.200 --- TeX4ht warning --- File `"../figures/semivariogram.xbb"' not found --
 -
 l.200 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/se
 mivariogram.xbb" (no BoundingBox) ---
 l. 200 --- needs --- ../figures/semivariogram-.png ---
-[236]
-l. 222 Writing geostats.idv[383] (geostats382x.svg)
-l. 236 Writing geostats.idv[384] (geostats383x.svg)
-[237]
-l. 242 Writing geostats.idv[385] (geostats384x.svg)
+[238]
+l. 222 Writing geostats.idv[394] (geostats393x.svg)
+l. 236 Writing geostats.idv[395] (geostats394x.svg)
+[239]
+l. 242 Writing geostats.idv[396] (geostats395x.svg)
 l.248 --- TeX4ht warning --- File `"../figures/semivariogramfit.xbb"' not found
  ---
 l.248 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/se
@@ -4346,33 +4361,33 @@ l.275 --- TeX4ht warning --- File `"../figures/snr.xbb"' not found ---
 l.275 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/sn
 r.xbb" (no BoundingBox) ---
 l. 275 --- needs --- ../figures/snr-.png ---
-[238]
-l. 296 Writing geostats.idv[386] (geostats385x.svg)
-l. 311 Writing geostats.idv[387] (geostats386x.svg)
-[239]
-l. 346 Writing geostats.idv[388] (geostats387x.svg)
-l. 355 Writing geostats.idv[389] (geostats388x.svg)
 [240]
-l. 413 Writing geostats.idv[390] (geostats389x.svg)
+l. 296 Writing geostats.idv[397] (geostats396x.svg)
+l. 311 Writing geostats.idv[398] (geostats397x.svg)
+[241]
+l. 346 Writing geostats.idv[399] (geostats398x.svg)
+l. 355 Writing geostats.idv[400] (geostats399x.svg)
+[242]
+l. 413 Writing geostats.idv[401] (geostats400x.svg)
 l.424 --- TeX4ht warning --- File `"../figures/meusecontour.xbb"' not found ---
 
 l.424 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/me
 usecontour.xbb" (no BoundingBox) ---
 l. 424 --- needs --- ../figures/meusecontour-.png ---
-[241]
-l. 437 Writing geostats.idv[391] (geostats390x.svg)
-l. 445 Writing geostats.idv[392] (geostats391x.svg)
-l. 453 Writing geostats.idv[393] (geostats392x.svg)
+[243]
+l. 437 Writing geostats.idv[402] (geostats401x.svg)
+l. 445 Writing geostats.idv[403] (geostats402x.svg)
+l. 453 Writing geostats.idv[404] (geostats403x.svg)
 l.457 --- TeX4ht warning --- File `"../figures/meusecontourerr.xbb"' not found 
 ---
 l.457 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/me
 usecontourerr.xbb" (no BoundingBox) ---
 l. 457 --- needs --- ../figures/meusecontourerr-.png ---
-[242]) (./R.tex [243] [244
+[244]) (./R.tex [245] [246
 
 ]
 Chapter 17.
-[245] [246]
+[247] [248]
 Overfull \hbox (356.27794pt too wide) in paragraph at lines 158--168
 [][][][][][][][][][][][][][][][]  
  []
@@ -4382,12 +4397,12 @@ Overfull \hbox (982.8849pt too wide) in paragraph at lines 195--205
 [][][][][][][][][][][][][][][][]  
  []
 
-[247] [248]
+[249] [250]
 Overfull \hbox (218.30943pt too wide) in paragraph at lines 305--314
 [][][][][][][][][][][][][][][]  
  []
 
-[249]
+[251]
 Overfull \hbox (885.15721pt too wide) in paragraph at lines 328--339
 [][][][][][][][][][][][][][][][][]  
  []
@@ -4397,7 +4412,7 @@ Overfull \hbox (362.02663pt too wide) in paragraph at lines 379--390
 [][][][][][][][][][][][][][][][][]  
  []
 
-[250]
+[252]
 Overfull \hbox (614.96889pt too wide) in paragraph at lines 411--418
 [][][][][][][][][][][][][]  
  []
@@ -4412,167 +4427,164 @@ Overfull \hbox (143.57649pt too wide) in paragraph at lines 435--442
 [][][][][][][][][][][][][]  
  []
 
-[251] [252]
+[253] [254]
 Overfull \hbox (499.99513pt too wide) in paragraph at lines 550--559
 [][][][][][][][][][][][][][][]  
  []
 
 --- file geostats20.html ---
-[253]
+[255]
 Overfull \hbox (701.1992pt too wide) in paragraph at lines 614--626
 [][][][][][][][][][][][][][][][][][]  
  []
 
 --- file geostats21.html ---
---- file geostats22.html ---
-[254]
-l. 709 Writing geostats.idv[394] (geostats393x.svg)
-[255] [256]
-Overfull \hbox (1396.79042pt too wide) in paragraph at lines 837--850
+[256]
+l. 704 Writing geostats.idv[405] (geostats404x.svg)
+[257] [258]
+Overfull \hbox (1396.79042pt too wide) in paragraph at lines 832--845
 [][][][][][][][][][][][][][][][][][][]  
  []
 
-l. 861 Writing geostats.idv[395] (geostats394x.svg)
-[257]
-Overfull \hbox (264.29893pt too wide) in paragraph at lines 865--873
-[][][][][][][][][][][][][][]  
- []
-
-[258]
-l. 968 Writing geostats.idv[396] (geostats395x.svg)
+l. 856 Writing geostats.idv[406] (geostats405x.svg)
 [259]
-Overfull \hbox (1149.59685pt too wide) in paragraph at lines 979--992
-[][][][][][][][][][][][][][][][][][][]  
- []
-
-l. 1012 Writing geostats.idv[397] (geostats396x.svg)
-
-Overfull \hbox (580.47676pt too wide) in paragraph at lines 1032--1042
-[][][][][][][][][][][][][][][][]  
+Overfull \hbox (264.29893pt too wide) in paragraph at lines 860--868
+[][][][][][][][][][][][][][]  
  []
 
 [260]
-l. 1061 Writing geostats.idv[398] (geostats397x.svg)
+l. 963 Writing geostats.idv[407] (geostats406x.svg)
+[261]
+Overfull \hbox (1149.59685pt too wide) in paragraph at lines 974--987
+[][][][][][][][][][][][][][][][][][][]  
+ []
 
-Overfull \hbox (344.78056pt too wide) in paragraph at lines 1076--1084
+l. 1007 Writing geostats.idv[408] (geostats407x.svg)
+
+Overfull \hbox (580.47676pt too wide) in paragraph at lines 1027--1037
+[][][][][][][][][][][][][][][][]  
+ []
+
+[262]
+l. 1056 Writing geostats.idv[409] (geostats408x.svg)
+
+Overfull \hbox (344.78056pt too wide) in paragraph at lines 1071--1079
 [][][][][][][][][][][][][][]  
  []
 
-l.1089 --- TeX4ht warning --- File `"../figures/LLpois.xbb"' not found ---
-l.1089 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/L
+l.1084 --- TeX4ht warning --- File `"../figures/LLpois.xbb"' not found ---
+l.1084 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/L
 Lpois.xbb" (no BoundingBox) ---
-l. 1089 --- needs --- ../figures/LLpois-.png ---
-[261]
+l. 1084 --- needs --- ../figures/LLpois-.png ---
+--- file geostats22.html ---
+[263] [264]
+l. 1185 Writing geostats.idv[410] (geostats409x.svg)
+
+Overfull \hbox (103.33568pt too wide) in paragraph at lines 1212--1216
+[][][][][][][][][][]  
+ []
+
+[265]
+Overfull \hbox (189.566pt too wide) in paragraph at lines 1235--1240
+[][][][][][][][][][][]  
+ []
+
+[266] [267]
 --- file geostats23.html ---
-[262]
-l. 1190 Writing geostats.idv[399] (geostats398x.svg)
-[263]
-Overfull \hbox (873.65984pt too wide) in paragraph at lines 1233--1240
-[][][][][][][][][][][][][]  
- []
 
-
-Overfull \hbox (126.33043pt too wide) in paragraph at lines 1248--1252
-[][][][][][][][][][]  
- []
-
-[264] [265]
---- file geostats24.html ---
-[266]
-Overfull \hbox (442.50826pt too wide) in paragraph at lines 1434--1439
+Overfull \hbox (442.50826pt too wide) in paragraph at lines 1397--1402
 [][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (91.8383pt too wide) in paragraph at lines 1444--1448
+Overfull \hbox (91.8383pt too wide) in paragraph at lines 1407--1411
 [][][][][][][][][][]  
- []
-
-
-Overfull \hbox (1138.09947pt too wide) in paragraph at lines 1453--1464
-[][][][][][][][][][][][][][][][][]  
- []
-
-[267]
---- file geostats25.html ---
-
-Overfull \hbox (201.06337pt too wide) in paragraph at lines 1492--1497
-[][][][][][][][][][][]  
  []
 
 [268]
-Overfull \hbox (494.24644pt too wide) in paragraph at lines 1552--1557
+Overfull \hbox (1138.09947pt too wide) in paragraph at lines 1416--1427
+[][][][][][][][][][][][][][][][][]  
+ []
+
+--- file geostats24.html ---
+
+Overfull \hbox (201.06337pt too wide) in paragraph at lines 1455--1460
 [][][][][][][][][][][]  
  []
 
---- file geostats26.html ---
 [269]
-Overfull \hbox (97.58699pt too wide) in paragraph at lines 1597--1600
+Overfull \hbox (494.24644pt too wide) in paragraph at lines 1511--1516
+[][][][][][][][][][][]  
+ []
+
+--- file geostats25.html ---
+[270]
+Overfull \hbox (97.58699pt too wide) in paragraph at lines 1556--1559
 [][][][][][][][][]  
  []
 
 
-Overfull \hbox (218.30943pt too wide) in paragraph at lines 1632--1638
+Overfull \hbox (218.30943pt too wide) in paragraph at lines 1591--1597
 [][][][][][][][][][][][]  
  []
 
-[270]
-Overfull \hbox (212.56075pt too wide) in paragraph at lines 1672--1676
+[271]
+Overfull \hbox (212.56075pt too wide) in paragraph at lines 1631--1635
 [][][][][][][][][][]  
  []
 
-[271] [272]
-Overfull \hbox (178.06862pt too wide) in paragraph at lines 1785--1789
-[][][][][][][][][][]  
- []
-
-[273]
-Overfull \hbox (206.81206pt too wide) in paragraph at lines 1863--1867
+[272] [273]
+Overfull \hbox (178.06862pt too wide) in paragraph at lines 1744--1748
 [][][][][][][][][][]  
  []
 
 [274]
-Overfull \hbox (74.59224pt too wide) in paragraph at lines 1917--1920
-[][][][][][][][][]  
- []
-
-
-Overfull \hbox (954.14146pt too wide) in paragraph at lines 1924--1931
-[][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (954.14146pt too wide) in paragraph at lines 1935--1943
-[][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (80.34093pt too wide) in paragraph at lines 1947--1951
+Overfull \hbox (206.81206pt too wide) in paragraph at lines 1822--1826
 [][][][][][][][][][]  
  []
 
 [275]
-Overfull \hbox (11.35667pt too wide) in paragraph at lines 1967--1972
-[][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (494.24644pt too wide) in paragraph at lines 2015--2020
-[][][][][][][][][][][]  
- []
-
-[276]
-Overfull \hbox (63.09486pt too wide) in paragraph at lines 2025--2028
+Overfull \hbox (74.59224pt too wide) in paragraph at lines 1876--1879
 [][][][][][][][][]  
  []
 
-) (./exercises.tex [277] [278
 
-]
+Overfull \hbox (954.14146pt too wide) in paragraph at lines 1883--1890
+[][][][][][][][][][][][][]  
+ []
+
+[276]
+Overfull \hbox (954.14146pt too wide) in paragraph at lines 1894--1902
+[][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (80.34093pt too wide) in paragraph at lines 1906--1910
+[][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (11.35667pt too wide) in paragraph at lines 1926--1931
+[][][][][][][][][][][]  
+ []
+
+[277]
+Overfull \hbox (494.24644pt too wide) in paragraph at lines 1974--1979
+[][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (63.09486pt too wide) in paragraph at lines 1984--1987
+[][][][][][][][][]  
+ []
+
+) (./exercises.tex [278]
 Chapter 18.
-l. 11 Writing geostats.idv[400] (geostats399x.svg)
-l. 31 Writing geostats.idv[401] (geostats400x.svg)
-[279] [280] [281]
+l. 11 Writing geostats.idv[411] (geostats410x.svg)
+l. 31 Writing geostats.idv[412] (geostats411x.svg)
+[279
+
+] [280] [281]
 l.190 --- TeX4ht warning --- File `"../figures/e.xbb"' not found ---
 l.190 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/e.
 xbb" (no BoundingBox) ---
@@ -4586,21 +4598,21 @@ l.199 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/e.
 xbb" (no BoundingBox) ---
 l. 199 --- needs --- ../figures/e-.png ---
 [282]
-l. 215 Writing geostats.idv[402] (geostats401x.svg)
-l. 247 Writing geostats.idv[403] (geostats402x.svg)
+l. 215 Writing geostats.idv[413] (geostats412x.svg)
+l. 247 Writing geostats.idv[414] (geostats413x.svg)
 [283]
---- file geostats27.html ---
-l. 309 Writing geostats.idv[404] (geostats403x.svg)
+--- file geostats26.html ---
+l. 309 Writing geostats.idv[415] (geostats414x.svg)
 [284]
-l. 328 Writing geostats.idv[405] (geostats404x.svg)
-l. 346 Writing geostats.idv[406] (geostats405x.svg)
+l. 328 Writing geostats.idv[416] (geostats415x.svg)
+l. 346 Writing geostats.idv[417] (geostats416x.svg)
 [285]
 Overfull \hbox (735.69133pt too wide) in paragraph at lines 365--371
 [][][][][][][][][][][][]  
  []
 
 [286] [287] [288]
-l. 566 Writing geostats.idv[407] (geostats406x.svg)
+l. 568 Writing geostats.idv[418] (geostats417x.svg)
 [289] [290]) (./solutions.tex [291] [292
 
 ]
@@ -4651,13 +4663,13 @@ Overfull \hbox (34.35143pt too wide) in paragraph at lines 230--237
  []
 
 [296]
-l. 308 Writing geostats.idv[408] (geostats407x.svg)
-l. 309 Writing geostats.idv[409] (geostats408x.svg)
-l. 309 Writing geostats.idv[410] (geostats409x.svg)
-l. 310 Writing geostats.idv[411] (geostats410x.svg)
-l. 326 Writing geostats.idv[412] (geostats411x.svg)
+l. 308 Writing geostats.idv[419] (geostats418x.svg)
+l. 309 Writing geostats.idv[420] (geostats419x.svg)
+l. 309 Writing geostats.idv[421] (geostats420x.svg)
+l. 310 Writing geostats.idv[422] (geostats421x.svg)
+l. 326 Writing geostats.idv[423] (geostats422x.svg)
 [297]
-l. 338 Writing geostats.idv[413] (geostats412x.svg)
+l. 338 Writing geostats.idv[424] (geostats423x.svg)
 
 Overfull \hbox (505.74382pt too wide) in paragraph at lines 344--353
 [][][][][][][][][][][][][][][]  
@@ -4668,249 +4680,232 @@ Overfull \hbox (120.58174pt too wide) in paragraph at lines 359--366
 [][][][][][][][][][][][][]  
  []
 
-l. 372 Writing geostats.idv[414] (geostats413x.svg)
+l. 372 Writing geostats.idv[425] (geostats424x.svg)
 [298]
-l. 407 Writing geostats.idv[415] (geostats414x.svg)
+l. 407 Writing geostats.idv[426] (geostats425x.svg)
 [299]
 Overfull \hbox (413.76482pt too wide) in paragraph at lines 497--507
 [][][][][][][][][][][][][][][][]  
  []
 
 [300]
-l. 537 Writing geostats.idv[416] (geostats415x.svg)
-l. 543 Writing geostats.idv[417] (geostats416x.svg)
+l. 537 Writing geostats.idv[427] (geostats426x.svg)
+l. 543 Writing geostats.idv[428] (geostats427x.svg)
 [301]
-l. 561 Writing geostats.idv[418] (geostats417x.svg)
-l. 577 Writing geostats.idv[419] (geostats418x.svg)
-l. 584 Writing geostats.idv[420] (geostats419x.svg)
-[302]
-Overfull \hbox (2718.9886pt too wide) in paragraph at lines 648--661
+l. 561 Writing geostats.idv[429] (geostats428x.svg)
+l. 577 Writing geostats.idv[430] (geostats429x.svg)
+l. 584 Writing geostats.idv[431] (geostats430x.svg)
+[302] [303]
+Overfull \hbox (2718.9886pt too wide) in paragraph at lines 668--681
 [][][][][][][][][][][][][][][][][][][]  
  []
 
-[303]
-Overfull \hbox (275.79631pt too wide) in paragraph at lines 710--716
+[304]
+Overfull \hbox (275.79631pt too wide) in paragraph at lines 730--736
 [][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (528.73857pt too wide) in paragraph at lines 721--730
+Overfull \hbox (528.73857pt too wide) in paragraph at lines 741--750
 [][][][][][][][][][][][][][][]  
  []
 
-[304]
-l. 754 Writing geostats.idv[421] (geostats420x.svg)
-l. 770 Writing geostats.idv[422] (geostats421x.svg)
+l. 774 Writing geostats.idv[432] (geostats431x.svg)
 [305]
-l. 776 Writing geostats.idv[423] (geostats422x.svg)
-l. 776 Writing geostats.idv[424] (geostats423x.svg)
-l. 778 Writing geostats.idv[425] (geostats424x.svg)
-l. 778 Writing geostats.idv[426] (geostats425x.svg)
-l. 792 Writing geostats.idv[427] (geostats426x.svg)
-l. 800 Writing geostats.idv[428] (geostats427x.svg)
+l. 790 Writing geostats.idv[433] (geostats432x.svg)
+l. 796 Writing geostats.idv[434] (geostats433x.svg)
+l. 796 Writing geostats.idv[435] (geostats434x.svg)
+l. 798 Writing geostats.idv[436] (geostats435x.svg)
+l. 798 Writing geostats.idv[437] (geostats436x.svg)
+l. 812 Writing geostats.idv[438] (geostats437x.svg)
 [306]
-Overfull \hbox (69.93883pt too wide) in paragraph at lines 818--823
+l. 820 Writing geostats.idv[439] (geostats438x.svg)
+
+Overfull \hbox (69.93883pt too wide) in paragraph at lines 838--843
 [][][][][][][][][][][]  
  []
 
-l. 852 Writing geostats.idv[429] (geostats428x.svg)
 [307]
-l. 887 Writing geostats.idv[430] (geostats429x.svg)
-l. 888 Writing geostats.idv[431] (geostats430x.svg)
+l. 872 Writing geostats.idv[440] (geostats439x.svg)
+l. 910 Writing geostats.idv[441] (geostats440x.svg)
 [308]
-l. 890 Writing geostats.idv[432] (geostats431x.svg)
-l. 891 Writing geostats.idv[433] (geostats432x.svg)
-l. 892 Writing geostats.idv[434] (geostats433x.svg)
+l. 911 Writing geostats.idv[442] (geostats441x.svg)
+l. 913 Writing geostats.idv[443] (geostats442x.svg)
+l. 914 Writing geostats.idv[444] (geostats443x.svg)
+l. 915 Writing geostats.idv[445] (geostats444x.svg)
 [309]
-l. 899 Writing geostats.idv[435] (geostats434x.svg)
-l. 900 Writing geostats.idv[436] (geostats435x.svg)
-l. 903 Writing geostats.idv[437] (geostats436x.svg)
-l. 907 Writing geostats.idv[438] (geostats437x.svg)
-l. 910 Writing geostats.idv[439] (geostats438x.svg)
+l. 922 Writing geostats.idv[446] (geostats445x.svg)
+l. 923 Writing geostats.idv[447] (geostats446x.svg)
+l. 926 Writing geostats.idv[448] (geostats447x.svg)
+l. 930 Writing geostats.idv[449] (geostats448x.svg)
 [310]
-Overfull \hbox (449.37926pt too wide) in paragraph at lines 923--931
+l. 933 Writing geostats.idv[450] (geostats449x.svg)
+
+Overfull \hbox (459.75432pt too wide) in paragraph at lines 946--954
 [][][][][][][][][][][][][][]  
  []
 
-l. 934 Writing geostats.idv[440] (geostats439x.svg)
-l. 937 Writing geostats.idv[441] (geostats440x.svg)
+l. 957 Writing geostats.idv[451] (geostats450x.svg)
+l. 960 Writing geostats.idv[452] (geostats451x.svg)
 [311]
-l. 952 Writing geostats.idv[442] (geostats441x.svg)
-l. 953 Writing geostats.idv[443] (geostats442x.svg)
-l. 955 Writing geostats.idv[444] (geostats443x.svg)
-l. 956 Writing geostats.idv[445] (geostats444x.svg)
-[312]
-l. 957 Writing geostats.idv[446] (geostats445x.svg)
-l. 964 Writing geostats.idv[447] (geostats446x.svg)
-l. 965 Writing geostats.idv[448] (geostats447x.svg)
-l. 968 Writing geostats.idv[449] (geostats448x.svg)
-[313]
-l. 972 Writing geostats.idv[450] (geostats449x.svg)
-l. 975 Writing geostats.idv[451] (geostats450x.svg)
-
-Overfull \hbox (449.37926pt too wide) in paragraph at lines 988--996
-[][][][][][][][][][][][][][]  
- []
-
-l. 999 Writing geostats.idv[452] (geostats451x.svg)
-[314]
-l. 1002 Writing geostats.idv[453] (geostats452x.svg)
-
-Overfull \hbox (505.74382pt too wide) in paragraph at lines 1022--1028
+Overfull \hbox (505.74382pt too wide) in paragraph at lines 978--984
 [][][][][][][][][][][][]  
  []
 
-[315]
-l. 1044 Writing geostats.idv[454] (geostats453x.svg)
-l. 1055 Writing geostats.idv[455] (geostats454x.svg)
-l. 1062 Writing geostats.idv[456] (geostats455x.svg)
-l. 1065 Writing geostats.idv[457] (geostats456x.svg)
-[316]
-l. 1086 Writing geostats.idv[458] (geostats457x.svg)
+l. 1000 Writing geostats.idv[453] (geostats452x.svg)
+l. 1011 Writing geostats.idv[454] (geostats453x.svg)
+[312]
+l. 1018 Writing geostats.idv[455] (geostats454x.svg)
+l. 1021 Writing geostats.idv[456] (geostats455x.svg)
+l. 1042 Writing geostats.idv[457] (geostats456x.svg)
 
-Overfull \hbox (488.49776pt too wide) in paragraph at lines 1090--1097
+Overfull \hbox (488.49776pt too wide) in paragraph at lines 1046--1053
 [][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (1730.21431pt too wide) in paragraph at lines 1103--1113
+Overfull \hbox (1730.21431pt too wide) in paragraph at lines 1059--1069
 [][][][][][][][][][][][][][][][]  
  []
 
-
-Overfull \hbox (2615.51222pt too wide) in paragraph at lines 1145--1162
+[313]
+Overfull \hbox (2615.51222pt too wide) in paragraph at lines 1101--1118
 [][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[317]
-Overfull \hbox (2299.3344pt too wide) in paragraph at lines 1166--1176
+
+Overfull \hbox (2299.3344pt too wide) in paragraph at lines 1122--1132
 [][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (241.30418pt too wide) in paragraph at lines 1190--1196
+Overfull \hbox (241.30418pt too wide) in paragraph at lines 1146--1152
+[][][][][][][][][][][][]  
+ []
+
+[314]
+Overfull \hbox (206.81206pt too wide) in paragraph at lines 1184--1188
+[][][][][][][][][][]  
+ []
+
+l. 1200 Writing geostats.idv[458] (geostats457x.svg)
+[315]
+Overfull \hbox (51.59749pt too wide) in paragraph at lines 1239--1243
+[][][][][][][][][][]  
+ []
+
+[316]
+Overfull \hbox (908.15196pt too wide) in paragraph at lines 1316--1322
 [][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (206.81206pt too wide) in paragraph at lines 1228--1232
+Overfull \hbox (287.29369pt too wide) in paragraph at lines 1327--1331
 [][][][][][][][][][]  
  []
 
-[318]
-l. 1244 Writing geostats.idv[459] (geostats458x.svg)
-
-Overfull \hbox (51.59749pt too wide) in paragraph at lines 1283--1287
-[][][][][][][][][][]  
- []
-
-[319] [320]
-Overfull \hbox (908.15196pt too wide) in paragraph at lines 1360--1366
-[][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (287.29369pt too wide) in paragraph at lines 1371--1375
-[][][][][][][][][][]  
- []
-
-
-Overfull \hbox (3282.36pt too wide) in paragraph at lines 1403--1415
+[317]
+Overfull \hbox (3282.36pt too wide) in paragraph at lines 1359--1371
 [][][][][][][][][][][][][][][][][][]  
  []
 
-[321]
-l.1435 --- TeX4ht warning --- File `"../figures/PCAiris.xbb"' not found ---
-l.1435 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/P
+l.1391 --- TeX4ht warning --- File `"../figures/PCAiris.xbb"' not found ---
+l.1391 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/P
 CAiris.xbb" (no BoundingBox) ---
-l. 1435 --- needs --- ../figures/PCAiris-.png ---
-
-Overfull \hbox (1437.03123pt too wide) in paragraph at lines 1467--1475
+l. 1391 --- needs --- ../figures/PCAiris-.png ---
+[318]
+Overfull \hbox (1437.03123pt too wide) in paragraph at lines 1423--1431
 [][][][][][][][][][][][][][]  
  []
 
-l.1478 --- TeX4ht warning --- File `"../figures/elbow.xbb"' not found ---
-l.1478 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/e
+l.1434 --- TeX4ht warning --- File `"../figures/elbow.xbb"' not found ---
+l.1434 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/e
 lbow.xbb" (no BoundingBox) ---
-l. 1478 --- needs --- ../figures/elbow-.png ---
-[322]
-l.1499 --- TeX4ht warning --- File `"../figures/DZtree.xbb"' not found ---
-l.1499 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/D
+l. 1434 --- needs --- ../figures/elbow-.png ---
+l.1455 --- TeX4ht warning --- File `"../figures/DZtree.xbb"' not found ---
+l.1455 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/D
 Ztree.xbb" (no BoundingBox) ---
-l. 1499 --- needs --- ../figures/DZtree-.png ---
-[323] [324] [325]
-Overfull \hbox (472.34697pt too wide) in paragraph at lines 1667--1673
+l. 1455 --- needs --- ../figures/DZtree-.png ---
+[319] [320] [321]
+Overfull \hbox (472.34697pt too wide) in paragraph at lines 1623--1629
 [][][][][][][][][][][][]  
  []
 
-
-Overfull \hbox (229.80681pt too wide) in paragraph at lines 1699--1703
+[322]
+Overfull \hbox (229.80681pt too wide) in paragraph at lines 1655--1659
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (270.04762pt too wide) in paragraph at lines 1712--1718
+Overfull \hbox (270.04762pt too wide) in paragraph at lines 1668--1674
 [][][][][][][][][][][][]  
  []
 
-l.1721 --- TeX4ht warning --- File `"../figures/testPCA.xbb"' not found ---
-l.1721 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/t
+l.1677 --- TeX4ht warning --- File `"../figures/testPCA.xbb"' not found ---
+l.1677 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/t
 estPCA.xbb" (no BoundingBox) ---
-l. 1721 --- needs --- ../figures/testPCA-.png ---
-[326] [327]
-Overfull \hbox (63.09486pt too wide) in paragraph at lines 1807--1810
+l. 1677 --- needs --- ../figures/testPCA-.png ---
+[323] [324]
+Overfull \hbox (63.09486pt too wide) in paragraph at lines 1763--1766
 [][][][][][][][][]  
  []
 
 
-Overfull \hbox (172.31993pt too wide) in paragraph at lines 1815--1819
+Overfull \hbox (172.31993pt too wide) in paragraph at lines 1771--1775
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (80.34093pt too wide) in paragraph at lines 1823--1826
+Overfull \hbox (80.34093pt too wide) in paragraph at lines 1779--1782
 [][][][][][][][][]  
  []
 
 
-Overfull \hbox (270.04762pt too wide) in paragraph at lines 1830--1834
+Overfull \hbox (270.04762pt too wide) in paragraph at lines 1786--1790
 [][][][][][][][][][]  
  []
 
-[328]
-Overfull \hbox (660.95839pt too wide) in paragraph at lines 1887--1893
+[325]
+Overfull \hbox (660.95839pt too wide) in paragraph at lines 1843--1849
 [][][][][][][][][][][][]  
  []
 
-l.1901 --- TeX4ht warning --- File `"../figures/hills.xbb"' not found ---
-l.1901 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/h
+l.1857 --- TeX4ht warning --- File `"../figures/hills.xbb"' not found ---
+l.1857 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/h
 ills.xbb" (no BoundingBox) ---
-l. 1901 --- needs --- ../figures/hills-.png ---
-[329]
-Overfull \hbox (488.49776pt too wide) in paragraph at lines 1929--1934
+l. 1857 --- needs --- ../figures/hills-.png ---
+[326]
+Overfull \hbox (488.49776pt too wide) in paragraph at lines 1885--1890
 [][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (379.27269pt too wide) in paragraph at lines 1939--1945
+Overfull \hbox (379.27269pt too wide) in paragraph at lines 1895--1901
 [][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (902.40327pt too wide) in paragraph at lines 1949--1955
+Overfull \hbox (902.40327pt too wide) in paragraph at lines 1905--1911
 [][][][][][][][][][][][]  
  []
 
-[330]
-l.1971 --- TeX4ht warning --- File `"../figures/sphvsexp.xbb"' not found ---
-l.1971 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/s
+l.1927 --- TeX4ht warning --- File `"../figures/sphvsexp.xbb"' not found ---
+l.1927 --- TeX4ht warning --- Cannot determine size of graphic in "../figures/s
 phvsexp.xbb" (no BoundingBox) ---
-l. 1971 --- needs --- ../figures/sphvsexp-.png ---
-) (./tables.tex [331] [332
-
-]
+l. 1927 --- needs --- ../figures/sphvsexp-.png ---
+[327]) (./tables.tex [328]
 Chapter 20.
-[333] [334
+[329
+
+] [330
+
+] [331
+
+] [332
+
+] [333
+
+] [334
 
 ] [335
 
@@ -4930,17 +4925,9 @@ Chapter 20.
 
 ] [343
 
-] [344
+]) [344
 
 ] [345
-
-] [346
-
-] [347
-
-]) [348
-
-] [349
 
 ] (./geostats.aux)
 
@@ -4948,12 +4935,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 35124 strings out of 478288
- 605114 string characters out of 5849315
- 1271716 words of memory out of 5000000
- 52144 multiletter control sequences out of 15000+600000
+ 35112 strings out of 478288
+ 605007 string characters out of 5849315
+ 1270898 words of memory out of 5000000
+ 52132 multiletter control sequences out of 15000+600000
  480649 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,28n,132p,1897b,1098s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on geostats.dvi (352 pages, 2749608 bytes).
+Output written on geostats.dvi (348 pages, 2745728 bytes).

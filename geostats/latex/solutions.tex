@@ -609,7 +609,7 @@ The probability that it contains 41 to 60 fission tracks is:
   $H_0: \lambda=2$\\
   $H_{\!A}: \lambda<2$
 
-In \texttt{R}:
+  In \texttt{R}:
 
 \begin{console}
 > h <- poisson.test(x=12,T=10,r=2,alternative='less')
@@ -618,7 +618,27 @@ In \texttt{R}:
 \end{console}
 
 $H_0$ is rejected on a 95\% confidence level, and so it would be
-best to cease operations and abandon the mining site.
+best to cease operations and abandon the mining site. Instead of
+using the number of diamonds per tonne to define $\lambda$, we
+can also use the number of diamonds per 10 tonnes:
+
+  $H_0: \lambda=20$\\
+  $H_{\!A}: \lambda<20$
+
+\begin{console}
+> qpois(p=0.05,lambda=20)
+[1] 13 
+\end{console}
+
+$k = 12 \in R = \{0,\ldots,12\}$, leading to the rejection of
+$H_0$. Equivalently:
+
+\begin{console}
+> poisson.test(x=12,T=1,r=20,alternative='less')$p.value
+[1] 0.03901199
+\end{console}
+
+\noindent which is the same result as before.
 
 \item To construct a 95\% confidence interval, we again use
   \texttt{poisson.test}, but have no need to formulate a null
@@ -883,70 +903,8 @@ Running this script in \texttt{R} yields
 \label{sec:sol-comparingdistributions}
 
 \begin{enumerate}
-\item Carrying out a one-sided t-test:
-  \[H_0: \mu = 750.0\]
-  \[H_a: \mu > 750.0\]
-  Compute a one-sided t-statistic:
-  \[\bar{x} = \frac{750.1 + 750.4 + 749.9 + 750.3 + 750.3}{5} = 750.2\]
-  \[s[x] = \sqrt{\frac{(-0.1)^2 + 0.2^2 + (-0.3)^2 + 0.1^2 + 0.1^2}{5-1}} = 0.2\]
-  \[t = \frac{750.2-750.0}{0.2/\sqrt{5}} = 2.236\]
-  $t$ was drawn from a t-distribution with 4 degrees of freedom,
-  with $\alpha = 0.05$. Using Table~\ref{tab:t}, the rejection
-  region: $R = \{t>2.13\}$. $2.236 \in R$, therefore, $H_0$ is
-  rejected and we conclude that the mean volume exceeds 750\,ml.
 
-\item Switching to a two-sided t-test:
-  \[H_0: \mu = 750.0\]
-  \[H_a: \mu \neq 750.0\]
-  The t-statistic is the same as before ($t = 2.236$). However,
-  the two-sided rejection region is $R = \{t<-2.78,t>2.78\}$.
-  $2.236 \notin R$, therefore, $H_0$ is not rejected and the mean
-  volume may yet equal 750\,ml.
-  
-\item Using Equation~\ref{eq:tci} and the t-statistic:
-  \[
-  \mu \in \bar{x} \pm t_{df,\alpha/2}\frac{s[x]}{\sqrt{n}}
-  \]
-  \[
-  \mu \in
-  \left\{ 750.2 \pm 2.78 \frac{0.2}{\sqrt{5}} \right\} =
-  \left\{ 750.2 \pm 0.25 \right\}
-  \]
-  This interval overlaps with $\mu=750.0$, reflecting the
-  conclusion drawn from the two-sided hypothesis test of
-  Exercise~\ref{sec:ex-comparingdistributions}.\ref{it:wine-t}.\ref{it:two-sided}.
-
-\end{enumerate}
-
-Repeating the same exercise using \texttt{R}:
-
-\begin{console}
-> wine <- c(750.1,750.4,749.9,750.3,750.3)
-> t.test(wine,mu=750,alternative='greater')$p.value
-[1] 0.04450467
-> t.test(wine,mu=750)$p.value
-[1] 0.08900934
-> t.test(wine)$conf.int
-[1] 749.9517 750.4483
-\end{console}
-
-Bonus note: it is also possible to construct a \emph{one-sided} confidence interval:
-\[
-\mu \in \biggl[\bar{x} + t_{df,\alpha}\frac{s[x]}{\sqrt{n}}, \infty\biggr)
-\]
-\[
-\mu \in
-\biggl[750.2 - 2.13 \frac{0.2}{\sqrt{5}}, \infty \biggr) =
-  \biggl[750.01, \infty\biggr)
-\]
-\noindent which does not overlap with 750.0 and is, therefore,
-compatible with the outcome of the one-sided hypothesis test. In
-\texttt{R}:
-\begin{console}
-> t.test(wine,alternative='greater')$conf.int
-[1] 750.0093      Inf
-\end{console}
-
+\item
 \begin{enumerate}
 \item Carrying out a one-sided t-test:
   \[H_0: \mu = 750.0\]
@@ -1011,8 +969,6 @@ compatible with the outcome of the one-sided hypothesis test. In
 > t.test(wine,alternative='greater')$conf.int
 [1] 750.0093      Inf
 \end{console}
-
-\begin{enumerate}
 
 \item This exercise is most concisely solved using \texttt{R}'s
   \texttt{chisq.test} function. First we amalgamate the data columns
@@ -1082,8 +1038,8 @@ X-squared = 8, df = 4, p-value = 0.09158
   $n_1=7$ natural and $n_2=8$ synthetic diamonds.  The sum of the
   ranks for the natural diamonds is $w = 1 + 3 + 4 + 8 + 9 + 10 + 11 =
   46$.  This is a two-sided test, so we must evaluate the null
-  distribution at $\alpha=0.025$.  Using Table~\ref{tab:wilcox}, the
-  rejection region is $R=\{w<{41}\}$. $46\notin{R}$, so we cannot
+  distribution at $\alpha=0.025$.  Using Table~\ref{tab:w0.025}, the
+  rejection region is $R=\{w<{38}\}$. $46\notin{R}$, so we cannot
   reject the null hypothesis. There is no discernable quality
   difference between the two diamond varieties. Using \texttt{R}:
 
@@ -1637,7 +1593,7 @@ rate of the \texttt{test} data by LDA.
 \item\label{it:sol-mpg2} Convert the data to litres/100km:
 
 \begin{console}
-l100k <- 235/mtcars[,'mpg']
+> l100k <- 235/mtcars[,'mpg']
 \end{console}
 
 \item\label{it:sol-mpg3} Average the litres/100km:
