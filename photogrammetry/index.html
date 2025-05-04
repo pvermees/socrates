@@ -1,0 +1,338 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>Introduction to topographic surveying and photogrammetry</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='notes.css' rel='stylesheet' type='text/css' /> 
+<meta content='notes.tex' name='src' /> 
+<style>
+body{width:800px;margin-left:auto;margin-right:auto;}
+img{max-height:200px; max-width:800px;}
+</style>
+</head><body>
+   <div class='maketitle'>
+
+
+
+<h2 class='titleHead'>Introduction to topographic surveying and photogrammetry</h2>
+          <div class='author'><span class='cmr-12'>Pieter Vermeesch</span>
+<br />   <span class='cmr-12'>Department of Earth Sciences</span>
+<br /><span class='cmr-12'>University College London, KLB 116</span>
+<br />      <span class='cmtt-12'>p.vermeesch@ucl.ac.uk</span></div><br />
+<div class='date'></div>
+   </div>
+<!-- l. 15 --><p class='indent'>   As the name suggests, geomorphology (geo = Earth, morpho = form) is a field of science concerned
+with understanding the Earth’s topography. Topographic maps and Digital Elevation Models (DEMs) are
+therefore essential tools for geomorphological research. In this session, we will review the most common
+techniques to measure topography, using either land-based observations (Section <a href='#levelling'>1<!-- tex4ht:ref: sec:levelling  --></a>) or remote sensing
+(Sections <a href='#photogrammetry'>2<!-- tex4ht:ref: sec:photogrammetry  --></a>-<a href='#srtm'>4<!-- tex4ht:ref: sec:SRTM  --></a>).
+</p>
+   <h3 class='sectionHead' id='levelling'><span class='titlemark'>1   </span> <a id='x1-10001'></a>Levelling</h3>
+<!-- l. 27 --><p class='noindent'>The methods introduced in this section can be carried out at low cost by ground-based individuals.
+</p><!-- l. 30 --><p class='noindent'>
+</p>
+   <h4 class='subsectionHead' id='differential-levelling'><span class='titlemark'>1.1   </span> <a id='x1-20001.1'></a>Differential levelling</h4>
+<!-- l. 32 --><p class='noindent'>This type of survey requires:
+</p><!-- l. 34 --><p class='indent'>
+     </p><ol class='enumerate1'>
+<li class='enumerate' id='x1-2002x1'>A <span class='cmti-10x-x-109'>level</span>, consisting of a telescope and spirit level mounted on a tripod.
+     </li>
+<li class='enumerate' id='x1-2004x2'>A measuring rod, to be held at a distance of 10-100 metres from the level, depending on the
+     steepness of the topography.
+
+     </li>
+<li class='enumerate' id='x1-2006x3'>A point of known elevation, for example an Ordnance Survey Bench Mark.</li></ol>
+<!-- l. 43 --><p class='indent'>   The elevation difference between two points can be mapped by precisely measuring the vertical
+distance along a measuring rod held at some distance from the level (Figure <a href='#-differential-levelling-the-height-difference-h-hh'>1<!-- tex4ht:ref: fig:difflevel  --></a>). The survey is typically
+done along a closed loop, beginning and ending at the same bench mark. To estimate the precision of the
+resulting elevations, we simply divide the mismatch between the start and the end of the loop by the
+number of measurements in the survey.
+</p>
+   <figure class='figure' id='-differential-levelling-the-height-difference-h-hh'> 
+
+
+<a id='x1-20071'></a>
+
+<!-- l. 52 --><p class='noindent'> <img alt='PIC' src='levelling-.png' />
+</p>
+<figcaption class='caption'><span class='id'>Figure 1: </span><span class='content'>Differential levelling. The height difference Δ<span class='cmmi-10x-x-109'>h </span>= <span class='cmmi-10x-x-109'>H </span><span class='cmsy-10x-x-109'>− </span><span class='cmmi-10x-x-109'>h</span>.</span></figcaption><!-- tex4ht:label?: x1-20071  -->
+
+   </figure>
+   <h4 class='subsectionHead' id='trigonometric-levelling'><span class='titlemark'>1.2   </span> <a id='x1-30001.2'></a>Trigonometric levelling</h4>
+<!-- l. 61 --><p class='noindent'>Differential levelling is very effective in areas of relatively gentle topography. However, topographic slopes
+of greater than 5% result in impractically small horizontal steps. This limitation can be overcome by
+using a <span class='cmti-10x-x-109'>theodolite </span>to precisely measure angles to the horizontal over long distances (Figure <a href='#-trigonometric-levelling'>2<!-- tex4ht:ref: fig:triglevel  --></a>).
+Looking at the same distant object from two different locations separated by a known horizontal
+distance, their viewing angles will differ due to the parallex effect (see Section <a href='#stereoimagery'>2.2<!-- tex4ht:ref: sec:parallax  --></a>). Let <span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>1</span></sub>
+be the viewing angle relative to the horizontal plane at location 1 and <span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>2</span></sub> the viewing angle
+at location 2. Let <span class='cmmi-10x-x-109'>D </span>and <span class='cmmi-10x-x-109'>h </span>be the unknown horizontal and vertical distances, respectively,
+from location 2 to the point of interest, and (<span class='cmmi-10x-x-109'>D </span>+ <span class='cmmi-10x-x-109'>d</span>) the horizontal distance from location 1.
+Then
+</p><!-- l. 75 --><p class='indent'>
+</p><table class='align'>
+                       <tr><td class='align-odd'></td>                       <td class='align-even'><span class='cmmi-10x-x-109'>h </span>= <span class='cmmi-10x-x-109'>D </span>tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>2</span></sub>) = (<span class='cmmi-10x-x-109'>D </span>+ <span class='cmmi-10x-x-109'>d</span>)<span class='cmmi-10x-x-109'> </span>tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>1</span></sub>)</td>                                                           <td class='align-label'><a id='x1-3001r1'></a>(1)
+                       </td></tr><tr><td class='align-odd'></td>                       <td class='align-even'> <span class='cmsy-10x-x-109'>⇒ </span><span class='cmmi-10x-x-109'>D </span>[tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>2</span></sub>) <span class='cmsy-10x-x-109'>−</span> tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>1</span></sub>)] = <span class='cmmi-10x-x-109'>d </span>tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>1</span></sub>)</td>                                                        <td class='align-label'><a id='x1-3002r2'></a>(2)
+                       </td></tr><tr><td class='align-odd'></td>                       <td class='align-even'> <span class='cmsy-10x-x-109'>⇒ </span><span class='cmmi-10x-x-109'>D </span>= <span class='cmmi-10x-x-109'>d </span>tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>1</span></sub>)<span class='cmmi-10x-x-109'> ∕ </span>[tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>2</span></sub>) <span class='cmsy-10x-x-109'>−</span> tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>1</span></sub>)]</td>                                                      <td class='align-label'><a id='x1-3003r3'></a>(3)
+                       </td></tr><tr><td class='align-odd'></td>                       <td class='align-even'> <span class='cmsy-10x-x-109'>⇒ </span><span class='cmmi-10x-x-109'>h </span>= <span class='cmmi-10x-x-109'>d </span>tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>1</span></sub>)<span class='cmmi-10x-x-109'> </span>tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>2</span></sub>)<span class='cmmi-10x-x-109'> ∕ </span>[tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>2</span></sub>) <span class='cmsy-10x-x-109'>−</span> tan(<span class='cmmi-10x-x-109'>α</span><sub><span class='cmr-8'>1</span></sub>)]</td>                                              <td class='align-label'><a id='x1-3004r4'></a>(4)                       </td></tr></table>
+   <figure class='figure' id='-trigonometric-levelling'> 
+
+
+<a id='x1-30052'></a>
+
+<!-- l. 83 --><p class='noindent'> <img alt='PIC' src='difflevelling-.png' />
+</p>
+<figcaption class='caption'><span class='id'>Figure 2: </span><span class='content'>Trigonometric levelling</span></figcaption><!-- tex4ht:label?: x1-30052  -->
+
+   </figure>
+<!-- l. 88 --><p class='noindent'><span class='cmti-10x-x-109'>exercise:</span>
+</p><!-- l. 90 --><p class='noindent'>You stand on a level beach and look up to the edge of a cliff above. The viewing angle is 60<sup class='textsuperscript'><span class='cmsy-10'>∘</span></sup>. Stepping
+back 10 m, the viewing angle reduces to 50<sup class='textsuperscript'><span class='cmsy-10'>∘</span></sup>. How high is the cliff?
+</p>
+   <h4 class='subsectionHead' id='barometric-levelling'><span class='titlemark'>1.3   </span> <a id='x1-40001.3'></a>Barometric levelling</h4>
+<!-- l. 97 --><p class='noindent'>Water is an <span class='cmti-10x-x-109'>incompressible </span>fluid, and so its pressure (<span class='cmmi-10x-x-109'>P</span>) increases linearly with depth (<span class='cmmi-10x-x-109'>z</span>):
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='P = ρ g z
+' class='math-display' src='notes0x.png' /><a id='x1-4001r5'></a></div>
+   </td><td class='equation-label'>(5)</td></tr></table>
+<!-- l. 103 --><p class='nopar'>
+</p><!-- l. 105 --><p class='indent'>   where <span class='cmmi-10x-x-109'>ρ </span>is the density of water (<span class='cmsy-10x-x-109'>∼ </span>1 kg/l) and <span class='cmmi-10x-x-109'>g </span>is the gravitational constant (<span class='cmsy-10x-x-109'>∼</span>9.81 m/s<sup><span class='cmr-8'>2</span></sup>).
+Scuba-divers use Equation <a href='#x1-4001r5'>5<!-- tex4ht:ref: eq:water  --></a> to determine the depth of their dives. Likewise, mountaineers can use air
+pressure to determine elevation (<span class='cmmi-10x-x-109'>h</span>). However, because air is a <span class='cmti-10x-x-109'>compressible </span>fluid, they cannot use Equation
+<a href='#x1-4001r5'>5<!-- tex4ht:ref: eq:water  --></a>, but must employ a different formula:
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='P = P∘e−h∕8435
+' class='math-display' src='notes1x.png' /><a id='x1-4002r6'></a></div>
+   </td><td class='equation-label'>(6)</td></tr></table>
+<!-- l. 115 --><p class='nopar'>
+
+</p><!-- l. 117 --><p class='indent'>   where <span class='cmmi-10x-x-109'>P</span><sub><span class='cmsy-8'>∘</span></sub> is the pressure at sea level (<span class='cmsy-10x-x-109'>∼ </span>1013.25 mbar) and 8435 is the <span class='cmti-10x-x-109'>e-folding length </span>of the
+exponential function, in metres. Using Equation <a href='#x1-4002r6'>6<!-- tex4ht:ref: eq:air  --></a>, we can calculate that the air pressure on the summit of
+Mount Makalu (close to 8435m high) is approximately 2.71 (= <span class='cmmi-10x-x-109'>e</span>) times lower than at sea level. One
+problem with barometric elevation surveys is the variability of <span class='cmmi-10x-x-109'>P</span><sub><span class='cmsy-8'>∘</span></sub>, which can range from 980 mbar (low
+pressure, bad weather) to 1050 mbar (high pressure, good weather), potentially resulting in up
+to
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='Δh  = 8435 ln(1050∕980) = 582
+' class='math-display' src='notes2x.png' /><a id='x1-4003r7'></a></div>
+   </td><td class='equation-label'>(7)</td></tr></table>
+<!-- l. 128 --><p class='nopar'>
+</p><!-- l. 130 --><p class='indent'>   metres of variability in ‘apparent elevation’. It is therefore important to calibrate the barometer to the
+elevation of a bench mark before (and after) a barometric survey.
+</p><!-- l. 134 --><p class='noindent'>
+</p>
+   <h4 class='subsectionHead' id='differential-gps'><span class='titlemark'>1.4   </span> <a id='x1-50001.4'></a>(differential) GPS</h4>
+<!-- l. 136 --><p class='noindent'>The Global Positioning System (GPS) measures the horizontal and vertical location of GPS
+receivers relative to a constellation of satellites. The positional accuracy is greatly improved by
+monitoring the relative distances (both horizontally and vertically) relative to a fixed GPS
+receiver, located at a known location (e.g. a bench mark). This is called <span class='cmti-10x-x-109'>differential </span>GPS and
+has allowed geodesists to monitor plate tectonic movements with millimetre accuracy and
+precision.
+</p><!-- l. 145 --><p class='noindent'>
+</p>
+   <h3 class='sectionHead' id='photogrammetry'><span class='titlemark'>2   </span> <a id='x1-60002'></a>Photogrammetry</h3>
+<!-- l. 148 --><p class='noindent'>Levelling surveys are restricted to individual point measurements or profiles. The following
+methods overcome this limitation and cover large continuous areas using photographs, taken from
+above.
+
+</p><!-- l. 152 --><p class='noindent'>
+</p>
+   <h4 class='subsectionHead' id='single-image'><span class='titlemark'>2.1   </span> <a id='x1-70002.1'></a>Single image</h4>
+<!-- l. 154 --><p class='noindent'>It is possible to obtain the height of vertical objects such as trees, buildings or cliff faces from a
+single aerial photograph (Figure <a href='#-photogrammetry-from-a-single-image'>3<!-- tex4ht:ref: fig:singleimage  --></a>). Define the <span class='cmti-10x-x-109'>principal point </span>of an aerial photograph as
+the point located directly below the airplane. Let <span class='cmmi-10x-x-109'>D </span>be the measured horizontal distance
+on the photograph from the principal point to the top of the object of interest, and let <span class='cmmi-10x-x-109'>d</span>
+be the measured distance on the photograph between its base and its top. Finally, let <span class='cmmi-10x-x-109'>H </span>be
+the height of the airplane above the ground. Then the height of the object can be calculated
+as
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='h = H  d ∕D
+' class='math-display' src='notes3x.png' /><a id='x1-7001r8'></a></div>
+   </td><td class='equation-label'>(8)</td></tr></table>
+<!-- l. 166 --><p class='nopar'>
+</p>
+   <figure class='figure' id='-photogrammetry-from-a-single-image'> 
+
+
+<a id='x1-70023'></a>
+
+<!-- l. 170 --><p class='noindent'> <img alt='PIC' src='single-image-.png' />
+</p>
+<figcaption class='caption'><span class='id'>Figure 3: </span><span class='content'>Photogrammetry from a single image.</span></figcaption><!-- tex4ht:label?: x1-70023  -->
+
+   </figure>
+<!-- l. 175 --><p class='noindent'><span class='cmti-10x-x-109'>exercise:</span>
+</p><!-- l. 177 --><p class='noindent'>Estimate the height of the cooling towers shown in aerial photograph B at the end of these notes, which
+was taken at an altitude of 1000m.
+</p>
+   <h4 class='subsectionHead' id='stereoimagery'><span class='titlemark'>2.2   </span> <a id='x1-80002.2'></a>Stereo-imagery</h4>
+   <figure class='figure' id='-the-parallax-effect-is-used-by-the-human-brain-to-perceive-depth'> 
+
+
+<a id='x1-80014'></a>
+
+<!-- l. 185 --><p class='noindent'> <img alt='PIC' src='parallax-.png' />
+</p>
+<figcaption class='caption'><span class='id'>Figure 4: </span><span class='content'>The parallax effect is used by the human brain to perceive depth.</span></figcaption><!-- tex4ht:label?: x1-80014  -->
+
+   </figure>
+<!-- l. 191 --><p class='indent'>   Single images can only be used to measure vertical objects. This limitation can be overcome by using
+two images taken at different locations, and utilising the parallax effect (see Section <a href='#trigonometric-levelling'>1.2<!-- tex4ht:ref: sec:trigonometric  --></a>). To illustrate this
+effect, carry out the following experiment (Figure <a href='#-the-parallax-effect-is-used-by-the-human-brain-to-perceive-depth'>4<!-- tex4ht:ref: fig:parallax  --></a>):
+     </p><ol class='enumerate1'>
+<li class='enumerate' id='x1-8003x1'>Choose any small object located 2-5 metres away from you, and close your right eye.
+     </li>
+<li class='enumerate' id='x1-8005x2'>Stretch out your arm, holding a ruler, and align the ‘zero’ marker with the object.
+     </li>
+<li class='enumerate' id='x1-8007x3'>Open your right eye, close the left one, and note the apparent shift in location of your chosen
+     object along the ruler, in millimetres (<span class='cmmi-10x-x-109'>d</span>).
+     </li>
+<li class='enumerate' id='x1-8009x4'>Measure the length of your arm (<span class='cmmi-10x-x-109'>l</span>) and the distance between your eyes (<span class='cmmi-10x-x-109'>D</span>).</li></ol>
+<!-- l. 209 --><p class='indent'>   Then we can calculate the distance from your eyes to the chosen object as
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='d∕D =  (L − l)∕L ⇒  L = lD ∕(D − d)
+' class='math-display' src='notes4x.png' /><a id='x1-8010r9'></a></div>
+   </td><td class='equation-label'>(9)</td></tr></table>
+<!-- l. 213 --><p class='nopar'>
+</p><!-- l. 215 --><p class='indent'>   The same principle is used by astronometers to measure the distance (<span class='cmmi-10x-x-109'>L</span>) from the Earth to other
+planets and nearby stars (Figure <a href='#-the-orbit-of-the-earth-around-the-sun-provides-a-sufficiently-long-baseline-from-which-to-observe-a-measurable-parallax-effect-to-nearby-stars'>5<!-- tex4ht:ref: fig:astronomy  --></a>), using the diameter of Earth’s orbit around the Sun as a
+baseline (<span class='cmmi-10x-x-109'>l</span>) and the apparent angle from the baseline to the object of interest as a parallax angle
+(<span class='cmmi-10x-x-109'>α</span>):
+
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='L =  l∕ tan(α)
+' class='math-display' src='notes5x.png' /><a id='x1-8011r10'></a></div>
+   </td><td class='equation-label'>(10)</td></tr></table>
+<!-- l. 224 --><p class='nopar'>
+</p>
+   <figure class='figure' id='-the-orbit-of-the-earth-around-the-sun-provides-a-sufficiently-long-baseline-from-which-to-observe-a-measurable-parallax-effect-to-nearby-stars'> 
+
+
+<a id='x1-80125'></a>
+
+<!-- l. 227 --><p class='noindent'> <img alt='PIC' src='astronomy2-.png' />
+</p>
+<figcaption class='caption'><span class='id'>Figure 5: </span><span class='content'>The orbit of the Earth around the Sun provides a sufficiently long baseline from which
+to observe a measurable parallax effect to nearby stars.</span></figcaption><!-- tex4ht:label?: x1-80125  -->
+
+   </figure>
+<!-- l. 234 --><p class='noindent'><span class='cmti-10x-x-109'>exercise:</span>
+</p><!-- l. 236 --><p class='noindent'>A <span class='cmti-10x-x-109'>parsec </span>is the physical distance to a celestial object for which <span class='cmmi-10x-x-109'>α </span>= 1 arc second in Equation <a href='#x1-8011r10'>10<!-- tex4ht:ref: eq:astronomy  --></a>. Given
+that light travels from the Sun to Earth in 8 minutes and 20 seconds, how many light years does one
+parsec equal to?<br class='newline' />
+</p><!-- l. 242 --><p class='indent'>   Given a <span class='cmti-10x-x-109'>stereo-set </span>of two aerial photographs (or satellite images), we can determine the elevation
+distance between any two points x and y (not just those located immediately above or below each other)
+as follows:
+     </p><ol class='enumerate1'>
+<li class='enumerate' id='x1-8014x1'>Determine the horizontal distances from the principal point of image A to points x and y
+     (<span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>x</span></sub>(<span class='cmmi-10x-x-109'>A</span>) and <span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>y</span></sub>(<span class='cmmi-10x-x-109'>A</span>), respectively). Do the same for image B (<span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>x</span></sub>(<span class='cmmi-10x-x-109'>B</span>) and <span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>y</span></sub>(<span class='cmmi-10x-x-109'>B</span>)).
+     </li>
+<li class='enumerate' id='x1-8016x2'>
+     <!-- l. 251 --><p class='noindent'>Calculate the <span class='cmti-10x-x-109'>parallax </span>of points <span class='cmmi-10x-x-109'>x </span>and <span class='cmmi-10x-x-109'>y </span>as
+     </p><!-- l. 253 --><p class='noindent'>
+     </p><table class='align'>
+                                 <tr><td class='align-odd'></td>                                 <td class='align-even'><span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>x</span></sub> = <span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>x</span></sub>(<span class='cmmi-10x-x-109'>A</span>) <span class='cmsy-10x-x-109'>− </span><span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>x</span></sub>(<span class='cmmi-10x-x-109'>B</span>)</td>                                                                  <td class='align-label'><a id='x1-8017r11'></a>(11)
+                                 </td></tr><tr><td class='align-odd'></td>                                 <td class='align-even'><span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>y</span></sub> = <span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>y</span></sub>(<span class='cmmi-10x-x-109'>A</span>) <span class='cmsy-10x-x-109'>− </span><span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>y</span></sub>(<span class='cmmi-10x-x-109'>B</span>)</td>                                                                  <td class='align-label'><a id='x1-8018r12'></a>(12)                                 </td></tr></table>
+     </li>
+<li class='enumerate' id='x1-8020x3'>
+
+     <!-- l. 258 --><p class='noindent'>If the images were taken at an altitude <span class='cmmi-10x-x-109'>H</span>, then the elevation difference between points <span class='cmmi-10x-x-109'>x </span>and <span class='cmmi-10x-x-109'>y </span>is
+     given by
+</p>
+     <table class='equation'><tr><td>
+<div class='math-display'>
+<img alt='h = H  (py − px) ∕ py
+' class='math-display' src='notes6x.png' /><a id='x1-8021r13'></a></div>
+     </td><td class='equation-label'>(13)</td></tr></table>
+     <!-- l. 263 --><p class='nopar'>
+     </p></li></ol>
+   <figure class='figure' id='-photogrammetry-with-stereoimages-note-that-pxa-pxb-pya-and-pyb-can-be-either-positive-or-negative'> 
+
+
+<a id='x1-80226'></a>
+
+<!-- l. 267 --><p class='noindent'> <img alt='PIC' src='stereo1-.png' /><br class='newline' /> <img alt='PIC' src='stereo2-.png' />
+</p>
+<figcaption class='caption'><span class='id'>Figure 6: </span><span class='content'>Photogrammetry with stereo-images. Note that <span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>x</span></sub><sup><span class='cmmi-8'>A</span></sup>, <span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>x</span></sub><sup><span class='cmmi-8'>B</span></sup>, <span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>y</span></sub><sup><span class='cmmi-8'>A</span></sup> and <span class='cmmi-10x-x-109'>p</span><sub><span class='cmmi-8'>y</span></sub><sup><span class='cmmi-8'>B</span></sup> can be either
+positive or negative.</span></figcaption><!-- tex4ht:label?: x1-80226  -->
+
+   </figure>
+<!-- l. 274 --><p class='indent'>   Topographic contour maps are created by connecting points of equal parallax on a stereo-image, using
+a <span class='cmti-10x-x-109'>parallax bar</span>.<br class='newline' />
+</p><!-- l. 277 --><p class='noindent'><span class='cmti-10x-x-109'>exercise:</span>
+</p><!-- l. 279 --><p class='noindent'>Calculate the height of the cooling towers (last page of these notes) using the principles of
+stereo-photogrammetry, again assuming that the photographs were taken at an altitude of
+1000m.
+</p>
+   <h3 class='sectionHead' id='lidar'><span class='titlemark'>3   </span> <a id='x1-90003'></a>Lidar</h3>
+<!-- l. 285 --><p class='noindent'>Lidar stands for ‘LIght Detection And Ranging’ and is based on similar principles to sonar (‘SOund
+Navigation And Ranging’) and radar (‘RAdio Detection And Ranging’). It determines elevation (<span class='cmmi-10x-x-109'>h</span>) by
+measuring the two-way travel time (Δ<span class='cmmi-10x-x-109'>t</span>) of short light pulses between an airborne light source and the
+ground (Figure <a href='#-sonar-lidar-and-radar-are-all-based-on-the-same-principles'>7<!-- tex4ht:ref: fig:lidar  --></a>):
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='h = v Δt ∕ 2
+' class='math-display' src='notes7x.png' /><a id='x1-9001r14'></a></div>
+   </td><td class='equation-label'>(14)</td></tr></table>
+<!-- l. 293 --><p class='nopar'>
+</p><!-- l. 295 --><p class='indent'>   where <span class='cmmi-10x-x-109'>v </span>is the speed of light (<span class='cmsy-10x-x-109'>∼ </span>3 <span class='cmsy-10x-x-109'>×</span>10<sup><span class='cmr-8'>8</span></sup>m/s). Two-way travel times can be measured with a precision
+of <span class='cmsy-10x-x-109'>∼ </span>1 ns. Can you work out the vertical resolution of Lidar?
+</p>
+   <figure class='figure' id='-sonar-lidar-and-radar-are-all-based-on-the-same-principles'> 
+
+
+<a id='x1-90027'></a>
+
+<!-- l. 301 --><p class='noindent'> <img alt='PIC' height='234' src='lidar-.png' width='234' />
+</p>
+<figcaption class='caption'><span class='id'>Figure 7: </span><span class='content'>Sonar, lidar (and radar) are all based on the same principles.</span></figcaption><!-- tex4ht:label?: x1-90027  -->
+
+   </figure>
+   <h3 class='sectionHead' id='srtm'><span class='titlemark'>4   </span> <a id='x1-100004'></a>SRTM</h3>
+<!-- l. 309 --><p class='noindent'>During 11 days in February 2000, space shuttle Endeavor carried out the Shuttle Radar Topography
+Mission (SRTM). Using a radar (microwave) source and two detectors separated by a distance of 60 m, it
+circled the Earth, recording the interference patterns of the reflected light (Figure <a href='#-srtm-uses-the-principles-of-interferometry-in-which-a-radar-source-solid-lines-emits-electromagnetic-radiation-to-the-surface-which-is-reflected-dashed-lines-by-the-earth-and-received-by-two-receivers-offset-by-a-baseline-distance-b-m-changes-in-range-r-are-determined-by-monitoring-the-phase-of-the-incoming-radar-waves-thus-the-left-and-right-images-exhibit-destructive-and-constructive-interference-respectively-differences-in-height-h-can-be-obtained-using-the-following-formula-h-r-b-r-r-ocos-osin-'>8<!-- tex4ht:ref: fig:SRTM  --></a>). The resulting data
+went through several stages of post-processing, ultimately resulting in a Digital Elevation Model (DEM)
+with near-global coverage and a horizontal resolution of 30m. The data are available free of charge at
+<span class='cmtt-10x-x-109'>http://srtm.csi.cgiar.org/</span>
+</p>
+   <figure class='figure' id='-srtm-uses-the-principles-of-interferometry-in-which-a-radar-source-solid-lines-emits-electromagnetic-radiation-to-the-surface-which-is-reflected-dashed-lines-by-the-earth-and-received-by-two-receivers-offset-by-a-baseline-distance-b-m-changes-in-range-r-are-determined-by-monitoring-the-phase-of-the-incoming-radar-waves-thus-the-left-and-right-images-exhibit-destructive-and-constructive-interference-respectively-differences-in-height-h-can-be-obtained-using-the-following-formula-h-r-b-r-r-ocos-osin-'> 
+
+
+<a id='x1-100018'></a>
+
+<!-- l. 320 --><p class='noindent'> <img alt='PIC' src='SRTM-.png' />
+</p>
+<figcaption class='caption'><span class='id'>Figure 8: </span><span class='content'>SRTM uses the principles of interferometry, in which a radar source (solid lines) emits
+electromagnetic radiation to the surface, which is reflected (dashed lines) by the Earth and received
+by two receivers, offset by a baseline distance B (= 60m). Changes in range (Δ<span class='cmmi-10x-x-109'>R</span>) are determined
+by monitoring the phase of the incoming radar waves. Thus, the left and right images exhibit
+destructive and constructive interference, respectively. Differences in height (<span class='cmmi-10x-x-109'>h</span>) can be obtained
+using the following formula: <span class='cmmi-10x-x-109'>h </span><span class='cmsy-10x-x-109'>≈ </span>(<span class='cmmi-10x-x-109'>R∕B</span>)(Δ<span class='cmmi-10x-x-109'>R</span><sub><span class='cmr-8'>2</span></sub> <span class='cmsy-10x-x-109'>− </span>Δ<span class='cmmi-10x-x-109'>R</span><sub><span class='cmr-8'>1</span></sub>)cos(<span class='cmmi-10x-x-109'>ψ</span>)<span class='cmmi-10x-x-109'>∕</span>sin(<span class='cmmi-10x-x-109'>ψ </span>+ <span class='cmmi-10x-x-109'>β</span>) </span></figcaption><!-- tex4ht:label?: x1-100018  -->
+
+   </figure>
+
+   <figure class='figure'> 
+
+
+
+<!-- l. 336 --><p class='noindent'> <img alt='PIC' src='cooling-towers-.png' />
+
+</p>
+   </figure>
+    
+</body> 
+</html>

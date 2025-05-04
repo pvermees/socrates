@@ -1,0 +1,20 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Levelling}}{3}\relax 
+\doTocEntry\tocsubsection{1.1}{\csname a:TocLink\endcsname{1}{x1-20001.1}{QQ2-1-2}{Differential levelling}}{3}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-20071}{}{\ignorespaces Differential levelling. The height difference $\Delta h = H-h$.}}{figure}\relax 
+\doTocEntry\tocsubsection{1.2}{\csname a:TocLink\endcsname{1}{x1-30001.2}{QQ2-1-4}{Trigonometric levelling}}{7}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-30052}{}{\ignorespaces Trigonometric levelling}}{figure}\relax 
+\doTocEntry\tocsubsection{1.3}{\csname a:TocLink\endcsname{1}{x1-40001.3}{QQ2-1-6}{Barometric levelling}}{10}\relax 
+\doTocEntry\tocsubsection{1.4}{\csname a:TocLink\endcsname{1}{x1-50001.4}{QQ2-1-7}{(differential) GPS}}{11}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-60002}{QQ2-1-8}{Photogrammetry}}{11}\relax 
+\doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-70002.1}{QQ2-1-9}{Single image}}{12}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-70023}{}{\ignorespaces Photogrammetry from a single image.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-80002.2}{QQ2-1-11}{Stereo-imagery}}{15}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-80014}{}{\ignorespaces The parallax effect is used by the human brain to perceive depth.}}{figure}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-80125}{}{\ignorespaces The orbit of the Earth around the Sun provides a sufficiently long baseline from which to observe a measurable parallax effect to nearby stars.}}{figure}\relax 
+\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-80226}{}{\ignorespaces Photogrammetry with stereo-images. Note that $p_x^A$, $p_x^B$, $p_y^A$ and $p_y^B$ can be either positive or negative.}}{figure}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-90003}{QQ2-1-15}{Lidar}}{26}\relax 
+\doTocEntry\toclof{7}{\csname a:TocLink\endcsname{1}{x1-90027}{}{\ignorespaces Sonar, lidar (and radar) are all based on the same principles.}}{figure}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-100004}{QQ2-1-17}{SRTM}}{29}\relax 
+\doTocEntry\toclof{8}{\csname a:TocLink\endcsname{1}{x1-100018}{}{\ignorespaces SRTM uses the principles of interferometry, in which a radar source (solid lines) emits electromagnetic radiation to the surface, which is reflected (dashed lines) by the Earth and received by two receivers, offset by a baseline distance B (= 60m). Changes in range ($\Delta R$) are determined by monitoring the phase of the incoming radar waves. Thus, the left and right images exhibit destructive and constructive interference, respectively. Differences in height ($h$) can be obtained using the following formula: $ h \approx ( R / B ) (\Delta R_2 - \Delta R_1) \qopname  \relax o{cos}(\psi ) / \qopname  \relax o{sin}(\psi +\beta ) $ }}{figure}\relax 
+\par 
