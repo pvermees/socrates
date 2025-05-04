@@ -58,6 +58,7 @@
     },
     "K-Ca": {
 	"format": 1,
+	"sister": 44,
 	"i2i": true,
 	"projerr": false,
 	"inverse": false
@@ -76,7 +77,7 @@
     },
     "Re-Os": {
 	"format": 1,
-	"i2i": true,
+	"i2i": false,
 	"projerr": false,
 	"inverse": false
     },
@@ -131,7 +132,9 @@
 	},
 	"ellipsestroke": "#000000",
 	"model": 1,
-	"clabel": ""
+	"clabel": "",
+	"tticks": "auto",
+	"aticks": "auto"
     },
     "isochron": {
 	"UPbtype": 1,
@@ -156,7 +159,8 @@
 	},
 	"ellipsestroke": "#000000",
 	"growth": false,
-	"clabel": ""
+	"clabel": "",
+	"taxis": false
     },
     "regression": {
 	"model": 1,
@@ -181,6 +185,7 @@
 	"mint": "auto",
 	"z0": "auto",
 	"maxt": "auto",
+	"xlim": "auto",
 	"pch": 21,
 	"cex": 1,
 	"bg": {
