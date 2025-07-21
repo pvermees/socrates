@@ -1,0 +1,249 @@
+\begin{thebibliography}{42}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{https://doi.org/\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{https://doi.org/\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Albar\`{e}de(1995)}]{albarede1995}
+Albar\`{e}de, F.: {Introduction to Geochemical Modeling}, Cambridge University
+  Press, 1995.
+
+\bibitem[{Audi et~al.(2003)Audi, Bersillon, Blachot, and Wapstra}]{audi2003}
+Audi, G., Bersillon, O., Blachot, J., and Wapstra, A.~H.: {The NUBASE
+  evaluation of nuclear and decay properties}, Nuclear Physics A, 729, 3--128,
+  2003.
+
+\bibitem[{Bateman(1908)}]{bateman1908}
+Bateman, H.: {The solution of a system of differential equations occurring in
+  the theory of radio-active transformations}, Proc. Cambridge Phil. Soc.,
+  1908, 15, 423--427, 1908.
+
+\bibitem[{Chaldekas et~al.(2022)Chaldekas, Vaks, Haviv, Gerdes, and
+  Albert}]{chaldekas2022}
+Chaldekas, O., Vaks, A., Haviv, I., Gerdes, A., and Albert, R.: {U-Pb
+  speleothem geochronology reveals a major 6 Ma uplift phase along the western
+  margin of Dead Sea Transform}, Bulletin, 134, 1571--1584, 2022.
+
+\bibitem[{Cheng et~al.(2013)Cheng, Edwards, Shen, Polyak, Asmerom, Woodhead,
+  Hellstrom, Wang, Kong, Sp{\"o}tl et~al.}]{cheng2013}
+Cheng, H., Edwards, R.~L., Shen, C.-C., Polyak, V.~J., Asmerom, Y., Woodhead,
+  J., Hellstrom, J., Wang, Y., Kong, X., Sp{\"o}tl, C., et~al.: {Improvements
+  in $^{230}$Th dating, $^{230}$Th and $^{234}$U half-life values, and U--Th
+  isotopic measurements by multi-collector inductively coupled plasma mass
+  spectrometry}, Earth and Planetary Science Letters, 371, 82--91, 2013.
+
+\bibitem[{Dani{\v{s}}{\'\i}k et~al.(2017)Dani{\v{s}}{\'\i}k, Schmitt, Stockli,
+  Lovera, Dunkl, and Evans}]{danisik2017b}
+Dani{\v{s}}{\'\i}k, M., Schmitt, A.~K., Stockli, D.~F., Lovera, O.~M., Dunkl,
+  I., and Evans, N.~J.: {Application of combined U-Th-disequilibrium/U-Pb and
+  (U-Th)/He zircon dating to tephrochronology}, Quaternary Geochronology, 40,
+  23--32, 2017.
+
+\bibitem[{Engel et~al.(2019)Engel, Woodhead, Hellstrom, Maas, Drysdale, and
+  Ford}]{engel2019}
+Engel, J., Woodhead, J., Hellstrom, J., Maas, R., Drysdale, R., and Ford, D.:
+  {Corrections for initial isotopic disequilibrium in the speleothem U-Pb
+  dating method}, Quaternary Geochronology, 54, 101\,009, 2019.
+
+\bibitem[{Farley et~al.(2002)Farley, Kohn, and Pillans}]{farley2002b}
+Farley, K., Kohn, B., and Pillans, B.: {The effects of secular disequilibrium
+  on (U--Th)/He systematics and dating of Quaternary volcanic zircon and
+  apatite}, Earth and Planetary Science Letters, 201, 117--125, 2002.
+
+\bibitem[{Fleischer(1982)}]{fleischer1982}
+Fleischer, R.~L.: Alpha-recoil damage and solution effects in minerals: uranium
+  isotopic disequilibrium and radon release, Geochimica et Cosmochimica Acta,
+  46, 2191--2201, 1982.
+
+\bibitem[{Horstwood et~al.(2016)Horstwood, Ko{\v{s}}ler, Gehrels, Jackson,
+  McLean, Paton, Pearson, Sircombe, Sylvester, Vermeesch
+  et~al.}]{horstwood2016}
+Horstwood, M.~S., Ko{\v{s}}ler, J., Gehrels, G., Jackson, S.~E., McLean, N.~M.,
+  Paton, C., Pearson, N.~J., Sircombe, K., Sylvester, P., Vermeesch, P.,
+  et~al.: {Community-Derived Standards for LA-ICP-MS U-(Th-) Pb
+  Geochronology--Uncertainty Propagation, Age Interpretation and Data
+  Reporting}, Geostandards and Geoanalytical Research, 40, 311--332, 2016.
+
+\bibitem[{Jaffey et~al.(1971)Jaffey, Flynn, Glendenin, Bentley, and
+  Essling}]{jaffey1971}
+Jaffey, A., Flynn, K., Glendenin, L., Bentley, W., and Essling, A.: {Precision
+  measurement of half-lives and specific activities of U-235 and U-238},
+  Physical Review C, 4, 1889, 1971.
+
+\bibitem[{Kaufman and Broecker(1965)}]{kaufman1965}
+Kaufman, A. and Broecker, W.: {Comparison of Th$^{230}$ and C$^{14}$ ages for
+  carbonate materials from Lakes Lahontan and Bonneville}, Journal of
+  Geophysical Research, 70, 4039--4054, 1965.
+
+\bibitem[{Kronfeld et~al.(1994)Kronfeld, Vogel, and Talma}]{kronfeld1994}
+Kronfeld, J., Vogel, J., and Talma, A.: {A new explanation for extreme
+  $^{234}$U/$^{238}$U disequilibria in a dolomitic aquifer}, Earth and
+  Planetary Science Letters, 123, 81--93, 1994.
+
+\bibitem[{Kuribayashi et~al.(2025)Kuribayashi, Miyakawa, Ito, and
+  Tanimizu}]{kuribayashi2025}
+Kuribayashi, C., Miyakawa, K., Ito, A., and Tanimizu, M.: Large disequilibrium
+  of $^{234}$U/$^{238}$U isotope ratios in deep groundwater and its potential
+  application as a groundwater mixing indicator, Geochemical Journal, 59,
+  35--44, 2025.
+
+\bibitem[{Le~Roux and Glendenin(1963)}]{leroux1963}
+Le~Roux, L.~J. and Glendenin, L.~E.: {Half-life of $^{232}$Th}, Proceedings of
+  the National Meeting on Nuclear Energy, Pretoria, South Africa, 1963.
+
+\bibitem[{Ludwig(1977)}]{ludwig1977}
+Ludwig, K.~R.: {Effect of initial radioactive-daughter disequilibrium on U-Pb
+  isotope apparent ages of young minerals}, J. Res. US Geol. Surv, 5, 663--667,
+  1977.
+
+\bibitem[{{Ludwig}(1998)}]{ludwig1998}
+{Ludwig}, K.~R.: {On the treatment of concordant uranium-lead ages}, Geochimica
+  et Cosmochimica Acta, 62, 665--676, \doi{10.1016/S0016-7037(98)00059-3},
+  1998.
+
+\bibitem[{Ludwig(2003)}]{ludwig2003b}
+Ludwig, K.~R.: {Mathematical--statistical treatment of data and errors for
+  $^{230}$Th/U geochronology}, Reviews in Mineralogy and Geochemistry, 52,
+  631--656, 2003.
+
+\bibitem[{Mason et~al.(2013)Mason, Henderson, and Vaks}]{mason2013}
+Mason, A.~J., Henderson, G.~M., and Vaks, A.: {An acetic acid-based extraction
+  protocol for the recovery of U, Th and Pb from calcium carbonates for
+  U-(Th)-Pb geochronology}, Geostandards and Geoanalytical Research, 37,
+  261--275, 2013.
+
+\bibitem[{{McLean} et~al.(2016){McLean}, {Smith}, {Roberts}, and
+  {Richards}}]{mclean2016b}
+{McLean}, N.~M., {Smith}, C.~J.~M., {Roberts}, N.~M.~W., and {Richards}, D.~A.:
+  {Connecting the U-Th and U-Pb Chronometers: New Algorithms and Applications},
+  AGU Fall Meeting Abstracts, 2016.
+
+\bibitem[{Neymark and Amelin(2008)}]{neymark2008}
+Neymark, L. and Amelin, Y.: {Natural radionuclide mobility and its influence on
+  U--Th--Pb dating of secondary minerals from the unsaturated zone at Yucca
+  Mountain, Nevada}, Geochimica et Cosmochimica Acta, 72, 2067--2089, 2008.
+
+\bibitem[{Nuriel et~al.(2021)Nuriel, Wotzlaw, Ovtcharova, Vaks, Stremtan,
+  \v{S}ala, Roberts, and Kylander-Clark}]{nuriel2021}
+Nuriel, P., Wotzlaw, J.-F., Ovtcharova, M., Vaks, A., Stremtan, C., \v{S}ala,
+  M., Roberts, N. M.~W., and Kylander-Clark, A. R.~C.: The use of ASH-15
+  flowstone as a matrix-matched reference material for laser-ablation U-Pb
+  geochronology of calcite, Geochronology, 3, 35--47,
+  \doi{10.5194/gchron-3-35-2021}, 2021.
+
+\bibitem[{Osmond et~al.(1976)Osmond, Cowart et~al.}]{osmond1976}
+Osmond, J., Cowart, J., et~al.: The theory and uses of natural uranium isotopic
+  variations in hydrology, Atomic Energy Review, 14, 621--679, 1976.
+
+\bibitem[{Pickering et~al.(2019)Pickering, Herries, Woodhead, Hellstrom, Green,
+  Paul, Ritzman, Strait, Schoville, and Hancox}]{pickering2019}
+Pickering, R., Herries, A.~I., Woodhead, J.~D., Hellstrom, J.~C., Green, H.~E.,
+  Paul, B., Ritzman, T., Strait, D.~S., Schoville, B.~J., and Hancox, P.~J.:
+  {U--Pb-dated flowstones restrict South African early hominin record to dry
+  climate phases}, Nature, 565, 226, 2019.
+
+\bibitem[{Pollard et~al.(2023)Pollard, Woodhead, Hellstrom, Engel, Powell, and
+  Drysdale}]{pollard2023}
+Pollard, T., Woodhead, J., Hellstrom, J., Engel, J., Powell, R., and Drysdale,
+  R.: {DQPB: software for calculating disequilibrium U--Pb ages},
+  Geochronology, 5, 181--196, 2023.
+
+\bibitem[{Porcelli and Swarzenski(2003)}]{porcelli2003}
+Porcelli, D. and Swarzenski, P.~W.: {The behavior of U-and Th-series nuclides
+  in groundwater}, Reviews in mineralogy and geochemistry, 52, 317--361, 2003.
+
+\bibitem[{Richards et~al.(1998)Richards, Bottrell, Cliff, Str{\"o}hle, and
+  Rowe}]{richards1998}
+Richards, D.~A., Bottrell, S.~H., Cliff, R.~A., Str{\"o}hle, K., and Rowe,
+  P.~J.: {U-Pb dating of a speleothem of Quaternary age}, Geochimica et
+  Cosmochimica Acta, 62, 3683--3688, 1998.
+
+\bibitem[{Roberts et~al.(2020)Roberts, Drost, Horstwood, Condon, Chew, Drake,
+  Milodowski, McLean, Smye, Walker et~al.}]{roberts2020}
+Roberts, N.~M., Drost, K., Horstwood, M.~S., Condon, D.~J., Chew, D., Drake,
+  H., Milodowski, A.~E., McLean, N.~M., Smye, A.~J., Walker, R.~J., et~al.:
+  {Laser ablation inductively coupled plasma mass spectrometry (LA-ICP-MS)
+  U--Pb carbonate geochronology: strategies, progress, and limitations},
+  Geochronology, 2, 33--61, 2020.
+
+\bibitem[{Smith and Farquhar(1989)}]{smith1989}
+Smith, P.~E. and Farquhar, R.~M.: {Direct dating of Phanerozoic sediments by
+  the 238U--206Pb method}, Nature, 341, 518--521, 1989.
+
+\bibitem[{Vaks et~al.(2010)Vaks, Bar-Matthews, Matthews, Ayalon, and
+  Frumkin}]{vaks2010}
+Vaks, A., Bar-Matthews, M., Matthews, A., Ayalon, A., and Frumkin, A.:
+  {Middle-Late Quaternary paleoclimate of northern margins of the
+  Saharan-Arabian Desert: reconstruction from speleothems of Negev Desert,
+  Israel}, Quaternary Science Reviews, 29, 2647--2662, 2010.
+
+\bibitem[{Vaks et~al.(2013{\natexlab{a}})Vaks, Gutareva, Breitenbach, Avirmed,
+  Mason, Thomas, Osinzev, Kononov, and Henderson}]{vaks2013}
+Vaks, A., Gutareva, O.~S., Breitenbach, S.~F., Avirmed, E., Mason, A.~J.,
+  Thomas, A.~L., Osinzev, A.~V., Kononov, A.~M., and Henderson, G.~M.:
+  {Speleothems reveal 500,000-year history of Siberian permafrost}, Science,
+  340, 183--186, 2013{\natexlab{a}}.
+
+\bibitem[{Vaks et~al.(2013{\natexlab{b}})Vaks, Woodhead, Bar-Matthews, Ayalon,
+  Cliff, Zilberman, Matthews, and Frumkin}]{vaks2013b}
+Vaks, A., Woodhead, J., Bar-Matthews, M., Ayalon, A., Cliff, R., Zilberman, T.,
+  Matthews, A., and Frumkin, A.: Pliocene--Pleistocene climate of the northern
+  margin of Saharan--Arabian Desert recorded in speleothems from the Negev
+  Desert, Israel, Earth and Planetary Science Letters, 368, 88--100,
+  2013{\natexlab{b}}.
+
+\bibitem[{Vaks et~al.(2020)Vaks, Mason, Breitenbach, Kononov, Osinzev,
+  Rosensaft, Borshevsky, Gutareva, and Henderson}]{vaks2020}
+Vaks, A., Mason, A., Breitenbach, S., Kononov, A., Osinzev, A., Rosensaft, M.,
+  Borshevsky, A., Gutareva, O., and Henderson, G.: Palaeoclimate evidence of
+  vulnerable permafrost during times of low sea ice, Nature, 577, 221--225,
+  2020.
+
+\bibitem[{Vermeesch(2018)}]{vermeesch2018c}
+Vermeesch, P.: {\texttt{IsoplotR}: a free and open toolbox for geochronology},
+  Geoscience Frontiers, 9, 1479--1493, 2018.
+
+\bibitem[{Vermeesch(2020)}]{vermeesch2020}
+Vermeesch, P.: {Unifying the U--Pb and Th--Pb methods: joint isochron
+  regression and common Pb correction}, Geochronology, 2, 119--131, 2020.
+
+\bibitem[{Vermeesch(2024)}]{vermeesch2024}
+Vermeesch, P.: {Errorchrons and anchored isochrons in IsoplotR}, Geochronology,
+  2024, 2024.
+
+\bibitem[{Vermeesch(2025)}]{vermeesch2025z}
+Vermeesch, P.: {Data and code for ``Carbonate $^{206}$Pb/$^{238}$U problems and
+  potential $^{207}$Pb/$^{235}$U fixes''}, \doi{10.5281/zenodo.16262131}, 2025.
+
+\bibitem[{Vermeesch et~al.(2025)Vermeesch, Hopley, Roberts, and
+  Parrish}]{vermeesch2025}
+Vermeesch, P., Hopley, P., Roberts, N., and Parrish, R.: Geochronology of Taung
+  and other southern African australopiths, in: One hundred years of
+  \emph{Australopithecus africanus}, edited by Wood, B.~A., Grine, F.~E., and
+  Smith, H.~B., chap.~4, Springer, 2025.
+
+\bibitem[{Walker et~al.(2006)Walker, Cliff, and Latham}]{walker2006}
+Walker, J., Cliff, R.~A., and Latham, A.~G.: {U-Pb isotopic age of the StW 573
+  hominid from Sterkfontein, South Africa}, Science, 314, 1592--1594, 2006.
+
+\bibitem[{Wendt and Carl(1985)}]{wendt1985}
+Wendt, I. and Carl, C.: {U/Pb dating of discordant 0.1 Ma old secondary U
+  minerals}, Earth and Planetary Science Letters, 73, 278--284, 1985.
+
+\bibitem[{Woodhead et~al.(2006)Woodhead, Hellstrom, Maas, Drysdale, Zanchetta,
+  Devine, and Taylor}]{woodhead2006}
+Woodhead, J., Hellstrom, J., Maas, R., Drysdale, R., Zanchetta, G., Devine, P.,
+  and Taylor, E.: {U--Pb geochronology of speleothems by MC-ICPMS}, Quaternary
+  Geochronology, 1, 208--221, 2006.
+
+\bibitem[{Zhou et~al.(2005)Zhou, Lundstrom, Fouke, Panno, Hackley, and
+  Curry}]{zhou2005}
+Zhou, J., Lundstrom, C.~C., Fouke, B., Panno, S., Hackley, K., and Curry, B.:
+  {Geochemistry of speleothem records from southern Illinois: Development of
+  ($^{234}$U)/($^{238}$U) as a proxy for paleoprecipitation}, Chemical Geology,
+  221, 1--20, 2005.
+
+\end{thebibliography}

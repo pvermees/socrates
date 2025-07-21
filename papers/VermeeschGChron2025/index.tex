@@ -1,0 +1,1172 @@
+\documentclass{article}
+
+\usepackage{hyperref,natbib,graphicx,caption,amsmath,wasysym}
+
+\title{Carbonate ${}^{206}$Pb/${}^{238}$U problems and potential ${}^{207}$Pb/${}^{235}$U fixes}
+
+\author{P.~Vermeesch$^1$, N.~McLean$^2$, A.~Vaks$^3$, T.~Golan$^3$, S.F.M~Breitenbach$^4$ and
+  R.~Parrish$^5$\\
+  $^1$ University College London, London WC1E 6BT, United Kingdom\\
+  $^2$ University of Kansas, Lawrence, KS 66045, United States\\
+  $^3$ Geological Survey of Israel, 9692100 Jerusalem, Israel\\
+  $^4$ Northumbria University, Newcastle upon Tyne NE1 8ST, United Kingdom\\
+  $^6$ University of Portsmouth, Portsmouth PO1 3QL, United Kingdom
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  Carbonate U--Pb dating has become a key tool for Quaternary
+  palaeoclimatology and palaeoanthropology beyond the age limit of
+  Th--U disequilibrium dating. U--Pb geochronology is based on the
+  paired radioactive decay of ${}^{238}$U to ${}^{206}$Pb and of
+  ${}^{235}$U to ${}^{207}$Pb.  Current carbonate U--Pb data
+  processing algorithms rely mostly on the ${}^{206}$Pb/${}^{238}$U
+  clock and attach little weight to the ${}^{207}$Pb/${}^{235}$U
+  data. A key weakness of this approach is the need to correct the
+  ${}^{206}$Pb/${}^{238}$U data for initial ${}^{234}$U/${}^{238}$U
+  disequilibrium, which may cause an excess or (occasionally) a
+  deficit in radiogenic ${}^{206}$Pb compared to secular
+  equilibrium. Uncorrected initial disequilibrium may bias
+  ${}^{206}$Pb/${}^{238}$U dates by up to 4\,Myr. We introduce a new
+  disequilibrium correction algorithm, using matrix exponentials. This
+  algorithm can be used to undo the effects of U-series disequilibrium
+  using either an assumed initial composition, or a measured set of
+  modern ${}^{234}$U/${}^{238}$U (and optionally
+  ${}^{230}$Th/${}^{238}$U) activity ratios. Using a deterministic
+  Bayesian inversion algorithm, we show that disequilibrium
+  corrections work well for relatively young samples but become
+  unreliable beyond 1.5\,Ma and impossible beyond 2\,Ma.  Using
+  theoretical models and real world examples from Siberia, South
+  Africa and Israel, we show that the uncertainty of the
+  disequilibrium correction of such old samples exceeds the correction
+  itself. Previous `Monte Carlo' error propagation methods
+  underestimate these uncertainties by up to an order of magnitude.
+  For carbonates older than 2\,Ma that likely experienced significant
+  initial ${}^{234}$U/${}^{238}$U disequilibrium, we recommend using
+  the ${}^{207}$Pb/${}^{235}$U isochron method instead of
+  ${}^{206}$Pb/${}^{238}$U geochronology.  ${}^{207}$Pb/${}^{235}$U
+  isochrons require only a small and simple correction for initial
+  ${}^{231}$Pa depletion. This makes ${}^{207}$Pb/${}^{235}$U dating
+  more accurate than ${}^{206}$Pb/${}^{238}$U geochronology. However,
+  the ${}^{207}$Pb/${}^{235}$U method is no panacea. Its precision is
+  limited by the lower abundance of ${}^{207}$Pb compared to
+  ${}^{206}$Pb. In some samples, this loss of precision results in a
+  failure to outperform the Bayesian credible intervals of the
+  disequilibrium-corrected ${}^{206}$Pb/${}^{238}$U dates. Such
+  samples remain undateable, unless prior information is available to
+  constrain the initial ${}^{234}$U/${}^{238}$U activity ratios.
+\end{abstract}
+
+%\copyrightstatement{TEXT} %% This section is optional and can be used for copyright transfers.
+
+\section{Introduction}\label{sec:intro}
+
+Carbonate rocks are only a minor component of the continental
+crust. However, their scientific importance far outweighs their
+volumetric abundance. Biogenic carbonates and speleothems document the
+history of life, and of Earth's climate and environment. To generate
+detailed time series of past changes from these carbonate archives, an
+accurate and precise chronological framework is essential. This
+framework is anchored in absolute time using radiometric dating
+methods, with two techniques commonly employed for this
+purpose. ${}^{230}$Th/U dating is the method of choice for young
+samples whose ${}^{230}$Th, ${}^{234}$U and ${}^{238}$U activities are
+out of secular equilibrium \citep{kaufman1965,
+  ludwig2003b}. ${}^{206}$Pb/${}^{238}$U dating is the default method
+for older rocks, in which the secular equilibrium between
+${}^{230}$Th, ${}^{234}$U and ${}^{238}$U has been restored
+\citep{smith1989, roberts2020}.\medskip
+
+Ironically, the absence of detectable ${}^{234}$U/${}^{238}$U
+disequilibrium compromises the accuracy of the
+${}^{206}$Pb/${}^{238}$U method. Any initial excess or deficit of
+${}^{234}$U and ${}^{230}$Th affects the ${}^{206}$Pb/${}^{238}$U
+ratio and, hence, the age estimate derived therefrom. In clean,
+detritus-free carbonates, it is often safe to assume the absence of
+initial ${}^{230}$Th. This assumption is not valid for ${}^{234}$U,
+which can be enriched (or occasionally depleted) relative to
+${}^{238}$U by physiochemical processes such as (1) $\alpha$-recoil
+ejection and preferential leaching of ${}^{234}$U from
+$\alpha$-damaged mineral sites, and (2) chemical fractionation between
+preferentially oxidised ${}^{234}$U$^{6+}$ and ${}^{238}$U$^{4+}$
+\citep{fleischer1982,porcelli2003}.\medskip
+
+Corrections for initial ${}^{234}$U/${}^{238}$U disequilibrium can be
+done by either assuming a specific initial ${}^{234}$U/${}^{238}$U
+activity ratio, or by inferring the initial ratio from any measured
+residual ${}^{234}$U/${}^{238}$U-disequilibrium \citep{richards1998,
+  woodhead2006, wendt1985, engel2019}.  In Section~\ref{sec:diseq} of
+this paper, we review the second approach using matrix
+exponentials. We show that initial ${}^{234}$U/${}^{238}$U
+disequilibrium can bias ${}^{206}$Pb/${}^{238}$U dates by up to
+4\,Myr.\medskip
+
+Current disequilibrium correction algorithms use a `Monte Carlo'
+approach to propagate the errors. In Section~\ref{sec:MC} we will show
+that this approach can underestimate the analytical uncertainties of
+${}^{206}$Pb/${}^{238}$U dates by an order of magnitude when samples
+are within a few permil of secular equilibrium (which typically
+happens before c.\,2\,Ma). This observation undermines the results of
+several published studies \citep{vermeesch2025}.\medskip
+
+In Section~\ref{sec:Bayes} we introduce a deterministic Bayesian
+approach to estimate the uncertainties of disequilibrium-corrected
+${}^{206}$Pb/${}^{238}$U dates. We use this alternative algorithm to
+show that beyond c.\,2\,Ma, disequilibrium-corrected
+${}^{206}$Pb/${}^{238}$U dates are impractically imprecise, unless
+highly enriched initial ${}^{234}$U/${}^{238}$U activity ratios can be
+ruled out \emph{a priori}. The large uncertainty associated with the
+${}^{206}$Pb/${}^{238}$U method degrades its ability to constrain
+reliable chronologies for carbonates whose initial disequibrium has
+expired. However, a more accurate approach is available. Following the
+example of \citet{richards1998}, \citet{neymark2008}, \citet{vaks2020}
+and others, Section~\ref{sec:207Pb235U} makes a case for the
+little-used ${}^{207}$Pb/${}^{235}$U clock as a replacement for the
+${}^{206}$Pb/${}^{238}$U method.\medskip
+
+${}^{207}$Pb/${}^{235}$U isochrons are, essentially, immune to the
+effects of initial disequilibrium (apart from a minor correction for
+${}^{231}$Pa, which becomes smaller with increasing age).  In
+Section~\ref{sec:accuracy-precision} we present examples from Siberia
+and Israel to show that the ${}^{207}$Pb/${}^{235}$U method is more
+accurate than the ${}^{206}$Pb/${}^{238}$U method, whilst being less
+precise for young samples. Both the Bayesian uncertainty estimation
+method and ${}^{207}$Pb/${}^{235}$U isochrons have been implemented in
+the \texttt{IsoplotR} toolbox for radiometric geochronology
+(Section~\ref{sec:IsoplotR}).\medskip
+
+This paper will use the following symbols and notations:
+\begin{itemize}
+\item{$n_{38}$, $n_{34}$, $n_{30}$, $n_{26}$ and $n_{06}$}: the number
+  of atoms of ${}^{238}$U, ${}^{234}$U, ${}^{230}$Th, ${}^{226}$Ra and
+  ${}^{206}$Pb, respectively;
+\item{$\lambda_{38}$, $\lambda_{35}$, $\lambda_{34}$, $\lambda_{32}$, $\lambda_{31}$ 
+  $\lambda_{30}$ and $\lambda_{26}$}: the radioactive decay constants
+  of ${}^{238}$U, ${}^{235}$U, ${}^{234}$U, ${}^{232}$Th, ${}^{231}$Pa, ${}^{230}$Th
+  and ${}^{226}$Ra, respectively;
+\item{$[4/8]_t$}: the present day ${}^{234}$U/${}^{238}$U activity
+  ratio (i.e. $[\lambda_{34}\,n_{34}]/[\lambda_{38}\,n_{38}]$);
+\item{$[4/8]_i$, $[0/8]_i$, $[1/5]_i$}: the initial
+  ${}^{234}$U/${}^{238}$U, ${}^{230}$Th/${}^{238}$U and
+  ${}^{231}$Pa/${}^{235}$U activity ratios, respectively;
+\item{$[4/8]_m$ and $s[4/8]_m$}: the measured
+  ${}^{234}$U/${}^{238}$U activity ratio and its standard error,
+  respectively.
+\item{$123.456 \pm 0.012$ represents a(n approximate) 95\% confidence
+  interval; whereas 123.456(78) is a more succinct notation that
+  indicates a value of 123.456 with a standard error of 0.078.}
+\end{itemize}
+
+\section{Disequilibrium corrections in a nutshell}\label{sec:diseq}
+
+Even though the U--Pb decay systems consist of numerous steps (14 for
+the $^{238}$U$\rightarrow^{206}$Pb chain and 11 for the
+$^{235}$U$\rightarrow^{207}$Pb chain), conventional U--Pb
+geochronology ignores this complexity and the method is mathematically
+treated as a set of simple parent-daughter pairs.  This simplification
+is justified once a state of secular equilibrium is established
+between all the intermediate daughter products in the decay chains.
+Such secular equilibrium is practically reached after 1 to 2 million
+years.  As mentioned in Section~\ref{sec:intro}, any disequilibrium
+that might exist prior to this secular equilibrium can be used as a
+chronometer in its own right.\medskip
+
+Initial disequilibrium of the U-decay series affects the accuracy of
+the U--Pb method. For example, ignoring any initial excess
+\textsuperscript{234}U results in an overestimated
+\textsuperscript{206}Pb/\textsuperscript{238}U age, and ignoring any
+initial \textsuperscript{231}Pa deficit results in an underestimated
+\textsuperscript{207}Pb/\textsuperscript{235}U age. Therefore, initial
+disequilibrium is one mechanism to produce discordant U--Pb results.
+Extreme ${}^{234}$U-enrichments have been observed in places such as
+South Africa \citep[\ensuremath{[4/8]_i<12};][]{kronfeld1994}, Siberia
+\citep[\ensuremath{[4/8]_i<6};][]{vaks2020} and Japan
+\citep[\ensuremath{[4/8]_i<12};][]{kuribayashi2025}. Using the
+$[4/8]_i=12$ value as an upper bound, the maximum effect of initial
+${}^{234}$U/${}^{238}$U-disequilibrium can be approximated as follows:
+\begin{equation}
+  \Delta(t) \approx \frac{1}{\lambda_{38}}\,
+  \ln\left[
+  1+\
+  \frac{{}^{206}\mbox{Pb}}{{}^{238}\mbox{U}} +
+  (12-1)\,\frac{\lambda_{38}}{\lambda_{34}} +
+  (0-1)\,\frac{\lambda_{38}}{\lambda_{30}}
+  \right] -
+  \frac{1}{\lambda_{38}}\,\ln\left[1+\frac{{}^{206}\mbox{Pb}}{{}^{238}\mbox{U}}\right] \approx
+  \frac{11}{\lambda_{34}} - \frac{1}{\lambda_{30}} = 3.8\,\mbox{Myr}
+    \label{eq:worst-case}
+\end{equation}
+
+\noindent where $\lambda_{38}=0.155125(83),\mbox{Gyr}^{-1}$
+\citep{jaffey1971}, $\lambda_{30}=9.1705(16)\,\mbox{Myr}^{-1}$ and
+$\lambda_{34}=2.82206(80)\,\mbox{Myr}^{-1}$ \citep{cheng2013}. For old
+carbonates ($>100$\,Ma, say), a 4\,Myr bias may be
+inconsequential. However, for young carbonates, the relative effect of
+initial disequilibrium can result in order-of-magnitude levels of
+bias. A disequilibrium correction is needed to remove this
+bias.\medskip
+
+If the intermediate daughter is sufficiently long lived and the sample
+is sufficiently young ($t < 5/\lambda$, say) to retain some of its
+disequilibrium, then the activity ratios can be back-calculated to the
+time of isotopic closure (assuming subsequent closed-system
+behaviour).  This strategy applies to
+$^{234}$U/$^{238}$U-disequilibrium and, for very young samples, to
+$^{230}$Th/$^{238}$U-disequilibrium. The complex evolution of the
+U-decay series was first described by \citet{bateman1908} and
+subsequently applied to U--Pb geochronology by \citet{ludwig1977},
+\citet{wendt1985} and \citet{engel2019}. Here we opt for an
+alternative formulation, using matrix exponentials
+\citep{albarede1995}.  For example, the
+\textsuperscript{238}U$\rightarrow$\textsuperscript{206}Pb decay chain
+can be expressed in matrix form as follows:
+\begin{equation}
+  \frac{\partial}{\partial{t}}\left[
+    \begin{array}{@{}c@{}}
+      n_{38}\\
+      n_{34}\\
+      n_{30}\\
+      n_{26}\\
+      n_{06}
+    \end{array}
+  \right]
+  =
+  \left[
+    \begin{array}{ccccc}
+      -\lambda_{38} & 0 & 0 & 0 & 0 \\
+      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
+      0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
+      0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
+      0 & 0 & 0 & \lambda_{26} & 0\\
+    \end{array}
+    \right]
+  \left[
+    \begin{array}{@{}c@{}}
+      n_{38}\\
+      n_{34}\\
+      n_{30}\\
+      n_{26}\\
+      n_{06}
+    \end{array}
+    \right]
+  \label{eq:matrixdecay}
+\end{equation}
+
+\noindent where $\lambda_{26}=0.4332(19)\,\mbox{kyr}^{-1}$
+\citep{audi2003}, and the shortest lived intermediate daughters
+($<$\,1\,kyr half lives) have been omitted. The solution to
+Equation~\ref{eq:matrixdecay} is a so-called matrix exponential:
+\begin{equation}
+  \left[
+    \begin{array}{@{}c@{}}
+      n_{38}\\
+      n_{34}\\
+      n_{30}\\
+      n_{26}\\
+      n_{06}
+    \end{array}
+  \right]
+  =
+  \mbox{expm}\left(
+  \left[
+    \begin{array}{ccccc}
+      -\lambda_{38} & 0 & 0 & 0 & 0 \\
+      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
+      0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
+      0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
+      0 & 0 & 0 & \lambda_{26} & 0\\
+    \end{array}
+    \right]
+  t
+  \right)
+  \left[
+    \begin{array}{@{}c@{}}
+      n_{38}\\
+      n_{34}\\
+      n_{30}\\
+      n_{26}\\
+      n_{06}
+    \end{array}
+    \right]_i
+  \label{eq:matrixdecaysolution}
+\end{equation}
+
+\noindent which expresses the present day amounts of the different
+isotopes as a function of the initial amounts. An interesting result
+is obtained by setting $t=\infty$ in
+Equation~\ref{eq:matrixdecaysolution} to estimate the activity ratio
+under secular equilibrium:
+\begin{equation}
+  [4/8]_\infty = \frac{\lambda_{234}}{\lambda_{234}-\lambda_{238}} = 1.000055
+  \label{eq:secular_equilibrium}
+\end{equation}
+
+Note that this activity ratio is \emph{not} exactly equal to
+unity. This is because 0.0055\% of ${}^{238}$U is lost during
+${}^{234}$U's mean lifetime of $1/\lambda_{34} =
+354\,\mbox{kyr}$. Equation~\ref{eq:matrixdecaysolution} can also be
+inverted to express the initial amounts as a function of the present
+day amounts:
+\begin{equation}
+  \left[
+    \begin{array}{@{}c@{}}
+      n_{38}\\
+      n_{34}\\
+      n_{30}\\
+      n_{26}\\
+      n_{06}
+    \end{array}
+  \right]_i
+  =
+  \mbox{expm}\left(
+      -
+  \left[
+    \begin{array}{ccccc}
+      -\lambda_{38} & 0 & 0 & 0 & 0 \\
+      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
+      0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
+      0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
+      0 & 0 & 0 & \lambda_{26} & 0\\
+    \end{array}
+    \right]
+  t
+  \right)
+  \left[
+    \begin{array}{@{}c@{}}
+      n_{38}\\
+      n_{34}\\
+      n_{30}\\
+      n_{26}\\
+      n_{06}
+    \end{array}
+    \right]
+  \label{eq:matrixdecaysolutioninverse}
+\end{equation}
+
+Equations~\ref{eq:matrixdecaysolution} and
+\ref{eq:matrixdecaysolutioninverse} can be used to construct a
+concordia diagram in the presence of disequilibrium. If measured
+activity ratios are used to infer the initial conditions, then the
+concordia line terminates where those inferred activity ratios reach
+unrealistic values (e.g., $[4/8]_i=500$ and $[0/8]_i=0$;
+Figure~\ref{fig:CorchiaMC}a). Beyond ten or so \textsuperscript{234}U
+half lives, it becomes very difficult to estimate $[4/8]_i$ from
+$[4/8]_m$, and it is even more difficult to quantify the analytical
+uncertainty of the disequilibrium correction. In Section~\ref{sec:MC}
+we review the current `Monte Carlo' approach to uncertainty estimation
+for initial disequilibrium correction and in Section~\ref{sec:Bayes}
+we propose an alternative `Bayesian' approach, which offers
+significant advantages for samples that are close to secular
+equilibrium.
+
+\section{`Monte Carlo' uncertainty estimation}\label{sec:MC}
+
+Existing data processing software for disequilibrium-corrected
+${}^{206}$Pb/${}^{238}$U geo\-chro\-nology, such as \texttt{DQPB}
+\citep{pollard2023}, estimate the uncertainty of the disequilibrium
+correction by Monte Carlo simulation. Given a linear array of isotopic
+data in Tera-Wasserburg space (i.e. $n_{07}/n_{06}$
+vs. $n_{38}/n_{06}$), paired with an activity ratio measurement
+$[4/8]_m$ with standard error $s[4/8]_m$, this approach works as
+follows:
+
+\begin{enumerate}
+\item\label{it:2} Draw a random value $[4/8]_t$ from a normal
+  distribution with mean $[4/8]_m$ and standard deviation
+  $s[4/8]_m$.
+\item\label{it:3} Fit a straight line to the U--Pb data and find the
+  $[4/8]_i$-value and isochron age ($t$) that are consistent with
+  both the U--Pb measurements and $[4/8]_t$. In other words, use
+  Equation~\ref{eq:matrixdecaysolutioninverse} to estimate $[4/8]_i$
+  from $[4/8]_t$ and repeat this for different values of $t$ until
+  the linear fit to the U--Pb data is optimised.
+\item Repeat steps~\ref{it:2} and \ref{it:3} until the entire
+  distribution of $[4/8]_t$-values has been sampled.
+\item If step \ref{it:3} fails or produces physically impossible
+  results (e.g., $t<0$), then ignore the corresponding
+  $[4/8]_t$-value. Otherwise add the $[4/8]_i$ and $t$-values to a
+  list of acceptable results.\label{it:4}
+\item Use the spread of the acceptable $[4/8]_i$ and $t$-values to
+  quantify their respective uncertainties.
+\end{enumerate}
+
+For the purpose of the present study, we have implemented our own
+version of this algorithm, using \texttt{R} and \texttt{IsoplotR}
+\citep{vermeesch2018c}.  The only major difference between our code
+and \texttt{DQPB} is that it does not sample the
+$[4/8]_m$-distribution randomly, but uses a targeted approach to
+sample $[4/8]_m$ as a sequence of regularly spaced normal
+quantiles. This is faster and produces deterministic results that do
+not depend on the seed of a random number
+generator. Figure~\ref{fig:CorchiaMC} summarises the application of
+this approach using the `Corchia' dataset of \citet{pollard2023},
+producing identical results to \texttt{DQPB}. To reflect this
+equivalence of outcomes, we will refer to our version of the algorithm
+as a `Monte Carlo' method, despite the fact that it does not actually
+use a random number generator.\medskip
+
+%\begin{figure}[!ht]
+{  \centering
+  \includegraphics[width=12cm]{figures/Fig1.pdf}
+  \captionof{figure}{Output of the `Monte Carlo' algorithm for the
+    Corchia dataset of \citet{pollard2023}. a) Tera-Wasserburg
+    concordia diagram with disequilibrium-corrected isochron
+    ($t=0.5804\,\pm\,0.0086$\,Ma); b) 50 representative samples from the
+    distribution of $^{234}$U/$^{238}$U activity ratio measurements;
+    c) The corresponding initial $^{234}$U/$^{238}$U activity ratios;
+    d) The isochron ages corresponding to the $[4/8]_i$ values
+    presented in panel~c.\medskip}
+  \label{fig:CorchiaMC}
+}%\end{figure}
+
+Next, let us apply the same approach to older materials such as sample
+AV03 (Bolt's Farm, South Africa) of \citet{pickering2019}. The
+uncorrected U--Pb isochron age for this sample is ${5.6}\pm{0.9}$\,Ma,
+which is 22 half-lives of $^{234}$U. Consequently, the measured
+present-day $^{234}$U/$^{238}$U activity ratio is statistically
+indistinguishable from secular equilibrium, at $[4/8]_m =
+{1.0046}\pm{0.0063}$. Despite the lack of measurable disequilibrium,
+the `Monte Carlo' approach appears to have successfully applied a
+disequilibrium correction, resulting in a corrected age that is less
+than half the uncorrected age, with a precision of better than 12\%
+(Figure~\ref{fig:AV03MC1}). How is this possible? The answer lies in
+the rejected solutions (step \ref{it:4} of the algorithm), which are
+marked in black in Figure~\ref{fig:AV03MC1}b. Ignoring these
+`physically impossible' initial ratios suppresses the equilibrium
+solutions and skews the distribution of Monte Carlo solutions towards
+high $[4/8]_i$-values (Figure~\ref{fig:AV03MC1}c) and young ages
+(Figure~\ref{fig:AV03MC1}d).\medskip
+
+%\begin{figure}[!ht]
+{ \centering
+  \includegraphics[width=12cm]{figures/Fig2.pdf}
+  \captionof{figure}{Output of the `Monte Carlo' algorithm for sample
+    AV03 of \citet{pickering2019}. Panels~a) -- d) are as in
+    Figure~\ref{fig:CorchiaMC}. The black dots in panel~b) mark
+    synthetic replicates that are rejected because they yield
+    physically impossible $[4/8]_i$ and/or $t$-values. The results
+    shown in panels~c and d are consistent with the published
+    values.\medskip}
+  \label{fig:AV03MC1}
+}%\end{figure}
+
+To demonstrate that the result of Figure~\ref{fig:AV03MC1} is wrong,
+let us replace the measured $^{234}$U/$^{238}$U activity ratio with
+the equilibrium ratio (Equation~\ref{eq:secular_equilibrium}):
+\[
+[4/8]_m = [4/8]_\infty \pm 0.0063
+\]
+
+Plugging this value into the `Monte Carlo' algorithm yields an
+impossible result (Figure~\ref{fig:AV03MC2}). It has
+applied a disequilibrium correction without any actual disequilibrium,
+by ignoring exactly half of the $[4/8]_t$ distribution
+(Figure~\ref{fig:AV03MC2}b). This was necessary because,
+for this old sample, essentially any $[4/8]_t$ value that is less
+than the equilibrium ratio would require a negative $[4/8]_i$ ratio,
+or a negative isochron age $t$.\medskip
+
+%\begin{figure}[!ht]
+{ \centering \includegraphics[width=12cm]{figures/Fig3.pdf}
+  \captionof{figure}{The same data as Figure~\ref{fig:AV03MC1}, but
+    replacing $[4/8]_m$ with the equilibrium ratio. Note that half
+    of the synthetic replicates have been rejected (black
+    circles). Even though there is absolutely no evidence for
+    disequilibrium, the `Monte Carlo' produces a corrected isochron
+    age (panel~d) that is half the uncorrected value (panel~a). This
+    result is clearly wrong.\medskip}
+  \label{fig:AV03MC2}
+}%\end{figure}
+
+\section{A Bayesian approach}\label{sec:Bayes}
+
+The previous section showed that the `Monte Carlo' algorithm produces
+incorrect results for samples whose $[4/8]_t$-distributions fall
+within, say, three standard errors (i.e., $3\times{s}[4/8]_m$) from
+secular equilibrium. One way to address this issue is for the `Monte
+Carlo' algorithm to issue a warning when the $[4/8]_m$ value is
+close to $[4/8]_\infty$. This is the approach taken by \texttt{DQPB}
+\citep{pollard2023}.  In this section we introduce an alternative
+approach that automatically handles problematic cases, without the
+need to define a nominal `applicability cutoff'. Given any values of
+$[4/8]_m$ and $s[4/8]_m$, our new `Bayesian' algorithm proceeds as
+follows:
+
+\begin{enumerate}
+\item Define a prior distribution for $[4/8]_i$. In a first
+  instance, we will use a uniform distribution that stretches between
+  a minimum $[4/8]_i$-value $m=0$ and a maximum $[4/8]_i$-value
+  $M=20$. However, this uniform distribution can easily be replaced by
+  a more informative prior. One flexible way to capture a diversity of
+  prior information is the logistic normal distribution:
+  \begin{equation}
+    \ln\left(\frac{[4/8]_i-m}{M-m}\right) \sim
+    \mathcal{N}(\mu,\sigma^2)
+    \label{eq:prior}
+  \end{equation}
+  \noindent where $\mu$ and $\sigma$ are the location and dispersion
+  parameters of the distribution, respectively. An application of this
+  informative prior will be given in
+  Section~\ref{sec:accuracy-precision}.
+\item Draw a random sample from the prior distribution, carry out a
+  constrained isochron regression and register the resulting age ($t$)
+  and corresponding $[4/8]_t$-value. In other words, use
+  Equation~\ref{eq:matrixdecaysolution} to estimate $[4/8]_t$ from
+  $[4/8]_i$, and repeat this for different values of $t$ until the
+  linear fit to the U--Pb data is optimised. Register the likelihood
+  of this linear fit using the same algorithm as used for regular
+  U--Pb isochron regression \citep{ludwig1998,
+    vermeesch2020}.\label{it:2b}
+\item Calculate the likelihood of the inferred $[4/8]_t$-values
+  under a normal distribution with mean $[4/8]_m$ and standard
+  deviation $s[4/8]_m$. Combine with the likelihood of the linear
+  fit (obtained in step~\ref{it:2b}) to produce the `posterior'
+  probability of initial ratios.\label{it:3b}
+\item Repeat steps \ref{it:2b} and \ref{it:3b} to constrain the
+  posterior distributions of $[4/8]_i$ and $t$. This can either be
+  done using a Markov chain, or with a targeted approach of
+  appropriately spaced $[4/8]_i$ values.
+\end{enumerate}
+
+Applying this method to the 580\,ka Corchia example
+(Figure~\ref{fig:CorchiaBayes}) yields essentially identical results
+to the `Monte Carlo' algorithm (Figure~\ref{fig:CorchiaMC}).\medskip
+
+%\begin{figure}[!ht]
+{ \centering \includegraphics[width=12cm]{figures/Fig4.pdf}
+  \captionof{figure}{The same data as Figure~\ref{fig:CorchiaMC}, but
+    using the Bayesian approach. y-axes display the prior probability
+    (a), likelihood (b) and posterior probabilities (c and d),
+    respectively. For this relatively young sample, the Bayesian
+    method yields similar results to the `Monte Carlo'
+    solution.\medskip}
+  \label{fig:CorchiaBayes}
+}%\end{figure}
+
+However, when the Bayesian approach is applied to the older Bolt's
+Farm data (Figure~\ref{fig:AV03Bayes}), it produces a very different
+result than the `Monte Carlo' approach (Figure~\ref{fig:AV03MC1}). The
+posterior distributions for Bolt's Farm sample AV03 (shown in
+Figure~\ref{fig:AV03Bayes}c and d) still have maxima at $[4/8]_i=9$
+and $t=2.6$\,Ma, just like the `Monte Carlo' distributions
+(Figures~\ref{fig:AV03MC1}c and d). But unlike the `Monte Carlo'
+solution, the result of the Bayesian approach also assigns a
+significant probability to older ages, including the uncorrected U--Pb
+date of 5.6\,Ma. The similarity of this posterior distribution to the
+prior distribution reflects the fact that the measured
+$^{234}$U/$^{238}$U activity ratio contains relatively little
+information. The resulting uncertainties are large, but correctly
+reflect our ignorance about the true extent of the disequilibrium in
+this case.\medskip
+
+Finally, changing the $[4/8]_m$-ratio to the equilibrium value
+(Figure~\ref{fig:AV03Bayes}) produces a posterior distribution that is
+nearly identical to the prior distribution. This means that the
+likelihood function contains almost no information. In other words:
+the measured $^{234}$U/$^{238}$U activity ratio does not tell us
+anything about the initial disequilibrium (except that
+$[4/8]_i<10$).  If it cannot be ruled out that the sample may have
+experienced extreme $^{234}$U/$^{238}$U disequilibrium, then it is not
+possible to undo the effects of this disequilibrium using the modern
+(measured) $^{234}$U/$^{238}$U activity ratio.
+
+%\begin{figure}[!ht]
+{ \centering
+  \includegraphics[width=12cm]{figures/Fig5.pdf}
+  \captionof{figure}{Posterior distributions of $[4/8]_i$ and $t$
+    for sample AV03 of \citet{pickering2019}. Panels~a and b represent
+    the original U--Pb data of Figure~\ref{fig:AV03MC1}, whereas
+    panels~c and d show the modified data of
+    Figure~\ref{fig:AV03MC2}. Likelihood functions are provided in
+    panels~b of the latter two figures. A uniform prior was used but
+    is not shown. The modes of the posterior distributions agree with
+    the modes of the `Monte Carlo' solutions. However, whereas the
+    `Monte Carlo' algorithm suggests a high degree of confidence in
+    the disequilibrium correction, the Bayesian approach shows that
+    one cannot rule out a much higher age of the sample, including the
+    uncorrected date of 5.6\,Ma.\medskip}
+  \label{fig:AV03Bayes}
+}%\end{figure}
+
+\section{The case against ${}^{206}$Pb/${}^{238}$U-dating of old carbonates}
+\label{sec:case-against}
+
+The applicability range of the $^{206}$Pb/$^{238}$U method depends on
+the $[4/8]_i$-ratio and on the precision of the
+$[4/8]_m$-mea\-su\-re\-ments.  Although sub-permil level analytical
+uncertainties can be routinely achieved for individual
+$[4/8]_m$-measurements, the external reproducibility is likely worse
+than this in most samples. This is due to a combination of two
+competing factors. First, $[4/8]_i$ is negatively correlated with U
+concentration \citep{osmond1976,zhou2005,kuribayashi2025}. Second, the
+U concentration must exhibit large variations to form a statistically
+robust \textsuperscript{206}Pb/\textsuperscript{238}U
+isochron.\medskip
+
+The combination of these two effects has the potential to cause
+intra-sample variations in $[4/8]_m$ exceeding the analytical
+uncertainties. The exact magnitude of the dispersion is unknown
+because most speleothem U--Pb dating studies report only one or a few
+$[4/8]_m$-values per isochron. Here we will assume a conservative
+value of $s[4/8]_m=2\,\permil$, based on a collection of twelve
+speleothems analysed by \citet{walker2006}.\medskip
+
+Disequilibrium corrections using measured $^{234}$U/$^{238}$U activity
+ratios are only feasible if those activity ratios are statistically
+distinguishable from secular equilibrium. To turn these conclusions
+into quantitative guidelines, let us define ``statistically
+distinguishable'' as ``at least $3\times{s[4/8]_m}$ removed from
+secular equilibrium''. Using this definition, a sample with
+$[4/8]_i<2.7$ would become indistinguishable from secular
+equilibrium after c.\,2\,Ma.  In other words, it is impossible to
+correct a 2\,Ma sample whose $[4/8]_i=2.7$, say. The uncorrected
+$^{206}$Pb/$^{238}$U isochron age of such a sample would be 2.6\,Ma,
+corresponding to a bias of 30\%. Table~\ref{tab:0638sensitivity} shows
+the outcomes of the same exercise for a range of other ages.\medskip
+
+%\begin{table}[!ht]
+{  \centering
+  \captionof{table}{Sensitivity test of the ${}^{206}$Pb/${}^{238}$U method using selected ages.}
+  \begin{tabular}{r|cccccc}
+    true age (Ma) & 0.5 & 1 & 1.5 & 2 & 2.5 & 3.0 \\
+    minimum resolvable $[4/8]_i$& 1.02 & 1.10 & 1.41 & 2.68 & 7.89 & 29.2\\
+    maximum bias (\%) & 1.1 & 3.2 & 9.5 & 30 & 97 & 333\\
+  \end{tabular}
+  \label{tab:0638sensitivity}\medskip
+}%\end{table}
+
+Figure~\ref{fig:nomogram} presents a more extensive exploration of the
+magnitude (panel~a) and precision (panel~b) of
+disequilibrium-corrected $^{206}$Pb/$^{238}$U geochronology assuming
+the aforementioned $2\,\permil$ reproducibility. Alternative versions
+of this diagram can be generated by modifying the reproducibility
+value in the \texttt{R}-code provided in the supplementary
+information \citep{vermeesch2025z}.\medskip
+
+Based on these considerations, we judge carbonate $^{206}$Pb/$^{238}$U
+geochronology to be unreliable beyond c.\,1.5\,Ma, and impossible
+beyond c.\,2\,Ma unless initial $^{234}$U/$^{238}$U disequilibrium can
+be confidently ruled out (Figure~\ref{fig:nomogram}).  However, there
+is a solution to the conundrum of
+$^{234}$U/$^{238}$U-disequilibrium. This solution is the
+${}^{207}$Pb/${}^{235}$U isochron method
+\citep{richards1998,engel2019,vaks2020,vermeesch2025}.\medskip
+
+\noindent\includegraphics[width=14cm]{figures/Fig6.pdf}
+\captionof{figure}{
+  Nomogram to assess the applicability of the
+  \textsuperscript{206}Pb/\textsuperscript{238}U method in the
+  presence of different degrees of initial
+  \textsuperscript{234}U/\textsuperscript{238}U-disequilibrium.
+  Panels a and b visualise the magnitude and the precision of the
+  disequilibrium correction, respectively, for selected values of the
+  initial activity ratios $[4/8]_i$.  $t_r$ is the uncorrected date,
+  assuming secular equilibrium. $t_c$ is the true age, which equals
+  the disequilibrium-corrected date using the expected $[4/8]_m$
+  value. $t_u$ and $t_l$ are the disequilibrium-corrected dates using
+  present-day \textsuperscript{234}U/\textsuperscript{238}U activity
+  ratios of $[4/8]_m + 2\,\permil$ and $[4/8]_m - 2\,\permil$,
+  respectively. The dashed line in panel b) marks the relative
+  uncertainty interval when no disequilibrium measurement is
+  available, defined as the difference between corrected dates 
+  assuming initial ${}^{234}$U${/}^{238}$U activity ratios of 1 and 12.}
+\label{fig:nomogram}
+
+\section{A potential ${}^{207}$Pb/${}^{235}$U fix to ${}^{206}$Pb/${}^{238}$U's problems}\label{sec:207Pb235U}
+
+In the previous section, we showed that the ${}^{206}$Pb/${}^{238}$U
+method's accuracy is hampered by the extreme enrichment (up to double
+the equilibrium value or more) of ${}^{234}$U observed in certain
+groundwaters
+\citep[e.g.,][]{osmond1976,kronfeld1994,kuribayashi2025}. This problem
+can be solved by avoiding ${}^{234}$U altogether and sidestepping the
+${}^{238}$U--${}^{206}$Pb decay chain in favour of the
+${}^{235}$U--${}^{207}$Pb decay chain \citep{neymark2008}.\medskip
+
+There are two kinds of ${}^{207}$Pb/${}^{235}$U-isochrons. The
+simplest kind plots ${}^{204}$Pb/${}^{207}$Pb-ratios against
+${}^{204}$Pb/${}^{235}$U-ratios, defining the following linear
+relationship:
+\begin{equation}
+  \left[\frac{{}^{204}\mbox{Pb}}{{}^{207}\mbox{Pb}}\right] =
+  \left[\frac{{}^{204}\mbox{Pb}}{{}^{207}\mbox{Pb}}\right]_i \left\{ 1
+  - \left[\frac{{}^{235}\mbox{U}}{{}^{207}\mbox{Pb}}\right](\exp[\lambda_{35}t]-1) \right\}
+  \label{eq:204isochron}
+\end{equation}
+
+\noindent where ${}^{204}$Pb is used as a proxy for common
+Pb. Alternatively, one can also use ${}^{208}$Pb to fulfil this
+role. This gives rise to a ${}^{208}$Pb$_i/{}^{207}$Pb
+vs. ${}^{235}$U/${}^{207}$Pb isochron, where ${}^{208}$Pb$_i$ is the
+non-radiogenic ${}^{208}$Pb-component (with the decay products of
+${}^{232}$Th removed). Equation~\ref{eq:204isochron} is then replaced
+with:
+\begin{equation}
+  \left[\frac{{}^{208}\mbox{Pb}_i}{{}^{207}\mbox{Pb}}\right] =
+  \left[\frac{{}^{208}\mbox{Pb}}{{}^{207}\mbox{Pb}}\right]_i \left\{ 1 -
+  \left[\frac{{}^{235}\mbox{U}}{{}^{207}\mbox{Pb}}\right](\exp[\lambda_{35}t]-1) \right\}
+  \label{eq:208isochron}
+\end{equation}
+
+\noindent where
+\begin{equation}
+  \left[\frac{{}^{208}\mbox{Pb}_i}{{}^{207}\mbox{Pb}}\right] =
+  \left[\frac{{}^{208}\mbox{Pb}}{{}^{207}\mbox{Pb}}\right] -
+  \left[\frac{{}^{232}\mbox{Th}}{{}^{207}\mbox{Pb}}\right] \exp[\lambda_{32}t] + 1
+\end{equation}
+
+\noindent in which $\lambda_{32}=0.0495(25)\,\mbox{Gyr}^{-1}$
+\citep{leroux1963} and the ${}^{232}$Th/${}^{207}$Pb-ratio can be
+obtained from the product of the ${}^{232}$Th/${}^{238}$U,
+${}^{238}$U/${}^{235}$U and ${}^{232}$Th/${}^{207}$Pb ratios. Because
+Th is insoluble in water, radiogenic ${}^{208}$Pb is often absent from
+carbonates. Therefore, it is generally safe to assume that
+$\left[{}^{208}\mbox{Pb}_i/^{207}\mbox{Pb}\right] \approx
+\left[{}^{208}\mbox{Pb}/^{207}\mbox{Pb}\right]$.\medskip
+
+The ${}^{235}$U$\rightarrow{}^{207}$Pb method has just one long-lived
+intermediate daughter, ${}^{231}$Pa, which requires a correction. Due
+to ${}^{231}$Pa's short half-life of 32.65~kyr
+\citep[$\lambda_{31}=21.158(71)\,\mbox{Myr}^{-1}$;][]{audi2003}, it is
+generally not possible to measure any remaining disequilibrium in the
+Myr time range where the ${}^{235}$U$\rightarrow{}^{207}$Pb method
+offers a tangible advantage over the
+${}^{238}$U$\rightarrow{}^{206}$Pb method. Therefore, the
+$[1/5]_i$-value must be assumed.\medskip
+
+Pa is chemically similar to Th, and insoluble in water.  Therefore,
+${}^{231}$Pa is always depleted relative to ${}^{235}$U in
+carbonates. So whereas $[4/8]_i$ can vary anywhere between 0 and 12
+\citep{osmond1976}, $[1/5]_i$ is always less than 1 and can be
+safely assumed to be zero. In a worst case scenario, in which one
+assumes $[1/5]_i=0$ but the true activity ratio is $[1/5]_i=1$,
+this would only bias the ${}^{235}$Pb/${}^{235}$U age by a relatively
+small amount (Table~\ref{tab:0735sensitivity}).\medskip
+
+%\begin{table}[!ht]
+{ \centering \captionof{table}{Sensitivity test of the
+    ${}^{207}$Pb/${}^{235}$U method against $^{231}$Pa
+    disequilibrium.}
+  \begin{tabular}{r|cccccc}
+    true age (Ma) & 0.5 & 1 & 1.5 & 2 & 2.5 & 3.0 \\
+    maximum bias (\%) & 9.4 & 4.7 & 3.1 & 2.4 & 1.9 & 1.6
+  \end{tabular}
+  \label{tab:0735sensitivity}\medskip
+}%\end{table}
+
+The degree of potential bias of the ${}^{207}$Pb/${}^{235}$U method
+decreases with increasing age, unlike the ${}^{206}$Pb/${}^{238}$U
+method, whose bias increases with age
+(Table~\ref{tab:0638sensitivity}). In this sense, the
+${}^{207}$Pb/${}^{235}$U and ${}^{206}$Pb/${}^{238}$U methods are
+complementary to each other. The ${}^{207}$Pb/${}^{235}$U is most
+accurate for samples older than 1\,Ma, whereas the
+${}^{206}$Pb/${}^{238}$U is more accurate for samples younger than
+1\,Ma. Note that the latter is similar to the applicability range of
+the ${}^{230}$Th/U method. So one could argue that
+disequilibrium-corrected ${}^{206}$Pb/${}^{238}$U dating is of limited
+use to carbonate U--Pb geochronology \citep[except to infer
+  {[4/8]\textsubscript{\it{i}}};][]{engel2019}. Although the
+${}^{207}$Pb/${}^{235}$U method outperforms the
+${}^{206}$Pb/${}^{238}$U method at c.\,1\,Ma in terms of accuracy, its
+poorer precision means that its potential benefits do not materialise
+until c.\,2\,Ma. In the next Section, we will demonstrate this by
+applying both methods to three different case studies.
+
+\section{Case studies}
+\label{sec:accuracy-precision}
+
+Having made a largely theoretical case against
+\textsuperscript{206}Pb/\textsuperscript{238}U dating and for
+\textsuperscript{207}Pb/\textsuperscript{235}U dating of old
+carbonates that are suspected to have experienced initial
+\textsuperscript{234}U/\textsuperscript{238}U disequilibrium, we will
+now compare and contrast the two chronometers using three practical
+case studies.  The first example will demonstrate the accuracy of the
+\textsuperscript{207}Pb/\textsuperscript{235}U method by showing its
+consistency with disequilibrium-corrected
+\textsuperscript{206}Pb/\textsuperscript{238}U dates of young
+($<2$\,Ma) samples.\medskip
+
+The second example uses ID-TIMS data to serve two purposes. First, it
+will show that the \textsuperscript{207}Pb/\textsuperscript{235}U
+method produces more accurate, more consistent, and more precise
+results than the \textsuperscript{206}Pb/\textsuperscript{238}U method
+for older ($>2$\,Ma) carbonates. Second, it will demonstrate how the
+Bayesian framework can use prior information to overcome the the
+inaccuracy of the \textsuperscript{206}Pb/\textsuperscript{238}U
+method.\medskip
+
+In the third case study we apply the
+\textsuperscript{207}Pb/\textsuperscript{235}U method to LA-ICP-MS
+data using ${}^{208}$Pb as a proxy for common Pb.  In addition to
+highlighting a successful application where the
+\textsuperscript{207}Pb/\textsuperscript{235}U method produces
+demonstrably superior results to the
+\textsuperscript{206}Pb/\textsuperscript{238}U method, this dataset
+also illustrates limitations of the
+\textsuperscript{207}Pb/\textsuperscript{235}U approach with a sample
+that yields a precise \textsuperscript{206}Pb/\textsuperscript{238}U
+isochron and an unusably imprecise
+\textsuperscript{207}Pb/\textsuperscript{235}U isochron.
+
+\subsection{ID-ICP-MS data from Siberia}
+\label{sec:Vaks}
+
+A rich dataset of 72 speleothem dates is available from the Botovskaya
+and Ledyanaya Lenskaya (LLC) caves in Siberia. \citet{vaks2020} used
+the U--Pb method to extend an important palaeoclimatological archive
+from these caves that was previously dated using the ${}^{230}$Th--U
+disequilibrium method \citep{vaks2013}.  Samples were analysed by
+isotope dilution ICP-MS and were found to exhibit a significant level
+of ${}^{234}$U/${}^{238}$U disequilibrium.  U--Pb ages were estimated
+using a two-step procedure.  First, the common-Pb contribution was
+removed by two-point isochron regression through an inherited
+composition that was inferred by inspection of apparent linear trends
+in Tera-Wasserburg concordia space. Second, a ${}^{234}$U/${}^{238}$U
+disequilibrium correction was applied to the radiogenic end-member
+composition, using the procedures described in
+Section~\ref{sec:diseq}.  This correction combined the measured
+${}^{234}$U/${}^{238}$U activity ratios with an assumed absence of
+initial ${}^{230}$Th and ${}^{231}$Pa.\medskip
+
+The inferred $[4/8]_i$-values were c.\,2 and 3--5 for LLC and
+Botovskaya cave, respectively. This corresponds to an age correction
+of 15\% for LLC and 60\% for Botovskaya cave
+(Figure~\ref{fig:Siberia}). Uncertainties were estimated using the
+Bayesian procedure of Section~\ref{sec:Bayes}, making the optimistic
+assumption that the analytical uncertainty of the
+$[4/8]_m$-measurements faithfully captures all sources of
+dispersion. The scatter of the $[4/8]_i$-values suggests that this
+may not be the case. This caveat notwithstanding, the
+disequilibrium-corrected ${}^{206}$Pb/${}^{238}$U and
+${}^{207}$Pb/${}^{235}$U ages overlap within uncertainty in all but
+four of the samples.\medskip
+
+The ${}^{207}$Pb/${}^{235}$U age uncertainty is invariably larger than
+the ${}^{206}$Pb/${}^{238}$U age uncertainty.  In fact, below
+c.\,1\,Ma, it could be argued that the ${}^{207}$Pb/${}^{235}$U age
+uncertainties are unusably imprecise ($s[t]/t>50\%$).  However, above
+c.\,1\,Ma, the uncertainty reduces to acceptable levels
+($s[t]/t<5\%$).  Extrapolating this trend further into the past
+confirms the earlier assertion that beyond c.\,2\,Ma, the
+${}^{207}$Pb/${}^{235}$U method outperforms the
+${}^{206}$Pb/${}^{238}$U method in both accuracy and precision.
+
+{ \centering \includegraphics[width=12cm]{figures/Fig7.pdf}
+  \captionof{figure}{ Reanalysis of the speleothem data of
+    \citet{vaks2020}. This record stacks together several speleothems,
+    which are arranged in stratigraphic order for each cave. a)
+    uncorrected (circles) and corrected (black error bars)
+    ${}^{206}$Pb/${}^{238}$U dates, juxtaposed next to the
+    ${}^{207}$Pb/${}^{235}$U dates (blue error bars) for the same
+    samples. b) measured ($[4/8]_m$, circles) and inferred initial
+    ($[4/8]_i$, error bars) ${}^{234}$U/${}^{238}$U-activity
+    ratios. All error bars represent Bayesian 95\% credible
+    intervals. Sample~5 does not have a $[4/8]_m$ measurement and
+    was assumed to be in secular equilibrium. Sample~41 is an outlier
+    that has an anomalously high common Pb concentration and is only
+    included for the sake of completeness.\medskip}
+  \label{fig:Siberia}
+}
+
+\subsection{ID-TIMS data for ASH-15}
+\label{sec:ASH15}
+
+ASH-15 is a carbonate U--Pb dating reference material sourced from a
+flowstone in Ashalim cave of southern Israel \citep{nuriel2021}.
+37~ID-TIMS measurements were obtained from the flowstone, including 12
+from horizon D and 25 from horizon K. The latter are shown in
+Figure~\ref{fig:ASH15}. \citet{nuriel2021} report an uncorrected
+semitotal-Pb/U isochron age of $2.965 \pm 0.011$\,Ma for
+ASH-15.\medskip
+
+No \textsuperscript{234}U/\textsuperscript{238}U activity ratio
+measurements are available for ASH-15D and ASH-15K. However, two other
+horizons of the same flowstone (ASH-15A+B and ASH-15C1) are
+characterised by $[4/8]_m$-values of ${0.99939}\pm{0.00108}$ and
+${0.99925}\pm{0.0015}$, indistinguishable from secular
+equilibrium. Younger flowstones in Ashalim cave yield an average
+$[4/8]_i$-value of 1.0470 with a standard deviation of 0.01492
+\citep{vaks2010,vaks2013b}. A wider survey of 904 speleothem samples
+dated in southern and central Israel by \citet{chaldekas2022} have
+average $[4/8]_i$-values of $1.081\pm{0.138}$. Despite this lack of
+observable disequilibrium, \citet{mason2013} suggest a
+$[4/8]_i$-value of 1.5--2.0 to explain the minor degree of
+discordance of the common-Pb corrected Tera-Wasserburg ratios.\medskip
+
+To investigate the effect of initial U-series disequilibrium on
+ASH-15, Figures~\ref{fig:ASH15}a and b apply the Bayesian inversion
+algorithm to the ASH-15K data, using the $[4/8]_m$-value of ASH-15C1
+and assuming that $[0/8]_i=0$ (i.e. no initial
+\textsuperscript{230}Th). In a first attempt, we will use the same
+uniform prior from $m=0$ to $M=20$ as before. This results in a
+disequilibrium-corrected
+\textsuperscript{206}Pb/\,\textsuperscript{238}U-isochron age of
+$3.47+0.053/-0.794$\,Ma, and an inferred $[4/8]_i$ ratio of
+$0.067+2.23/-0.052$. As expected, initial equilibrium is very
+plausible with $P([4/8]_i>1.0)=0.47$. The initial activity ratio
+preferred by \citet{mason2013} cannot be ruled out either, but is less
+likely, with $P([4/8]_i>1.5)=0.25$ and $P([4/8]_i>2.0)=0.09$.\medskip
+
+In a second attempt, we used the $[4/8]_i$-values of
+\citet{chaldekas2022} to construct an informative prior, using the
+logistic normal formulation of Equation~\ref{eq:prior} with $m=1$,
+$M=3$, $\mu=1.081$ and $\sigma=0.2$.  This produces a posterior
+distribution for $[4/8]_i$ that is, essentially, identical to the
+prior, confirming that the $[4/8]_m$ data carry virtually no
+additional information. The corresponding disequilibrium-corrected
+\textsuperscript{206}Pb/\,\textsuperscript{238}U-isochron age is
+$3.107\pm{0.065}$\,Ma.\medskip
+
+In contrast with the widely varying scenarios for the
+\textsuperscript{206}Pb/\,\textsuperscript{238}U method, the
+\textsuperscript{207}Pb/\,\textsuperscript{235}U isochron age
+calculation is straightforward:
+
+\begin{enumerate}
+\item An uncorrected \textsuperscript{207}Pb/\,\textsuperscript{235}U
+  isochron age of $3.039\pm0.068$\,Ma, assuming $[1/5]_i\approx{1}$.
+\item A corrected \textsuperscript{207}Pb/\,\textsuperscript{235}U
+  isochron age of $3.086\pm0.068$\,Ma, assuming $[1/5]_i=0$.
+\end{enumerate}
+
+\noindent which are nearly identical to the
+\textsuperscript{206}Pb/\textsuperscript{238}U date using the
+informative $[4/8]_i$-prior. We would like to conclude the
+discussion of ASH-15 by remarking that disequilibrium issues do not
+affect the suitability of this sample as a reference material for
+in-situ U--Pb geochronology. This is because standardisation is done
+relative to the \emph{uncorrected} isotopic composition
+\citep{horstwood2016}.\medskip
+
+{ \centering 
+  \includegraphics[width=\linewidth]{figures/Fig8.pdf}
+  \captionof{figure}{
+    ID-TIMS U--Pb data for flowstone ASH-15K \citep{nuriel2021}. a)
+    informative prior for $[4/8]_i$, based on the data compilation of
+    \citet{chaldekas2022}; b) likelihood function for $[4/8]_m$, using
+    the activity ratio measurements of ASH-15C1 \citep{vaks2013}; c)
+    and d) posterior probabilities for $[4/8]_i$ and $t$,
+    respectively; e) the ${}^{206}$Pb/${}^{238}$U isochron, fitted
+    using the model-3 algorithm of \citet{vermeesch2024}, with the
+    excess dispersion shown as a horizontal 95\% error bar; and f) the
+    model-1 ${}^{207}$Pb/${}^{235}$U isochron. The grey uncertainty
+    bands represent the standard errors of the isochron fits and do
+    not reflect the Bayesian credible intervals.}
+  \label{fig:ASH15}
+}
+
+\subsection{LA-ICP-MS data from Siberia}
+
+For the final case study, we return from Israel to the Botovskaya cave
+deposits in Siberia. Section~\ref{sec:Vaks} and
+Figure~\ref{fig:Siberia} show abundant evidence that this cave is
+strongly enriched in initial ${}^{234}$U, with $[4/8]_i$-values
+ranging from 3 to 5 according to the results of \citet{vaks2020}. The
+effect of this strong disequilibrium can be confidently undone for the
+young ($<500$\,ka) speleothems shown in
+Figure~\ref{fig:Siberia}. However, Botovskaya cave also contains
+speleothems that are considerably older than this, going all the way
+back to the Plio-Pleistocene. By now it should be clear that the
+${}^{206}$Pb/${}^{238}$U method is ill suited to unlock this older
+archive. Figure~\ref{fig:Botovskaya} summarises some preliminary U--Pb
+results from two of these older cave deposits (sample SB-1625-22 and
+sample SB-72-8) obtained by LA-ICP-MS.\medskip
+
+As mentioned before under the discussion of the Bolt's Cave data, the
+${}^{204}$Pb measurements produced by this technique are imprecise and
+potentially inaccurate. In this case, ${}^{208}$Pb was measured and
+can be used as a substitute for ${}^{204}$Pb.  Th/U ratios (also
+measured by LA-ICP-MS) were extremely low, allowing us to ignore the
+radiogenic ${}^{208}$Pb contribution.\medskip
+
+The uncorrected ${}^{206}$Pb/${}^{238}$U isochron age of sample
+SB-1625-22 is $2.66\pm{0.10}$\,Ma and exhibits significant
+overdispersion with respect to the analytical uncertainties (MSWD=36).
+Model-3 isochron regression \citep[\emph{sensu}][]{vermeesch2024}
+indicates that this excess scatter is equivalent to an age dispersion
+of $104\pm{28}$\,kyr (Figure~\ref{fig:Botovskaya}a). In reality, the
+excess dispersion around the isochron is unlikely to reflect
+diachronous isotopic closure. A more likely explanation for the
+scatter of the ${}^{206}$Pb/${}^{238}$U data is spatial variability of
+the $[4/8]_i$-values, as discussed in
+Section~\ref{sec:case-against}. In summary, the actual dispersion
+estimate probably has no physical meaning, but the isochron age should
+be as accurate as mathematically possible. The reduction of the
+scatter around the Botovskaya isochrons (Figures~\ref{fig:Botovskaya}a
+and c) towards the y-intercept also suggests that the common Pb-ratio
+is not substantially correlated with the postulated heterogeneous
+initial disequilibrium.\medskip
+
+Given the antiquity of the sample and the difficulty of measuring
+$[4/8]_m$ by LA-ICP-MS, no initial disequilibrium measurement was
+made. Switching from ${}^{206}$U/${}^{238}$U to
+${}^{207}$Pb/${}^{235}$U isochron space lowers the age to
+$1.60\pm{0.10}$\,Ma whilst reducing the dispersion of the data around
+the isochron line (MSWD=1.5, Figure~\ref{fig:Botovskaya}b). To verify
+the accuracy of this result, it is useful to point out that a
+$[4/8]_i$-value of 3.9 would bring the corrected
+${}^{206}$Pb/${}^{238}$U isochron in alignment with the
+${}^{207}$Pb/${}^{235}$U isochron. Such a value is consistent with the
+initial activity ratios of the more recent Botovskaya deposits
+(Figure~\ref{fig:Siberia}b). This not only supports the accuracy of
+the ${}^{207}$Pb/${}^{235}$U isochron results, but also suggests that
+the $[4/8]_i$ ratios have remained stable over hundreds of thousands
+of years.\medskip
+
+We would like to conclude the results section by drawing attention to
+the fact that the ${}^{207}$Pb/${}^{235}$U method is not always
+successful. Figures~\ref{fig:Botovskaya}c and d show that Botovskaya
+sample SB-72-8 produces a well defined linear array in
+${}^{206}$Pb/${}^{238}$U isochron space, but fails to do so in
+${}^{207}$Pb/${}^{235}$U isochron space.  Such cases are not rare. The
+${}^{207}$Pb/${}^{235}$U approach only works in samples that are
+sufficiently rich in U and sufficiently poor in common Pb. Speleothems
+from Botovskaya are rich in U (30--170\,ppm for SB-72-8), so that here
+the problem seems to originate from common Pb (0.4--4\,ppm for
+SB-72-8).\medskip
+
+{ \centering
+  \includegraphics[width=.7\linewidth]{figures/Fig9.pdf}
+  \captionof{figure}{LA-ICP-MS data for two speleothems from 
+    Botovskaya cave in Siberia. a) model-3 ${}^{206}$Pb/${}^{238}$U
+    isochron regression for sample SB-1625-22. The equivalent model-1
+    isochron age (with MSWD=9) is $2.65\pm{0.10}$\,Ma. b) model-1
+    ${}^{207}$Pb/${}^{235}$U isochron for SB-1625-22; c) model-1
+    ${}^{206}$Pb/${}^{238}$U and d) ${}^{207}$Pb/${}^{235}$U isochrons
+    for sample SB-72-8 ($2.73\pm{1.33}$\,Ma).}
+  \label{fig:Botovskaya}
+}
+
+\section{Implementation in \texttt{IsoplotR}}\label{sec:IsoplotR}
+
+All the methods described in this paper have been implemented in the
+\texttt{IsoplotR} toolbox for geochronological data processing
+\citep{vermeesch2018c}.  The matrix exponential disequilibrium
+correction method of Section~\ref{sec:diseq} has been part of
+\texttt{IsoplotR} since version 3.0, whereas the deterministic
+Bayesian uncertainty estimation routine of Section~\ref{sec:Bayes} was
+introduced in version 5.2.  At the time of writing, \texttt{IsoplotR}
+(version 6.7) supports twelve different U--Pb data
+formats. Disequilibrium corrected U--Pb isochron regression is
+available for all these formats, in different forms.\medskip
+
+Formats~1--3 contain neither ${}^{204}$Pb nor ${}^{208}$Pb. Therefore,
+isochron regression for these formats must be done by semitotal-Pb/U
+regression in Tera-Wasserburg concordia space. Formats~4--6 include
+${}^{204}$Pb as a common Pb tracer. These formats permit the
+calculation of both ${}^{206}$Pb/${}^{238}$U and
+${}^{207}$Pb/${}^{235}$U isochrons, either jointly \citep[by
+  three-dimensional total-Pb/U isochron regression;][]{ludwig1998} or
+separately.  To take full advantage of the ${}^{207}$Pb/${}^{235}$U
+method's superior accuracy, it is recommended to use the
+two-dimensional option. Formats~7 and 8 use ${}^{208}$Pb as a common
+Pb tracer. They are also amenable to both ${}^{206}$Pb/${}^{238}$U and
+${}^{207}$Pb/${}^{235}$U isochron regression, either jointly \citep[by
+  total Pb/U--Th regression;][]{vermeesch2020} or separately.
+Formats~9--10 and 11--12 are simplified versions of formats~4--6 and
+7--8, respectively, which only permit two-dimensional regression.
+Formats~9 and 11 are meant for ${}^{206}$Pb/${}^{238}$U isochron
+regression, whereas formats~10 and 12 are meant for
+${}^{207}$Pb/${}^{235}$U isochron regression.\medskip
+
+The disequilibrium corrections can be accessed from
+\texttt{IsoplotR}'s GUI (either online or offline) by using the
+`isochron' function and ticking the `apply disequilibrium correction'
+check box in the options menu. Alternatively, the same functionality
+can also be accessed from the command-line API. Bayesian uncertainty
+estimation is possible using either interface, but visualising the
+posterior distributions of the parameter space is currently only
+possible from the command line.\medskip
+
+The online supplement provides all the \texttt{R} code that was used
+to reproduce the figures in this paper \citep{vermeesch2025z}.
+
+\section{Conclusions}\label{sec:conclusions}
+
+In this paper, we presented a critical appraisal of carbonate U--Pb
+geochronology, and proposed three improvements to the
+technique. First, we introduced a matrix exponential solution to the
+initial disequilibrium problem, extending the work of
+\citet{albarede1995}. This formulation produces identical results to
+the conventional solution by \citet{engel2019}, but can be written out
+more succinctly, and can more easily be modified to suit other
+problems. For example, the matrix exponential approach can be adjusted
+to calculate disequilibrium-corrected U--Th--He ages
+\citep{farley2002b,danisik2017b}.  Second, we presented a
+deterministic Bayesian algorithm to quantify the statistical
+uncertainty associated with the disequilibrium correction. This
+algorithm was used to demonstrate that, for samples older than
+c.\,2\,Ma, disequilibrium-corrected ${}^{206}$Pb/${}^{238}$U
+geochronology is unreliable. Third, we advocated the use of the
+${}^{207}$Pb/${}^{235}$U isochron method as a more accurate
+alternative to the ${}^{206}$Pb/${}^{238}$U method.\medskip
+
+Although our findings are most relevant to young carbonates, the
+inaccuracy of the ${}^{206}$Pb/${}^{238}$U method equally applies to
+old samples.  Only the relative difference between the
+${}^{206}$Pb/${}^{238}$U and ${}^{207}$Pb/${}^{235}$U ages reduces
+with time. The absolute difference remains constant at up to 4\,Myr
+(Equation~\ref{eq:worst-case}). The corresponding systematic
+uncertainty cannot be removed without making unverifiable assumptions
+about the initial ${}^{234}$U/${}^{238}$U activity ratio.  For samples
+older than $>100$\,Ma, say, the systematic error caused by initial
+disequilibrium is generally smaller than the random errors associated
+with the isotope ratio measurements. However, given a sufficiently
+precise set of isochrons, it is theoretically possible to reconstruct
+the U-disequilibrium conditions at the time of isotopic closure from
+the difference between the ${}^{206}$Pb/${}^{238}$U and
+${}^{207}$Pb/${}^{235}$U clocks.\medskip
+
+\citet{engel2019} advocate using the same procedure in Quaternary
+studies.  They propose a two-step procedure, whereby the difference
+between the ${}^{206}$Pb/${}^{238}$U and ${}^{207}$Pb/${}^{235}$U
+dates is used to estimate $[4/8]_i$; and this $[4/8]_i$-value is
+then used to calculate a corrected
+${}^{206}$Pb/${}^{238}$U-age. \texttt{IsoplotR} implements a one-step
+algorithm that achieves the same goal using the total-Pb/U algorithm
+of \citet{ludwig1998} and the total-Pb/U--Th algorithm of
+\citet{vermeesch2020}. However, we would like to add a note of caution
+about the usefulness of this joint regression procedure. Beyond
+c.\,2\,Ma, all the age-resolving power of the paired
+${}^{206}$Pb/${}^{238}$U and ${}^{207}$Pb/${}^{235}$U approach resides
+in the ${}^{207}$Pb/${}^{235}$U clock, so the ${}^{206}$Pb/${}^{238}$U
+data add no value.
+
+\subsection*{Code availability}
+
+\texttt{IsoplotR} is free software released under the GPL-3
+license. The package and its source code are available from
+https://cran.r-project.org/package=IsoplotR \citep[last access:
+  July~21, 2025,][]{vermeesch2018c}. The test data used in
+Section~\ref{sec:IsoplotR} are provided in the supplementary
+information \citep{vermeesch2025z}
+
+\subsection*{Author Contributions}
+
+NM developed the matrix exponential solution to the initial
+disequilibrium problem \citep{mclean2016b}; PV developed the
+deterministic Bayesian inversion algorithm; RP proposed the
+${}^{207}$Pb/${}^{235}$U fix to the ${}^{206}$Pb/${}^{238}$U problems;
+AV, TG and SB provided the Siberian data; PV wrote the paper, with
+feedback from the other authors.
+
+\subsection*{Competing Interests}
+
+PV and NM are Associate Editors of \emph{Geochronology}.
+
+\subsection*{Acknowledgements}
+This research has been supported by the Natural Environment Research
+Council (grant no. NE/T001518/1, awarded to PV) and the Leverhulme
+Trust (grant no. RPG-20202-334, awarded to SFMB). This paper benefited
+from thorough reviews by Perach Nuriel, Timothy Pollard and Robyn
+Pickering.
+
+\bibliographystyle{copernicus}
+\bibliography{/home/pvermees/Dropbox/biblio.bib}
+
+\end{document}

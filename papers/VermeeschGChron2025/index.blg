@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: index.aux
+The style file: copernicus.bst
+Database file #1: /home/pvermees/Dropbox/biblio.bib
+Warning--entry type for "vermeesch2025z" isn't style-file defined
+--line 13789 of file /home/pvermees/Dropbox/biblio.bib
+You've used 42 entries,
+            2932 wiz_defined-function locations,
+            1273 strings with 17878 characters,
+and the built_in function-call counts, 43306 in all, are:
+= -- 4846
+> -- 1743
+< -- 17
++ -- 798
+- -- 547
+* -- 2624
+:= -- 4355
+add.period$ -- 42
+call.type$ -- 42
+change.case$ -- 265
+chr.to.int$ -- 43
+cite$ -- 126
+duplicate$ -- 4290
+empty$ -- 2191
+format.name$ -- 665
+if$ -- 8535
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 471
+newline$ -- 135
+num.names$ -- 169
+pop$ -- 1819
+preamble$ -- 1
+purify$ -- 265
+quote$ -- 0
+skip$ -- 2743
+stack$ -- 0
+substring$ -- 1803
+swap$ -- 3693
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 375
+warning$ -- 0
+while$ -- 230
+width$ -- 0
+write$ -- 469
+(There was 1 warning)
