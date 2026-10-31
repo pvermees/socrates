@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Pieter Vermeesch" />
+  <title>Too good to be true: Underdispersion in geochronology</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 800px;
+      counter-reset: figure;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-height: 350px;
+      max-width: 100%;
+    }
+    figure {
+      counter-increment: figure;
+      text-align: center;
+      margin: 1em 0;
+    }
+    figure img {
+      display: block;
+      margin: 0 auto;
+    }
+    figcaption {
+      text-align: left;
+    }
+    figcaption::before {
+      content: "Figure " counter(figure) ": ";
+      font-weight: bold;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Too good to be true: Underdispersion in
+geochronology</h1>
+<p class="author">Pieter Vermeesch</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>Statistical tests of data dispersion are widely used in geochronology
+to assess whether analytical uncertainties adequately explain the
+scatter of repeated measurements. Whereas excess scatter
+(overdispersion) is commonly regarded as a problem to be identified and
+removed, this paper draws attention to the opposite phenomenon:
+underdispersion, in which measurements cluster more closely than
+expected from their analytical uncertainties. Underdispersion may result
+from incorrectly estimated uncertainties, but can also arise from
+over-zealous outlier rejection, whereby measurements are selectively
+removed until the remaining data meet a predefined p-value cutoff or
+mean square weighted deviation (MSWD) target. Such practices can produce
+apparently precise but potentially inaccurate geochronological
+estimates.</p>
+<p>This paper introduces a simple graphical method for detecting
+underdispersion in collections of geochronological data. The method is
+based on the empirical cumulative distribution function (ECDF) of
+p-values from chi-squared tests of sample homogeneity. Under the null
+hypothesis, p-values should be uniformly distributed. Although genuine
+geological complexity can shift the distribution towards low p-values,
+there is no natural mechanism that can produce an excess of high
+p-values. Consequently, the region below the 1:1 line of a p-value ECDF
+represents a “forbidden zone” that provides a diagnostic for excessive
+outlier rejection (“Type-II cherry picking”).</p>
+<p>Observer drift, iterative outlier removal and optimised LA-ICP-MS
+signal windows are mechanisms that can produce underdispersion. Applied
+to real data, underdispersion appears in every geochronometer examined.
+For fission track analysis (where cherry picking is the only possible
+cause of underdispersion), about one third of p-values in the
+<code>geochron.org</code> database plot in the forbidden zone. So do 15%
+of 650 p-values from <em>Nature</em> journals (rising from 11.5% before
+2019 to 17.2% since) and 25% of those underlying the 2020 edition of the
+Geologic Time Scale, including 90% of Ar–Ar constraints. Addressing the
+problem requires greater emphasis on geological evidence when
+identifying outliers, preferably through procedures that are blind to
+statistical dispersion, and greater transparency through FAIR sharing of
+raw data and data-reduction workflows.</p>
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#sec:definitions" id="toc-sec:definitions"><span
+class="toc-section-number">1</span> Definitions</a></li>
+<li><a href="#sec:overdispersion" id="toc-sec:overdispersion"><span
+class="toc-section-number">2</span> What causes overdispersion?</a></li>
+<li><a href="#sec:causes" id="toc-sec:causes"><span
+class="toc-section-number">3</span> What causes
+underdispersion?</a></li>
+<li><a href="#sec:ecdf" id="toc-sec:ecdf"><span
+class="toc-section-number">4</span> A graphical means of detecting
+underdispersion</a></li>
+<li><a href="#sec:synthetic" id="toc-sec:synthetic"><span
+class="toc-section-number">5</span> Synthetic examples</a>
+<ul>
+<li><a href="#sec:synthetic-FT" id="toc-sec:synthetic-FT"><span
+class="toc-section-number">5.1</span> Fission tracks</a></li>
+<li><a href="#sec:weighted-mean" id="toc-sec:weighted-mean"><span
+class="toc-section-number">5.2</span> Weighted means</a></li>
+<li><a href="#isochrons" id="toc-isochrons"><span
+class="toc-section-number">5.3</span> Isochrons</a></li>
+<li><a href="#sec:concordia" id="toc-sec:concordia"><span
+class="toc-section-number">5.4</span> Concordia ages</a></li>
+<li><a href="#sec:mixtures" id="toc-sec:mixtures"><span
+class="toc-section-number">5.5</span> Mixtures of over- and
+under-dispersed datasets</a></li>
+</ul></li>
+<li><a href="#sec:real" id="toc-sec:real"><span
+class="toc-section-number">6</span> Natural examples</a>
+<ul>
+<li><a href="#sec:FT" id="toc-sec:FT"><span
+class="toc-section-number">6.1</span> Fission tracks</a></li>
+<li><a href="#a-compilation-of-nature-papers"
+id="toc-a-compilation-of-nature-papers"><span
+class="toc-section-number">6.2</span> A compilation of <em>Nature</em>
+papers</a></li>
+<li><a href="#sec:GTS2020" id="toc-sec:GTS2020"><span
+class="toc-section-number">6.3</span> The Geologic Time Scale
+(GTS2020)</a></li>
+<li><a href="#sec:detrital" id="toc-sec:detrital"><span
+class="toc-section-number">6.4</span> Detrital zircon U–Pb
+geochronology</a></li>
+</ul></li>
+<li><a href="#sec:importance" id="toc-sec:importance"><span
+class="toc-section-number">7</span> Discussion: (why) does
+underdispersion matter?</a></li>
+<li><a href="#type-i-and-type-ii-cherry-picking"
+id="toc-type-i-and-type-ii-cherry-picking"><span
+class="toc-section-number">8</span> Type I and Type II cherry
+picking</a></li>
+</ul>
+</nav>
+<p><span id="sec:intro" label="sec:intro"></span></p>
+<p>The scientific method is a powerful tool for discovery and objective
+decision-making <span class="citation" data-cites="popper1959">(Popper
+1959)</span>. Statistical hypothesis testing is often used to formalise
+this process. If an observed experimental result is unlikely under a
+mathematically defined null hypothesis, the hypothesis is rejected;
+otherwise, it is retained (Section <a href="#sec:definitions"
+data-reference-type="ref" data-reference="sec:definitions">1</a>). When
+used correctly, hypothesis tests are extremely valuable. For instance,
+powered tests in double-blind clinical trials form the foundation of the
+pharmaceutical drug approval process<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a>. In this way, hypothesis
+testing can literally save lives. However, unpowered tests are
+vulnerable to both conscious and unconscious misuse.</p>
+<p>Formalised hypothesis tests create an artificial dichotomy between
+results that support or reject scientific hypotheses. This binary
+thinking introduces bias into research findings. Arbitrary p-value
+cutoffs (typically at <span class="math inline">\(\alpha =
+0.05\)</span>) incentivise researchers to bias data to fit one side of
+the divide <span class="citation" data-cites="amrhein2019">(Amrhein,
+Greenland, and McShane 2019)</span>. When an entire community of
+scientists tries to reject a statistical hypothesis, it increases the
+risk of committing a so-called Type I error (false positive). This is a
+serious issue in the life sciences, which may even cause most published
+research findings to be false in that field <span class="citation"
+data-cites="ioannidis2005">(Ioannidis 2005)</span>.</p>
+<p>This paper will show that geochronology experiences the opposite
+problem, whereby hypothesis tests are exclusively used to check whether
+a dataset is ‘simple’ before proceeding with another statistical
+procedure <span class="citation" data-cites="mcintyre1966">(McIntyre et
+al. 1966)</span>. In geochronology, failure of the test indicates the
+presence of excess scatter (‘overdispersion’), which may be diagnostic
+of faulty data or geological complexity (Section <a
+href="#sec:overdispersion" data-reference-type="ref"
+data-reference="sec:overdispersion">2</a>). Removal of perceived
+‘outliers’ avoids this complexity and makes life considerably easier.
+However, taking this approach too far can lead to Type II errors (false
+negative) and, in the most extreme cases, to ‘underdispersed’ datasets
+that are ‘too good to be true’ (Section <a href="#sec:causes"
+data-reference-type="ref" data-reference="sec:causes">3</a>).</p>
+<p>Geochronologists are increasingly aware of these issues. Over the
+past decade, several papers and community recommendations have appeared,
+discussing the geological causes of overdispersion and introducing new
+statistical strategies to avoid over-zealous outlier detection <span
+class="citation"
+data-cites="horstwood2016 keller2018 klein2024 vermeesch2025c">(e.g.,
+Horstwood et al. 2016; Keller, Schoene, and Samperton 2018; Klein and
+Eddy 2024; Pieter Vermeesch 2025)</span>. Nevertheless, underdispersed
+datasets are still more likely to pass through peer review than
+overdispersed datasets, providing an incentive to ‘clean up’
+datasets.</p>
+<p>A key challenge is that there is currently no clear definition of
+underdispersion, nor a straightforward way to detect it. This paper
+addresses that gap by introducing a simple graphical method for
+identifying underdispersion in geochronological datasets (Section <a
+href="#sec:ecdf" data-reference-type="ref"
+data-reference="sec:ecdf">4</a>). The method is demonstrated using both
+synthetic (Section <a href="#sec:synthetic" data-reference-type="ref"
+data-reference="sec:synthetic">5</a>) and real datasets (Section <a
+href="#sec:real" data-reference-type="ref"
+data-reference="sec:real">6</a>) to evaluate how common underdispersion
+is in the published literature. Providing an accessible diagnostic tool
+is an important first step toward solving the problem.</p>
+<h1 data-number="1" id="sec:definitions"><span
+class="header-section-number">1</span> Definitions</h1>
+<p>Rare exceptions notwithstanding, most radiometric age estimates are
+based on multiple analyses (aliquots) per sample. This redundancy of
+measurements benefits the precision of the age estimates (which scales
+with the inverse of the square root of the number of analyses) and
+provides an opportunity to assess the internal consistency of the data.
+In statistics, it is useful to make a distinction between the true
+values and their statistical estimates, where</p>
+<ol>
+<li><p>The true values could be the actual <em>ages</em> of some
+minerals separated from a rock sample and the estimates are
+<em>dates</em> with some analytical uncertainty; or</p></li>
+<li><p>The true values could be a pair of
+<sup>206</sup>Pb/<sup>238</sup>U and <sup>207</sup>Pb/<sup>235</sup>U
+ratios which may or may not be concordant, and the estimated values are
+displaced from those true values by some random distance; or</p></li>
+<li><p>The true values may be isotopic ratio pairs that lie on a mixing
+line between radiogenic and non-radiogenic end-member components, while
+the estimates are offset from this mixing line, forming an isochron that
+can be fitted by weighted least-squares regression.</p></li>
+</ol>
+<p>The difference between the true and estimated values is the result of
+two contributions:</p>
+<ol>
+<li><p>Analytical uncertainty, which can be estimated from the raw mass
+spectrometer data by error propagation.</p></li>
+<li><p>Geological scatter between the true values.</p></li>
+</ol>
+<p>The relative contributions between these two sources of dispersion
+can be formally tested by formulating a null hypothesis <span
+class="math inline">\(H_0\)</span> and an alternative hypothesis <span
+class="math inline">\(H_a\)</span>:</p>
+<div class="description">
+<p><span><span class="math inline">\(H_0\)</span>:</span> All the ages
+are the same.</p>
+<p><span><span class="math inline">\(H_a\)</span>:</span> Some ages are
+different.</p>
+</div>
+<p>The dispersion of the estimated values around the best fitting
+weighted mean, concordia age or isochron can be quantified using the
+error-weighted sum of the squared differences, <span
+class="math inline">\(\chi^2\)</span>. Under <span
+class="math inline">\(H_0\)</span>, <span
+class="math inline">\(\chi^2\)</span> follows a chi-squared distribution
+with <span class="math inline">\(\nu\)</span> <em>degrees of
+freedom</em>, where <span class="math inline">\(\nu = 1\)</span> for
+U–Pb concordance, <span class="math inline">\(\nu = n-1\)</span> for
+weighted means, <span class="math inline">\(\nu = n-2\)</span> for
+two-dimensional isochrons and <span class="math inline">\(\nu =
+2\,n - 4\)</span> for three-dimensional isochrons. This leads to three
+equivalent ways to evaluate <span
+class="math inline">\(H_0\)</span>:</p>
+<ol>
+<li><p>High values of <span class="math inline">\(\chi^2\)</span> lead
+to the rejection of <span class="math inline">\(H_0\)</span> in favour
+of <span class="math inline">\(H_a\)</span>. The cutoff value <span
+class="math inline">\(X_c^2\)</span> corresponds to the <span
+class="math inline">\(1-\alpha\)</span> quantile of the null
+distribution, where <span class="math inline">\(\alpha\)</span> is
+typically taken to be 5% <span class="citation"
+data-cites="pearson1900">(Pearson 1900)</span>;</p></li>
+<li><p>The probability of observing a value exceeding <span
+class="math inline">\(\chi^2\)</span> under <span
+class="math inline">\(H_0\)</span> is known as the <em>p-value</em> of
+the chi-square test. P-values below <span
+class="math inline">\(\alpha\)</span> lead to the rejection of <span
+class="math inline">\(H_0\)</span>;</p></li>
+<li><p>The mean squared weighted deviation (MSWD) is defined as <span
+class="math inline">\(\chi^2/\nu\)</span>. If <span
+class="math inline">\(H_0\)</span>, is true and <span
+class="math inline">\(\nu&gt;20\)</span>, then the null distribution of
+the MSWD is approximately Gaussian with a mean of <span
+class="math inline">\(\sim 1\)</span> and a standard deviation <span
+class="math inline">\(\sqrt{2/\nu}\)</span>. MSWD values fall outside
+the range of <span class="math inline">\(1 \pm 2\,\sqrt{2/\nu}\)</span>
+lead to the rejection of <span class="math inline">\(H_0\)</span> at
+(approximately) a 95% confidence level <span class="citation"
+data-cites="wendt1991">(Wendt and Carl 1991)</span>.</p></li>
+</ol>
+<p>Datasets for which <span class="math inline">\(\chi^2 &gt;
+X_c^2\)</span>, <span class="math inline">\(p &lt; \alpha\)</span> or
+MSWD<span class="math inline">\(\,&gt;1+2\,\sqrt{2/\nu}\)</span> are
+said to be <em>overdispersed</em> with respect to the analytical
+uncertainties. Dataset for which <span class="math inline">\(\chi^2
+\approx 0\)</span>, <span class="math inline">\(p &gt; 1-\alpha\)</span>
+and MSWD<span class="math inline">\(\,&lt;1-2\,\sqrt{2/\nu}\)</span> are
+<em>underdispersed</em>.</p>
+<h1 data-number="2" id="sec:overdispersion"><span
+class="header-section-number">2</span> What causes overdispersion?</h1>
+<p>As explained in Section <a href="#sec:definitions"
+data-reference-type="ref" data-reference="sec:definitions">1</a>,
+overdispersion is the phenomenon whereby the observed scatter of the
+measurements around the mean or isochron exceeds the range expected from
+the analytical uncertainties alone. This leads to the rejection of <span
+class="math inline">\(H_0\)</span> in favour of <span
+class="math inline">\(H_a\)</span>, which can mean four things:</p>
+<ol>
+<li><p>The analytical uncertainties have been underestimated;</p></li>
+<li><p>Something has gone wrong during the sample preparation or
+analysis, causing poor reproducibility of the measurements;</p></li>
+<li><p>The true values are dispersed due to geological or
+sample-specific complexities that are not captured by the analytical
+uncertainties;</p></li>
+<li><p>The dataset has been selected among a larger collection of
+measurements to maximise the dispersion. This situation may never occur
+in geochronology but is actually quite common in other fields of science
+as detailed in the Appendix (‘Type I cherry picking’).</p></li>
+</ol>
+<p>Overdispersion carries a distinctly negative connotation in
+geochronology. For example, overdispersed isochrons are known as
+‘errorchrons’ <span class="citation" data-cites="brooks1972">(Brooks,
+Hart, and Wendt 1972)</span>, reflecting the concern that weighted least
+squares regression cannot safely be applied to datasets that exhibit
+excess scatter around the best fit line. However, this negative
+reputation is undeserved <span class="citation"
+data-cites="kalsbeek1992">(Kalsbeek 1992)</span>. If the first two
+scenarios can be ruled out, the presence of overdispersion provides an
+opportunity to extract additional information about the geological
+system of interest.</p>
+<p>Geological sources of overdispersion include protracted residence
+times of datable minerals in magmatic systems, slow cooling of minerals
+with variable closure temperatures, the presence of xenocrysts or common
+Pb, and the occurrence of Pb-loss <span class="citation"
+data-cites="galbraith1993 rioux2012 keller2018 klein2024">(Galbraith and
+Laslett 1993; Rioux et al. 2012; Keller, Schoene, and Samperton 2018;
+Klein and Eddy 2024)</span>.</p>
+<p>The statistical <em>power</em> of the chi-squared test to detect
+overdispersion steadily grows with increasing analytical precision and
+sample size. Given a large enough sample with sufficiently small
+analytical uncertainties, even the smallest amount of geological
+dispersion becomes discoverable. Given the steady gains in precision and
+throughput that radiometric geochronology has witnessed over time, it is
+not surprising that overdispersed datasets become ever more prevalent.
+Therefore, overdispersed datasets should be expected to be the rule, not
+the exception <span class="citation" data-cites="vermeesch2025c">(Pieter
+Vermeesch 2025)</span>.</p>
+<h1 data-number="3" id="sec:causes"><span
+class="header-section-number">3</span> What causes underdispersion?</h1>
+<p>Underdispersion is the phenomenon whereby the measured values cluster
+together closer than expected from the analytical uncertainties. This
+may mean two things:</p>
+<ol>
+<li><p>The analytical uncertainties have been overestimated. This can
+happen when systematic sources of uncertainty are mistakenly treated as
+random uncertainties. Consider, for example, an LA-ICP-MS session in
+which instrument drift and elemental fractionation are estimated by
+analysing reference materials interspersed between the samples. Then it
+seems logical to add the internal reproducibility of the reference
+materials to the analytical uncertainties of the samples, in quadrature.
+However, doing so potentially introduces strong error correlations
+between the different aliquots of the sample, which may result in
+overestimated uncertainties <span class="citation"
+data-cites="mclean2016">(McLean, Bowring, and Gehrels
+2016)</span>.</p></li>
+<li><p>The data have been subjected to over-zealous ‘outlier detection’
+in order to remove values that are perceived to be in disagreement with
+<span class="math inline">\(H_0\)</span>. A famous example of this type
+of behaviour is Gregor Mendel’s study of the genetic traits of garden
+peas <span class="citation" data-cites="mendel1866">(Mendel
+1866)</span>. A re-analysis of Mendel’s data by <span class="citation"
+data-cites="fisher1936">Fisher (1936)</span> using the chi-squared test
+yielded a p-value of 0.99993, which is ‘too good to be true’. In this
+paper, we will refer to this type of behaviour as ‘Type II cherry
+picking’, for reasons that are provided in the Appendix. Mendel’s
+motivations for Type II cherry picking have been discussed at length in
+the literature <span class="citation" data-cites="radick2015">(Radick
+2015)</span>. Whatever they may have been in 1866, it should be clear
+that this type of data manipulation has no place in modern
+science.</p></li>
+</ol>
+<p>In the case of Mendel’s experiment, a single p-value sufficed to
+identify the cherry picking. Such extreme cases of underdispersion are
+rare in geochronology, although they do exist. In most cases,
+underdispersion is more subtle, as an unintentional consequence of
+outlier detection. For example, when constraining the eruption age of a
+volcanic tuff from zircon U–Pb dates, it is common practice to remove
+antecrystic ‘outliers’ until the MSWD approaches unity. In the case of
+plateau ages in Ar–Ar geochronology, some definitions of a ‘plateau’
+even include an explicit p-value criterion <span class="citation"
+data-cites="jourdan2009">(Jourdan, Renne, and Reimold 2009)</span>.</p>
+<p>These more subtle cases of underdispersion cannot be identified in a
+single sample. For example, a p-value of 0.98 or greater has a chance of
+1 in 50 to occur by accident (no cherry picking) in datasets that do not
+exhibit overdispersion. However, when such moderately high p-values are
+systematically overrepresented in the literature, their collective
+effect can be as clear as that of a single, strongly underdispersed
+dataset. Section <a href="#sec:ecdf" data-reference-type="ref"
+data-reference="sec:ecdf">4</a> presents some numerical and graphical
+methods to detect this problem.</p>
+<h1 data-number="4" id="sec:ecdf"><span
+class="header-section-number">4</span> A graphical means of detecting
+underdispersion</h1>
+<p>Assuming <span class="math inline">\(n\)</span> independent
+experiments, the probability that all <span
+class="math inline">\(n\)</span> p-values exceed <span
+class="math inline">\(\alpha\)</span> is <span
+class="math inline">\((1-\alpha)^n\)</span>. Consequently, the
+probability of making at least one Type I error (i.e., incorrectly
+classifying a homogeneous sample as overdispersed) is <span
+class="math inline">\(1 - (1 -
+\alpha)^n\)</span>. For <span
+class="math inline">\(\alpha=0.05\)</span>, this probability increases
+from 5% for <span class="math inline">\(n = 1\)</span>, to 10% for <span
+class="math inline">\(n = 2\)</span>, 14% for <span
+class="math inline">\(n = 3\)</span>, and 51% for <span
+class="math inline">\(n =
+14\)</span>. In other words, in geochronological studies of homogeneous
+samples reporting 14 or more MSWD values, it becomes more likely than
+not that at least one sample will be falsely identified as
+overdispersed, resulting in a type-I error<a href="#fn2"
+class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>.</p>
+<p>The same reasoning can be applied to the lower tail of the
+chi-squared distribution. Under the null hypothesis of a non-dispersed
+sample, the probability of obtaining a p-value greater than 0.5 is 50%.
+For <span class="math inline">\(n\)</span> independent samples, the
+probability that all p-values exceed 0.5 is <span
+class="math inline">\((0.5)^n = 2^{-n}\)</span>. Section <a
+href="#sec:real" data-reference-type="ref"
+data-reference="sec:real">6</a> will show that some published datasets
+contain up to <span class="math inline">\(n = 9\)</span> p-values
+greater than 0.5. The probability of such an outcome is less than 0.2%.
+While this could occur by chance within a large collection of studies,
+the repeated occurrence of such uniformly high p-values is unlikely to
+be coincidental and cannot reasonably be attributed to random variation
+alone.</p>
+<p>These simple calculations are informative but have important
+limitations. They apply only to independent datasets evaluated at a
+single, arbitrarily chosen p-value threshold, and they assume that the
+true isotopic ratios of all the samples are non-dispersed. However, in
+practice the scientific literature comprises a heterogeneous mix of
+datasets in which some samples exhibit varying degrees of
+overdispersion, some studies may have applied various levels of outlier
+rejection, and many studies may have sample sizes too small to determine
+conclusively whether the deata are significantly underdispersed. A
+broader approach is therefore required to identify underdispersion at
+scale. This paper introduces a graphical method designed to detect
+underdispersion across a collection of multiple studies.</p>
+<p>Consider a representative collection of statistical hypothesis tests
+extracted from the scientific literature. If <em>all</em> the null
+hypotheses for these tests are true then, by definition, the frequency
+distribution of their p-values should follow a uniform distribution.
+That is, 90% of the p-values should be less than 0.9, 5% of the p-values
+should be less than 0.05 and so forth. The empirical cumulative
+distribution function (ECDF) of such a set of experimental outcomes
+would straddle the 1:1 line. If <em>some</em> of the null hypotheses are
+false, then this would shift the p-value distribution to the left and
+move its ECDF above the 1:1 line (blue line in Figure <a
+href="#fig:ECDF" data-reference-type="ref"
+data-reference="fig:ECDF">1</a>). The area below the 1:1 line is a
+‘forbidden zone’, indicating an over-supply of high p-values.</p>
+<p>There are no natural mechanisms that can push the p-value
+distribution in the ‘forbidden zone’. The only two mechanisms that can
+cause underdispersed datasets are given in Section <a href="#sec:causes"
+data-reference-type="ref" data-reference="sec:causes">3</a>: (1)
+incorrect error propagation; and (2) removal of perceived ‘outliers’ to
+inflate the p-value. If the first mechanism can be ruled out, then the
+p-value distribution can be used to detect systematic underdispersion in
+the scientific literature. Note that the ECDF of the p-values can only
+be used to detect excessive outlier detection (Type II cherry picking,
+see Appendix). Type I cherry picking shifts the p-value distribution
+towards the left and above the 1:1 line, where genuinely false null
+hypotheses are also found.</p>
+<figure id="fig:ECDF">
+<a href="figures/synthetic-ECDF.png"><img src="figures/synthetic-ECDF.png" /></a>
+<figcaption>p-value distribution using synthetic data, assuming
+correctly estimated analytical uncertainties. The blue curve shows the
+empirical cumulative distribution function (ECDF) of 100 simulated
+p-values derived from overdispersed samples. The red curve shows the
+ECDF of another set of 100 simulated p-values drawn from the same
+distribution, but with half of the samples affected by excessive outlier
+rejection.</figcaption>
+</figure>
+<h1 data-number="5" id="sec:synthetic"><span
+class="header-section-number">5</span> Synthetic examples</h1>
+<p>This section demonstrates the usefulness of the p-value distribution
+as a diagnostic tool, using synthetic examples to illustrate the
+different mechanisms that can give rise to underdispersion.</p>
+<h2 data-number="5.1" id="sec:synthetic-FT"><span
+class="header-section-number">5.1</span> Fission tracks</h2>
+<p>Section <a href="#sec:causes" data-reference-type="ref"
+data-reference="sec:causes">3</a> identified two mechanisms that can
+lead to underdispersion: (1) incorrect error propagation and (2) overly
+aggressive outlier rejection. Without fully transparent data-processing
+pipelines, it is impossible to distinguish between these causes. The
+only geochronological method with completely transparent error
+propagation is the fission-track method using the external detector
+approach <span class="citation" data-cites="hurford1983">(Hurford and
+Green 1983)</span>.</p>
+<p>For this type of data, the raw observations consist of paired
+measurements of spontaneous (<span class="math inline">\(N_s\)</span>)
+and induced (<span class="math inline">\(N_i\)</span>) track counts,
+obtained by human observers <span class="citation"
+data-cites="nachtergaele2021 boone2025">(or by computer algorithms
+trained by human observers; Nachtergaele and De Grave 2021; Boone et al.
+2025)</span>. The precision of the fission track age estimates is
+entirely determined by these two values, so that the uncertainty <span
+class="math inline">\(s[N_s/N_i] = (N_s/N_i)
+\sqrt{1/N_s+1/N_i}\)</span> <span class="citation"
+data-cites="galbraith1981">(Galbraith 1981)</span>. Because <span
+class="math inline">\(N_s\)</span> and <span
+class="math inline">\(N_i\)</span> are typically small (generally fewer
+than 100 and often fewer than 10), the precision of single-grain fission
+track age estimates is usually low compared to that of other (mass
+spectrometer-based) geochronometers. To improve precision, it is
+customary to analyse multiple grains (typically <span
+class="math inline">\(n=20\)</span>) per sample and to average or pool
+their counts.</p>
+<p>Before pooling multiple fission track measurements and treating them
+as single grain, it is important to verify that the data are
+homogeneous—that is, consistent with a single true age. This can be
+assessed with the following test statistic:</p>
+<p><span class="math display">\[\chi^2 = \dfrac{1}{N_{s\ast}\,N_{i\ast}}
+  \sum\limits_{j=1}^{n}\dfrac{\left(N_{sj}\,N_{i\ast}-N_{ij}\,N_{s\ast}\right)^2}
+             {N_{sj}-N_{ij}}\]</span></p>
+<p>where <span class="math inline">\(N_{sj}\)</span> and <span
+class="math inline">\(N_{ij}\)</span> represent the <span
+class="math inline">\(j\)</span><sup>th</sup> (out of <span
+class="math inline">\(n\)</span>) <span
+class="math inline">\(N_s\)</span> and <span
+class="math inline">\(N_i\)</span> values, <span
+class="math inline">\(N_{s\ast}\equiv\sum_{j=1}^nN_{sj}\)</span> and
+<span class="math inline">\(N_{i,\ast}\equiv\sum_{j=1}^nN_{ij}\)</span>.
+Under <span class="math inline">\(H_0\)</span>, this definition of <span
+class="math inline">\(\chi^2\)</span> follows a chi-squared distribution
+with <span class="math inline">\(n-1\)</span> degrees of freedom <span
+class="citation" data-cites="galbraith1993">(Galbraith and Laslett
+1993)</span>.</p>
+<p>Because fission track analysis is performed by human observers,
+analysts must take particular care to avoid bias. Various strategies can
+be used to minimise this risk. Arguably the most robust approach for
+acquiring external detector data is to count spontaneous and induced
+fission tracks separately. Under this procedure, a set of <span
+class="math inline">\(n\)</span> grains is counted first, followed by
+their corresponding <span class="math inline">\(n\)</span> mica images
+(or <em>vice versa</em>). This results in the following sequence of
+measurements: <span class="math inline">\(N_{s1}, N_{s2}, \ldots,
+N_{sn}\)</span>, <span class="math inline">\(N_{i1}, N_{i2},
+\ldots, N_{in}\)</span>.</p>
+<p>This ‘block counting’ design minimises the risk of unconscious bias,
+particularly when samples are analysed blindly, i.e. without the analyst
+knowing the origin or even the name of the sample being counted.
+Although this approach is used in some studies, most laboratories adopt
+a different procedure in which the analyst alternates between grains and
+mica images. This produces an ‘interleaved’ sequence of measurements:
+<span class="math inline">\(N_{s1}, N_{i1}, N_{s2},
+N_{i2}, \ldots, N_{sn}, N_{in}\)</span>.</p>
+<p>The interleaving pattern is not always chosen by the analyst; it may
+be imposed by the data acquisition software. A potential drawback of
+this design is that it may lead analysts to consciously or
+subconsciously converge on a particular <span
+class="math inline">\(N_s/N_i\)</span> ratio. Once the first pair of
+track counts has been obtained, the analyst effectively ‘knows’ the
+result, which may influence the selection criteria for subsequent
+grains. This type of behaviour can be simulated as follows:</p>
+<ol>
+<li><p>Generate <span class="math inline">\(n\)</span> random values
+<span class="math inline">\(r_j\)</span> from a lognormal distribution
+with location parameter <span class="math inline">\(\mu\)</span> and
+dispersion parameter <span
+class="math inline">\(\sigma\)</span>;</p></li>
+<li><p>Generate <span class="math inline">\(n\)</span> pairs of <span
+class="math inline">\(N_{sj}\)</span> and <span
+class="math inline">\(N_{ij}\)</span> values from binomial distributions
+with parameters <span class="math inline">\(\theta_j =
+r_j/(1+r_j)\)</span> and sample sizes <span class="math inline">\(N_j =
+N_{sj} + N_{ij}\)</span>, where <span class="math inline">\(N_j\)</span>
+is a random integer;</p></li>
+<li><p>For <span class="math inline">\(j=1\rightarrow{n}\)</span>,
+perform a chi-squared test on the first <span
+class="math inline">\(j\)</span> pairs of <span
+class="math inline">\(N_s\)</span> and <span
+class="math inline">\(N_i\)</span> values. If the test fails, adjust
+<span class="math inline">\(N_{sj}\)</span> and <span
+class="math inline">\(N_{ij}\)</span> until it passes, then
+proceed.</p></li>
+</ol>
+<p>The results of this numerical simulation are shown in Figure <a
+href="#fig:FT" data-reference-type="ref" data-reference="fig:FT">2</a>.
+It is important to note that observer drift is only one possible
+mechanism for underdispersion, assuming that the bias arises during
+fission track analysis. Alternative (or additional) biases may occur
+<em>post hoc</em>, through adjustments to fission track counts after the
+original data acquisition. This second type of bias affects block
+counting method and interleaved experimental design equally and is
+analogous to the bias that can arise when removing outliers from
+weighted means, as discussed in Section <a href="#sec:weighted-mean"
+data-reference-type="ref"
+data-reference="sec:weighted-mean">5.2</a>.</p>
+<figure id="fig:FT">
+<a href="figures/FT.png"><img src="figures/FT.png" /></a>
+<figcaption> Simulation of ‘observer drift’ in fission track analysis.
+Circles are synthetic fission track ratios, drawn from a population with
+20% overdispersion. Black squares are adjusted values, ensuring that
+<span class="math inline">\(p &gt; 0.05\)</span> for all counts up to
+and including <span class="math inline">\(j\)</span> (with <span
+class="math inline">\(1\leq{j}\leq{n=20}\)</span>). Arrows show the
+drift occurring for ratios that failed the homogeneity test before being
+adjusted. The black line shows the pooled ratio for all counts up to and
+including <span class="math inline">\(j\)</span>.</figcaption>
+</figure>
+<h2 data-number="5.2" id="sec:weighted-mean"><span
+class="header-section-number">5.2</span> Weighted means</h2>
+<p>Consider a collection of <span class="math inline">\(n\)</span>
+zircon crystals, which all formed at exactly the same time, <span
+class="math inline">\(t\)</span>. Suppose that the zircon crystals were
+dated by the U–Pb method, yielding <span
+class="math inline">\(n\)</span> dates <span
+class="math inline">\(\hat{t}_i\)</span> with analytical uncertainties
+<span class="math inline">\(s[\hat{t}_i]\)</span> (for <span
+class="math inline">\(1\leq{i}\leq{n}\)</span>). Then a precise estimate
+for <span class="math inline">\(t\)</span> can be obtained by taking the
+weighted mean of the <span class="math inline">\(n\)</span> zircon
+dates:</p>
+<p><span class="math display">\[\bar{t} =
+\dfrac{\sum_{i=1}^{n}\hat{t}_i/s[\hat{t}_i]^2}
+      {\sum_{i=1}^{n}1/s[\hat{t}_i]^2}\]</span></p>
+<p>The accuracy of this formula hinges on the assumption that the true
+ages of all the zircon grains are identical. This assumption can be
+tested by redefining the chi-square statistic:</p>
+<p><span class="math display">\[\chi^2 = \dfrac{1}{n-1}
+  \sum\limits_{i=1}^n
+\left(\dfrac{\hat{t}_i-\bar{t}}{s[\hat{t}_i]}\right)^2\]</span></p>
+<p>Small values of <span class="math inline">\(\chi^2\)</span> indicate
+good agreement with the hypothesis that all ages are identical, whereas
+large values suggest that this assumption is less likely to hold.
+Several mechanisms can lead to this outcome, including (1) the presence
+of xenocrysts, (2) common Pb, (3) Pb-loss, and (4) genuine outliers.
+Failure of the chi-squared test requires that the assumption of age
+homogeneity be dropped in favour of a more complex model that captures
+these scenarios. If one is willing to make the assumption that the
+dispersion is entirely caused by genuine outliers, then the dataset can
+be trimmed until the dataset passes the chi-squared test. This procedure
+can be simulated as follows:</p>
+<ol>
+<li><p><span id="it:X2full" label="it:X2full"></span> Calculate the
+p-value for the full dataset of <span class="math inline">\(n\)</span>
+dates.</p></li>
+<li><p>For <span class="math inline">\(i=1\rightarrow{n}\)</span>, leave
+out the <span class="math inline">\(i\)</span><sup>th</sup> measurement
+and calculate the p-value for the remaining <span
+class="math inline">\(n-1\)</span> analyses; call these values <span
+class="math inline">\(p_i\)</span>;</p></li>
+<li><p><span id="it:remove_outlier" label="it:remove_outlier"></span>
+Identify the aliquot with the highest value of <span
+class="math inline">\(p_i\)</span>, and permanently remove it from the
+dataset;</p></li>
+<li><p>Recursively repeat steps <a href="#it:X2full"
+data-reference-type="ref" data-reference="it:X2full">[it:X2full]</a>–<a
+href="#it:remove_outlier" data-reference-type="ref"
+data-reference="it:remove_outlier">[it:remove_outlier]</a> for the
+surviving dates until the dataset no longer fails the chi-squared
+test.</p></li>
+</ol>
+<p>This procedure is illustrated in Figure <a href="#fig:synthetic_U-Pb"
+data-reference-type="ref" data-reference="fig:synthetic_U-Pb">3</a>
+using a synthetic but realistic zircon U–Pb age distribution that
+includes both young and old tails.</p>
+<figure id="fig:synthetic_U-Pb">
+<a href="figures/wtdmean.png"><img src="figures/wtdmean.png" /></a>
+<figcaption>Synthetic U–Pb dataset, comprised of a three-component
+mixture of (1) normally distributed ages with a mean <span
+class="math inline">\(\mu_1 = 100\)</span> Ma and standard deviation
+<span class="math inline">\(\sigma_1 = 5\)</span> Ma; (2) a positively
+truncated normal distribution of antecryst ages with mean <span
+class="math inline">\(\mu_2 = \mu_1\)</span> and standard deviation
+<span class="math inline">\(\sigma_2 =
+    20\)</span> Ma; and (3) a negatively truncated normal distribution
+of ages affected by Pb-loss, with mean <span class="math inline">\(\mu_3
+= \mu_1\)</span> and standard deviation <span
+class="math inline">\(\sigma_3 = 20\)</span> Ma. a) calculates the
+weighted mean including all aliquots; b) calculates the weighted mean
+with ‘outliers’ removed until <span class="math inline">\(p(\chi^2) &gt;
+\alpha\)</span>. Empty boxes were removed from the weighted mean
+calculation; whereas green boxes were retained.</figcaption>
+</figure>
+<h2 data-number="5.3" id="isochrons"><span
+class="header-section-number">5.3</span> Isochrons</h2>
+<p>Most mass-spectrometer based geochronometers are based on the
+radioactive decay of a parent nuclide <span
+class="math inline">\(P\)</span> to a daughter nuclide <span
+class="math inline">\(D\)</span> in the presence of a non-radiogenic
+‘sister’ isotope <span class="math inline">\(d\)</span>. In general,
+<span class="math inline">\(D\)</span> consists of a mixture of
+radiogenic and non-radiogenic components, whose relative contributions
+can be estimated by analysing multiple cogenetic aliquots and fitting a
+straight line through their isotopic ratios. The isochron is then
+defined as <span class="math inline">\(y_i = a + b \, x_i\)</span> where
+<span class="math inline">\(y_i = P_i/d_i\)</span> and <span
+class="math inline">\(y_i = D_i/d_i\)</span> for conventional isochrons,
+and <span class="math inline">\(x_i = P_i/D_i\)</span> and <span
+class="math inline">\(y_i = d_i/D_i\)</span> for ‘inverse isochrons’.
+The intercept (<span class="math inline">\(a\)</span>) and slope (<span
+class="math inline">\(b\)</span>) are a function of the non-radiogenic
+<span class="math inline">\(D/d\)</span>-ratio and the age of the sample
+<span class="citation" data-cites="li2021">(Li and Vermeesch
+2021)</span>.</p>
+<p><span class="math inline">\(x_i\)</span> and <span
+class="math inline">\(y_i\)</span> are associated with analytical
+uncertainties, which are correlated because they share a common
+denominator <span class="citation"
+data-cites="pearson1896 chayes1949">(Pearson 1896; Chayes 1949)</span>.
+The fit parameters (and hence age) can be estimated by weighted least
+squares regression <span class="citation" data-cites="york2004">(York et
+al. 2004)</span>. The chi-squared statistic can be redefined again to
+quantify the degree to which the analytical uncertainties explain the
+scatter of the data around the best fit line. Let <span
+class="math inline">\(\{X_i,Y_i\}\)</span> be <span
+class="math inline">\(n\)</span> pairs of <span
+class="math inline">\(\{x,y\}\)</span>-measurements and their
+(co)variances <span class="math inline">\(s[X_i]^2\)</span>, <span
+class="math inline">\(s[Y_i]^2\)</span> and <span
+class="math inline">\(s[X_i,Y_i]\)</span>:</p>
+<p><span class="math display">\[\chi^2 = \sum\limits_{i=1}^{n}
+  \left[
+    \begin{array}{@{}cc@{}}
+      X_i - \hat{x}_i \\
+      Y_i - \hat{a} - \hat{b} x_i
+    \end{array}
+    \right]^T
+  \left[
+    \begin{array}{@{}cc@{}}
+      s[X_i]^2 &amp; s[X_i,Y_i] \\
+      s[Y_i,X_i] &amp; s[Y_i]^2
+    \end{array}
+    \right]^{-1}
+  \left[
+    \begin{array}{@{}cc@{}}
+      X_i - \hat{x}_i\\
+      Y_i - \hat{a} - \hat{b} \hat{x}_i
+    \end{array}
+    \right]\]</span></p>
+<p>where <span class="math inline">\(\hat{a}\)</span> and <span
+class="math inline">\(\hat{b}\)</span> are the best fit intercept and
+slope, and <span class="math inline">\(\hat{x}_i\)</span> are the fitted
+<span class="math inline">\(x\)</span>-values, which are obtained by
+minimising <span class="math inline">\(\chi^2\)</span> with respect to
+<span class="math inline">\(a\)</span> and <span
+class="math inline">\(b\)</span>. Under the hypothesis that the
+differences between the measured <span
+class="math inline">\(\{X_i,Y_i\}\)</span> and the fitted values <span
+class="math inline">\(\{\hat{x}_i,\hat{a}+\hat{b}\,\hat{x}_i\}\)</span>
+is purely caused by analytical uncertainty, <span
+class="math inline">\(\chi^2\)</span> follows a chi-squared distribution
+with <span class="math inline">\(\nu = n-2\)</span> degrees of freedom.
+Failure of the homogeneity test may be caused by (1) heterogeneity of
+the non-radiogenic component (i.e., differences in <span
+class="math inline">\(a\)</span> between the different aliquots); (2)
+diachronous isotopic closure of the geochronometer (i.e., differences in
+<span class="math inline">\(b\)</span> between different aliquots); or
+both. Naive outlier removal follows a similar procedure as for the
+weighted mean, by cycling through the measurements and removing those
+that result in the greatest reduction of <span
+class="math inline">\(\chi^2\)</span> (Figure <a
+href="#fig:synthetic_Ar-Ar" data-reference-type="ref"
+data-reference="fig:synthetic_Ar-Ar">4</a>).</p>
+<figure id="fig:synthetic_Ar-Ar">
+<a href="figures/isochron.png"><img src="figures/isochron.png" /></a>
+<figcaption>Synthetic <sup>40</sup>Ar–<sup>39</sup>Ar dataset (a)
+without and (b) with ‘outlier’ removal. The data are generated from a
+true isochron with horizontal intercept <span
+class="math inline">\(x_0=0.1\)</span> and a vertical intercept <span
+class="math inline">\(y_0=1/298.5\)</span>. Excess dispersion was added
+to both the <sup>36</sup>Ar/<sup>40</sup>Ar (10%) and
+<sup>39</sup>Ar/<sup>40</sup>Ar (5%) ratios. Empty ellipses were removed
+from the isochron regression; whereas green boxes were
+retained.</figcaption>
+</figure>
+<h2 data-number="5.4" id="sec:concordia"><span
+class="header-section-number">5.4</span> Concordia ages</h2>
+<p>The U–Pb method comprises two independent chronometers based on the
+radioactive decay of two isotopes of uranium (<sup>238</sup>U and
+<sup>235</sup>U) to two lead isotopes (<sup>206</sup>Pb and
+<sup>207</sup>Pb, respectively), providing an internal quality control
+mechanism that is absent from most other geochronometers. Concordance of
+the two clocks can be tested using the following chi-squared statistic:
+<span class="math display">\[\chi^2 =
+  \left[
+    \begin{array}{@{}c@{}}
+      X - \left(e^{\lambda_{235}t_c} - 1\right) \\
+      Y - \left(e^{\lambda_{238}t_c} - 1\right)
+    \end{array}
+    \right]^T
+  \left[
+    \begin{array}{@{}cc@{}}
+      s[X]^2 &amp; s[X,Y] \\
+      s[X,Y] &amp; s[Y]^2
+    \end{array}
+    \right]^{-1}
+  \left[
+    \begin{array}{@{}c@{}}
+      X - \left(e^{\lambda_{235}t_c} - 1\right) \\
+      Y - \left(e^{\lambda_{238}t_c} - 1\right)
+    \end{array}
+    \right]
+\]</span><span id="eq:concordance"></span></p>
+<p>where <span class="math inline">\(X\)</span> and <span
+class="math inline">\(Y\)</span> are the measured
+<sup>207</sup>Pb/<sup>235</sup>U and <sup>206</sup>Pb/<sup>238</sup>U
+ratios; <span class="math inline">\(s[X]^2\)</span>, <span
+class="math inline">\(s[Y]^2\)</span> and <span
+class="math inline">\(s[X,Y]\)</span> their (co)variances; and <span
+class="math inline">\(t_c\)</span> is the ‘concordia age’, which is
+obtained by minimising <span class="math inline">\(\chi^2\)</span>. If
+the <sup>207</sup>Pb/<sup>235</sup>U and
+<sup>206</sup>Pb/<sup>238</sup>U ages are perfectly concordant and
+analytical uncertainty is the only source of scatter, then <span
+class="math inline">\(\chi^2\)</span> follows a chi-squared distribution
+with <span class="math inline">\(\nu = 1\)</span> degree of freedom
+<span class="citation" data-cites="ludwig1998">(Ludwig 1998)</span>.</p>
+<p>Laser ablation inductively coupled plasma mass spectrometry
+(LA-ICP-MS) is a widely used technique for in-situ U–Pb geochronology.
+It produces raw instrument data consisting of time series of
+<sup>206</sup>Pb, <sup>207</sup>Pb, and <sup>238</sup>U measurements (in
+V, A, or Hz), which comprise two components: the ‘background’, measured
+before laser ablation, and the ‘signal’, measured during laser ablation.
+A key step in the data reduction process is the definition of ‘selection
+windows’ that group ‘stable’ segments of the mass spectrometer signal.
+Some data reduction packages support this process by providing an
+interactive ‘live concordia’ diagram, in which the effect of the
+selection window on the inferred U–Pb composition is immediately visible
+<span class="citation" data-cites="petrus2012">(e.g., Petrus and Kamber
+2012)</span>. Although such interactive user interfaces can be helpful,
+they also introduce a mechanism for generating isotopic compositions
+that are ‘too good to be true’ (Figure <a href="#fig:concordia"
+data-reference-type="ref" data-reference="fig:concordia">5</a>).</p>
+<figure id="fig:concordia">
+<a href="figures/concordia.png"><img src="figures/concordia.png" /></a>
+<figcaption>a) synthetic time-resolved LA-ICP-MS dataset showing
+<sup>238</sup>U (diamonds), <sup>206</sup>Pb (squares) and
+<sup>207</sup>Pb (triangles), and two selection windows; b) ‘live’
+concordia diagram of the individual mass spectrometer signals, with the
+means of the integrations for the two selection windows shown as blue
+and red ellipses, respectively.</figcaption>
+</figure>
+<h2 data-number="5.5" id="sec:mixtures"><span
+class="header-section-number">5.5</span> Mixtures of over- and
+under-dispersed datasets</h2>
+<p>Having reviewed some key mechanisms that may result in
+underdispersion on the sample level, this section will consider their
+effect on a collection of multiple samples. Let us first consider the
+simplest case of a collection of ‘perfect’ samples, which exhibit no
+overdispersion whatsoever.</p>
+<p>For fission track data and weighted means, ‘perfection’ means that
+all the analysed grains have exactly the same age, with the scatter of
+the dates being exclusively caused by analytical uncertainty. For
+isochrons, ‘perfect’ data mean that the true (but unknowable) isotopic
+ratios fall exactly on an isochron, with the scatter of the measured
+isotopic ratio estimate being only caused by analytical uncertainty.
+Finally, for concordia age calculation, the true (but unknown)
+<sup>207</sup>Pb/<sup>235</sup>U and <sup>206</sup>Pb/<sup>238</sup>U
+ratios of ‘perfect’ data fall exactly on the Wetherill concordia line,
+and the dispersion of the measured <sup>207</sup>Pb/<sup>235</sup>U and
+<sup>206</sup>Pb/<sup>238</sup>U ratio estimates is due to analytical
+uncertainty alone. For a collection of such ‘perfect’ samples (for all
+of which <span class="math inline">\(H_0\)</span> is true), the ECDF of
+a random selection of p-values would stradddle the 1:1 line. Therefore,
+on average 5% of the samples would erroneously be labelled as being
+overdispersed when in fact they are not, resulting in a Type I
+error.</p>
+<p>The outlier rejection procedures outlined in Sections <a
+href="#sec:synthetic-FT" data-reference-type="ref"
+data-reference="sec:synthetic-FT">5.1</a>–<a href="#sec:concordia"
+data-reference-type="ref" data-reference="sec:concordia">5.4</a> reduce
+the proportion of Type I errors to zero, causing the ECDF of the
+p-values to shift to the right and slightly below the 1:1 line (blue in
+Figure <a href="#fig:synthetic_ecdfs" data-reference-type="ref"
+data-reference="fig:synthetic_ecdfs">6</a>a). This can be referred to as
+‘mild’ underdispersion. More extreme degrees of underdispersion imply
+that the analyst has used a higher p-value cutoff than usual (e.g.,
+<span class="math inline">\(\alpha=0.5\)</span> instead of <span
+class="math inline">\(\alpha=0.05\)</span>). Alternatively (and
+equivalently), more extreme degrees of underdispersion can also arise
+from the use of MSWDs instead of p-values to identify ‘outliers’.
+Suppose that a collection of unequally sized samples was culled until
+MSWD <span class="math inline">\(\leq\)</span> 1. Then this MSWD-cutoff
+would be equivalent to <span
+class="math inline">\(\alpha=P(\chi^2&gt;4|\nu=4)=0.41\)</span> for
+<span class="math inline">\(n=5\)</span>, to <span
+class="math inline">\(\alpha=P(\chi^2&gt;19|\nu=19)=0.46\)</span> for
+<span class="math inline">\(n=20\)</span>, and to <span
+class="math inline">\(\alpha=P(\chi^2&gt;99|\nu=99)=0.49\)</span> for
+<span class="math inline">\(n=100\)</span>. The p-value distribution for
+these extreme levels of outlier rejection would fall further below the
+1:1 line, providing the diagnostic signature of ‘severe’ underdispersion
+(red in Figure <a href="#fig:synthetic_ecdfs" data-reference-type="ref"
+data-reference="fig:synthetic_ecdfs">6</a>a).</p>
+<p>Having considered the effect of outlier rejection on ‘perfect’
+samples, let us now move on to more realistic scenarios that exhibit
+some degree of overdispersion. Without outlier rejection, the p-value
+distribution of such an ‘imperfect’ collection of studies would fall
+completely above and to the left of the 1:1 line. Depending on the
+severity of the overdispersion, there may or may not be any p-values
+exceeding <span class="math inline">\(\alpha=0.05\)</span>. If all the
+samples in the collection were overdispersed (so that all <span
+class="math inline">\(H_0\)</span> are false), then any p-value
+exceeding <span class="math inline">\(\alpha\)</span> would constitute a
+Type II error (false negative). Subjecting the overdispersed collection
+of samples to outlier rejection shifts the p-value distribution to the
+right and below the 1:1 line, greatly increasing the number of Type II
+errors (blue and red in Figure <a href="#fig:synthetic_ecdfs"
+data-reference-type="ref"
+data-reference="fig:synthetic_ecdfs">6</a>b).</p>
+<p>Finally, let us consider the most realistic scenario, in which a
+collection of multiple samples, exhibiting different degrees of
+overdispersion, either have or have not been subjected to outlier
+rejection. The resulting p-value distribution of such a mixture would
+consist of a steep segment of low p-values obtained from samples that
+have not undergone outlier removal, followed by a convex-upward segment
+marking examples that have undergone outlier removal. An important
+observation is that only extreme levels of outlier removal manage to
+push the p-value distribution below the 1:1 line (orange in Figure <a
+href="#fig:synthetic_ecdfs" data-reference-type="ref"
+data-reference="fig:synthetic_ecdfs">6</a>b).</p>
+<figure id="fig:synthetic_ecdfs">
+<a href="figures/synthetic_ecdfs.png"><img src="figures/synthetic_ecdfs.png" /></a>
+<figcaption>p-value distributions for a) a non-dispersed (‘perfect’)
+collection of samples; and b) a collection of samples that exhibit up to
+2% overdispersion. Black curves mark p-value distributions without
+outlier removal; blue functions mark distributions with outlier removal
+using an <span class="math inline">\(\alpha\geq{0.05}\)</span> p-value
+cutoff; and red curves with an MSWD <span
+class="math inline">\(\leq\)</span> 1 cutoff. The orange distribution is
+a 50/50 mixture of the black and the red distributions.</figcaption>
+</figure>
+<h1 data-number="6" id="sec:real"><span
+class="header-section-number">6</span> Natural examples</h1>
+<p>Section <a href="#sec:synthetic" data-reference-type="ref"
+data-reference="sec:synthetic">5</a> reviewed the principal mechanisms
+that may cause underdispersion in geochronology, using synthetic
+examples. Section <a href="#sec:mixtures" data-reference-type="ref"
+data-reference="sec:mixtures">5.5</a> showed that, in extreme cases,
+excessive outlier rejection may cause the p-value distribution of a
+collection of multiple studies to fall below the 1:1 line and in the
+‘forbidden zone’. This Section will investigate whether such excessive
+outlier rejection occurs in real datasets. It is important to reiterate
+that, the most extreme cases nothwithstanding (MSWD<span
+class="math inline">\(= 0\)</span>, <span class="math inline">\(p =
+1\)</span>), it is generally not possible to identify with certainty
+that any given sample is ‘too good to be true’. However, a clearer
+picture emerges when considering multiple studies together. The purpose
+of this meta-analysis is not to point fingers at individual researchers.
+As explained in the previous sections, outlier rejection is often done
+for good reasons and many cases of underdispersion may be
+unintentional.</p>
+<h2 data-number="6.1" id="sec:FT"><span
+class="header-section-number">6.1</span> Fission tracks</h2>
+<p>Fission track analysis is especially well suited to detect cherry
+picking, for two reasons. First, error propagation of fission track data
+(using the external detector method) is so straightforward <span
+class="citation" data-cites="green1981b">(Green 1981)</span> that cherry
+picking is the sole mechanism that can push the p-value distribution
+into the ‘forbidden zone’ (Section <a href="#sec:synthetic-FT"
+data-reference-type="ref" data-reference="sec:synthetic-FT">5.1</a>).
+Second, unlike most other geochronometers (which are based on isotopic
+ratio estimates obtained by mass spectrometry), fission track analysis
+is based on manual counts of damage tracks under an optical microscope.
+This manual process is particularly prone to observer bias <span
+class="citation" data-cites="tamer2025">(Tamer et al. 2025)</span>,
+providing a particularly compelling reason to investigate fission track
+data for underdispersion.</p>
+<p>A useful ‘baseline result’ is provided by a dataset of 176 p-values
+for fission track reference materials analysed by <span class="citation"
+data-cites="iwano2018">(Iwano, Danhara, and Hirata 2018)</span>. By
+definition, reference materials are expected to exhibit little or no
+overdispersion. However, in reality even these ‘ideal’ materials are
+shifted towards low p-values compared to the uniform distribution
+(Figure <a href="#fig:Iwano" data-reference-type="ref"
+data-reference="fig:Iwano">7</a>). This confirms that overdispersion is
+the rule rather than the exception in nature. If even geochronological
+reference materials exhibit (mild) overdispersion, then the p-values of
+‘real’ samples –with all their natural complexity– should definitely be
+prohibited from plotting below the 1:1 line in ECDF-space. However, a
+compilation of fission track analyses from the <code>geochron.org</code>
+database indicates otherwise.</p>
+<p>At the time of writing, <code>geochron.org</code> contained 434
+fission track samples, 201 of which reported p-values. All these samples
+used the external detector method <span class="citation"
+data-cites="hurford1983">(Hurford and Green 1983)</span>, whose error
+propagation is straightforward <span class="citation"
+data-cites="green1981b">(Green 1981)</span> and standardised. Instead of
+plotting towards the left of <span class="citation"
+data-cites="iwano2018">Iwano, Danhara, and Hirata (2018)</span>’s
+p-value distribution, the <code>geochron.org</code> data plot nearly
+completely to the right of the reference materials (Figure <a
+href="#fig:Iwano" data-reference-type="ref"
+data-reference="fig:Iwano">7</a>). One third of the p-values plot below
+the 1:1 line.</p>
+<figure id="fig:Iwano">
+<a href="figures/Iwano.png"><img src="figures/Iwano.png" /></a>
+<figcaption>The yellow curve represents a fission track dataset of
+reference materials <span class="citation"
+data-cites="iwano2018">(Iwano, Danhara, and Hirata 2018)</span>, which
+shows no detectable evidence for cherry picking. In contrast, the blue
+curve corresponds to a compilation of fission track data in which 30% of
+the p-values plot in the ‘forbidden zone’.</figcaption>
+</figure>
+<h2 data-number="6.2" id="a-compilation-of-nature-papers"><span
+class="header-section-number">6.2</span> A compilation of
+<em>Nature</em> papers</h2>
+<p>The second real-world underdispersion study will investigate
+mass-spectrometer based geochronology data, including U–Pb,
+<sup>40</sup>Ar/<sup>39</sup>Ar, Rb–Sr and other methods. Whereas
+outlier rejection of fission track data nearly always done by p-value,
+other geochronometers generally use the MSWD to guide data selection.
+Because the acronym ‘MSWD’ is exclusively used in geochronology (with
+other fields of science referring to the statistic as the ‘reduced
+chi-squared statistic’), it is easy to extract measures of
+geochronological dispersion from the scientific literature.</p>
+<p>A database of 100 high profile geochronological papers was compiled
+with the aptly named ‘Publish or Perish’ software <span class="citation"
+data-cites="harzing2010">(Harzing 2010)</span>, using ‘MSWD’ as the sole
+keyword, and ‘Nature’ as the target journal. The search was restricted
+to <em>Nature</em> journals (including <em>Nature</em>, <em>Nature
+Geoscience</em>, <em>Nature Communications</em> and <em>Scientific
+Reports</em>) for two reasons. First, they are the most ‘impactful’
+publications, which should be held to the highest standards. Second,
+<em>Nature</em> publications provide consistently rich supplementary
+data archives. These are necessary to recover the degrees of freedom of
+the MSWD-statistics, which are needed to compute the corresponding
+p-value. Some papers report two p-values per sample, one for the
+complete dataset, and one for the ‘cleaned’ data with ‘outliers’
+removed. For these cases both values were included in the database.</p>
+<p>The 100 publications contain 650 MSWD-values, 36.3% of which are less
+than one. The ECDF of the corresponding p-values is shown in black in
+Figure <a href="#fig:Nature" data-reference-type="ref"
+data-reference="fig:Nature">8</a>a. Only the bottom 85% of the curve
+lies above the 1:1 line, while the remaining 15% of the p-value
+distribution falls within the forbidden zone of impossibly good results.
+The right-hand tail of the distribution is distinctly concave upwards:
+9% of the p-values exceed 0.95; 5.5% exceed 0.99; 3.1% exceed 0.999; and
+2.1% exceed 0.9999. In other words, one in fifty samples exhibits
+‘Mendel-levels’ of underdispersion, a frequency 200 times higher than
+expected even under the most optimistic statistical scenario. Closer
+inspection reveals that the most extreme p-values are concentrated in a
+small subset of the publications, which consequently have a
+disproportionate influence on the fraction of the p-value distribution
+falling within the forbidden zone.</p>
+<p>As mentioned before, there are two possible causes for the observed
+underdispersion. One possibility is incorrect error propagation. Mass
+spectrometer data processing is complex and it is possible that some
+uncertainties in the geochronological literature have been
+overestimated. For example, this could happen by failure to distinguish
+between systematic and random sources of uncertainty <span
+class="citation" data-cites="renne1998">(Renne et al. 1998)</span>. A
+second possible cause of underdispersion is excessive outlier
+rejection.</p>
+<p>To distinguish between the two causes of underdispersion, it is
+useful to group the p-values for different chronometers (Figure <a
+href="#fig:Nature" data-reference-type="ref"
+data-reference="fig:Nature">8</a>b). Note that the <em>Nature</em>
+compilation does not contain any fission track data. The two largest
+groups are U–Pb (320 p-values) and Ar–Ar (119 p-values). Both have ECDFs
+with similar proportions of analyses falling in the forbidden zone, at
+21% and 18.5% respectively. It seems unlikely that the data reduction
+software for both methods (which use different types of mass
+spectrometers) would be equally flawed. It is therefore also unlikely
+that incorrect error propagation is the sole cause of underdispersion.
+Excessive outlier rejection is a more likely culprit. This conclusion is
+corroborated by grouping the collection of p-values according to the
+statistical method of analysis.</p>
+<p>Isochrons exhibit the lowest percentage of p-values in the forbidden
+zone, at 11% (out of 223 p-values). This increases to 15% for weighted
+means (316 p-values) and 20% for <sup>40</sup>Ar/<sup>39</sup>Ar
+plateaux (80 p-values). It is not surprising that the latter exhibit the
+strongest evidence for underdispersion, as the definition of a
+<sup>40</sup>Ar/<sup>39</sup>Ar plateau involves selecting measurements
+that overlap within analytical uncertainty <span class="citation"
+data-cites="dalrymple1969 jourdan2009">(Dalrymple and Lanphere 1969;
+Jourdan, Renne, and Reimold 2009)</span>. Plateaux are, therefore,
+‘cherry picked’ by definition.</p>
+<p>Finally, the large size of the <em>Nature</em> database provides an
+opportunity to investigate the temporal evolution of the underdispersion
+problem. To this end, the database was divided into two approximately
+equal-sized subsets: 314 papers published before 2019 and 336 papers
+published from 2019 onwards. The p-value distributions of the two
+subsets provide no evidence for an increased acceptance of
+overdispersion. On the contrary, the situation appears to be getting
+worse, with the fraction of impossibly good results increasing from
+11.5% among the older papers to 17.2% among the more recent publications
+(Figure <a href="#fig:Nature" data-reference-type="ref"
+data-reference="fig:Nature">8</a>c).</p>
+<figure id="fig:Nature">
+<a href="figures/Nature.png"><img src="figures/Nature.png" /></a>
+<figcaption>p-value distributions for the compilation of 100
+<em>Nature</em> papers. The black curves represent the full dataset of
+650 p-values. The colours group the dataset according to the
+geochronometer (a), plotting device (b) and publication year
+(c).</figcaption>
+</figure>
+<h2 data-number="6.3" id="sec:GTS2020"><span
+class="header-section-number">6.3</span> The Geologic Time Scale
+(GTS2020)</h2>
+<p>The Geologic Time Scale (GTS) is a standardised framework that
+organises Earth’s ca. 4.56 billion-year history into a coherent
+timeline, enabling scientists to correlate rock records and place
+geological, climatic, and biological events in chronological order. It
+originated in the 18<sup>th</sup>–19<sup>th</sup> centuries as a
+relative system based on biostratigraphy. In the 20<sup>th</sup>
+century, the development of radiometric dating transformed the GTS into
+a calibrated system that integrates relative stratigraphy with absolute
+numerical ages, allowing increasingly precise timing of events <span
+class="citation" data-cites="holmes1947">(Holmes 1947)</span>.</p>
+<p>Over time, international efforts, particularly through the
+International Commission on Stratigraphy, have standardized boundaries
+using globally agreed reference points (Global Boundary Stratotype
+Sections and Points – GSSPs) and continually refined the scale as new
+data emerge. The latest synthesis, GTS2020, incorporates advances in
+geochronology, astrochronology, and stratigraphic correlation to produce
+a more precise and highly resolved timeline <span class="citation"
+data-cites="gradstein2020 schmitz2020">(Gradstein et al. 2020; Schmitz
+2020)</span>.</p>
+<p>The GTS places great emphasis on analytical precision. However,
+accuracy is equally if not more important. Because accuracy and
+precision can be competing targets (‘bias-variance tradeof’, see
+Section <a href="#sec:importance" data-reference-type="ref"
+data-reference="sec:importance">7</a>), the p-value distribution of the
+GTS is of particular interest. The geochronological database underlying
+GTS2020 contains 407 entries. It was not possible to obtain p-values for
+all these entries because (1) some dates were derived from unpublished
+sources; (2) some dates were locked behind unscalable pay walls; and (3)
+seventeen age constraints were based on single grain analyses, for which
+it is not possible to calculate an MSWD<a href="#fn3"
+class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.
+Nevertheless, going back to the original publications cited in the
+GTS2020 database did yield 355 MSWD-values and sample sizes, from which
+355 p-values were calculated.</p>
+<p>The overall distribution of these p-values plots close to the 1:1
+line, reflecting the GTS committee’s effort to identify discrete age
+components that are consistent within the analytical uncertainties.
+Nevertheless, 25% of the age constraints plot slightly below the 1:1
+line, including 5% of the U–Pb data and 90% of the Ar–Ar data (Figure <a
+href="#fig:GTS" data-reference-type="ref"
+data-reference="fig:GTS">9</a>).</p>
+<figure id="fig:GTS">
+<a href="figures/GTS.png"><img src="figures/GTS.png" /></a>
+<figcaption>p-value distribution of the Geologic Time Scale <span
+class="citation" data-cites="gradstein2020">(GTS2020, Gradstein et al.
+2020)</span>. The full dataset of 355 age constraints is shown in black;
+colours mark the sub-populations of <sup>40</sup>Ar/<sup>39</sup>Ar (88
+p-values) and <sup>206</sup>Pb/<sup>238</sup>U (328 p-values)
+data.</figcaption>
+</figure>
+<h2 data-number="6.4" id="sec:detrital"><span
+class="header-section-number">6.4</span> Detrital zircon U–Pb
+geochronology</h2>
+<p>All the p-value distributions presented thus far were extracted from
+collections of multiple studies, representing dozens of samples. This
+was necessary because most geochronological uses of the chi-squared test
+evaluate the consistency between aliquots of the same sample. Therefore,
+each sample corresponds to one MSWD value and, hence, one p-value. The
+single-grain concordia age calculation procedure of Section <a
+href="#sec:concordia" data-reference-type="ref"
+data-reference="sec:concordia">5.4</a> is an exception to this rule. It
+tests the agreement between the <sup>206</sup>Pb/<sup>238</sup>U and
+<sup>207</sup>Pb/<sup>235</sup>U clocks <em>within</em> each aliquot.
+Therefore, a single detrital zircon U–Pb dataset can produce an entire
+p-value distribution.</p>
+<p>As explained in Section <a href="#sec:concordia"
+data-reference-type="ref" data-reference="sec:concordia">5.4</a>, modern
+LA-ICP-MS data reduction software allows geochronogists to ‘optimise’
+their choice of selection windows using a ‘live concordia’ diagram,
+providing a mechanism to generate underdispersed datsets. A literature
+review has revealed some examples of this in published datasets.
+However, presenting those datasets here would single out individual
+researchers. This is not the purpose of the current study, which seeks
+to evaluate the occurrence of underdispersion in geochronology as a
+whole. Therefore, the inappropriate use of ‘live isochrons’ will not be
+illustrated with a published dataset, but with a new one.</p>
+<p>Figure <a href="#fig:Droellner" data-reference-type="ref"
+data-reference="fig:Droellner">10</a> presents a dataset of 150 zircon
+U–Pb measurements for an inter-laboratory comparison sample prepared by
+Dr. M. Dröllner (University of Göttingen). The full results of the
+comparison study will be presented in a forthcoming publication. Its
+details are irrelevant for the purpose of the present investigation,
+which merely aims to quantify the dispersion of the data obtained by a
+single laboratory.</p>
+<p>The sample was analysed at University College London using an Agilent
+7900 ICP-MS coupled to a New Wave NWR193 excimer laser, operated at
+10 Hz with a spot size of 25 , using a 5 s warmup time, followed by 25 s
+of ablation and 5 s of washout. Data reduction was performed with
+<code>KJ</code> <span class="citation" data-cites="vermeeschKJ">(P.
+Vermeesch 2026)</span>, using Ple<span>š</span>ovice and 91500 zircon
+<span class="citation" data-cites="slama2008 wiedenbeck1995">(Sláma et
+al. 2008; Wiedenbeck et al. 1995)</span> as primary reference materials
+and GJ-1 <span class="citation" data-cites="jackson2004">(Jackson et al.
+2004)</span> as a secondary standard. Raw data and FAIR data reduction
+procedures are provided in the supplementary information <span
+class="citation" data-cites="vermeesch2026c">(Pieter Vermeesch
+2026)</span>.</p>
+<p>The blue error ellipses in Figure <a href="#fig:Droellner"
+data-reference-type="ref" data-reference="fig:Droellner">10</a>a) show
+the results obtained using <code>KJ</code>’s default selection windows,
+without manual adjustment and presented as a Wetherill concordia diagram
+generated in <code>IsoplotR 7.0</code> <span class="citation"
+data-cites="vermeesch2018c">(P. Vermeesch 2018)</span>. The red ellipses
+show the same sample after ‘optimal’ signal window adjustment, which was
+achieved by exploring all continuous sections of the signal of at least
+50 integrations long, and selecting the window yielding the lowest MSWD
+using the definition of Equation <a href="#eq:concordance"
+data-reference-type="ref"
+data-reference="eq:concordance">5</a>. Unsurprisingly,
+this extreme example of cherry picking results in a p-value distribution
+in which nearly 90% of the 150 grains are ‘too good to be true’.</p>
+<figure id="fig:Droellner">
+<a href="figures/Droellner.png"><img src="figures/Droellner.png" /></a>
+<figcaption>a) Wetherill concordia diagrams for a detrital zircon U–Pb
+dataset acquired by LA-ICP-MS without (blue) and with (red) the
+‘optimal’ window selection approach of Section <a href="#sec:concordia"
+data-reference-type="ref" data-reference="sec:concordia">5.4</a>. b) the
+corresponding p-value distributions.</figcaption>
+</figure>
+<h1 data-number="7" id="sec:importance"><span
+class="header-section-number">7</span> Discussion: (why) does
+underdispersion matter?</h1>
+<p>There are many mechanisms that can produce overdispersed datasets. In
+fact, a case could be made that overdispersion should be the rule rather
+than the exception <span class="citation"
+data-cites="kalsbeek1992 vermeesch2025c">(Kalsbeek 1992; Pieter
+Vermeesch 2025)</span>. In comparison, it is not so easy to explain
+underdispersion. Excessive outlier detection is the most likely culprit
+behind the underdispersion observed in all the case studies of
+Section <a href="#sec:real" data-reference-type="ref"
+data-reference="sec:real">6</a>. The synthetic examples of Section <a
+href="#sec:mixtures" data-reference-type="ref"
+data-reference="sec:mixtures">5.5</a> showed that, in a meta-analysis
+that combines overdispersed datasets with underdispersed ones, it is not
+easy to pull the p-value distribution into the ‘forbidden zone’. Doing
+so requires extremely high levels of outlier rejection. All the case
+studies presented in this paper show evidence for such extreme outlier
+rejection in at least some of the samples.</p>
+<p>For example, the fact that one third of the fission track data plot
+below the 1:1 line of the p-value distribution plot indicates that
+<em>at least</em> one third of the fission track samples have been
+cherry picked to a degree that cannot be explained by the ‘observer
+drift’ phenomenon of Section <a href="#sec:synthetic-FT"
+data-reference-type="ref" data-reference="sec:synthetic-FT">5.1</a>. And
+the fact that 90% of the Ar–Ar data in the GTS plot in the ‘forbidden
+zone’ suggests that geochronologists apply more aggressive outlier
+rejection criteria than the 5% p-value cutoff advocated by <span
+class="citation" data-cites="jourdan2009">Jourdan, Renne, and Reimold
+(2009)</span>. It appears that at least some analysts aim to push the
+p-values of their data as close to unity as possible. This reflects a
+fundamental misunderstanding of practice of statistical hypothesis
+testing.</p>
+<p>Although the evidence for excessive outlier rejection is clear, one
+might still ask whether it actually matters. After all, Gregor Mendel’s
+data were almost certainly cherry-picked, yet the scientific conclusions
+drawn from them remain valid. Does the same hold true for geochronology?
+There are at least four answers to this question.</p>
+<p>First, it should be emphasised that the burden of proof should not
+rest with those who identify underdispersion to demonstrate its
+importance. Rather, it should lie with those who apply excessive outlier
+rejection to show that the underdispersion does <em>not</em> matter. It
+may be true that eliminating underdispersion would not change the
+scientific conclusions of most studies. However, the possibility that it
+could affect the conclusions of <em>some</em> studies is concerning.
+Moreover, in cases where excessive outlier rejection does not alter the
+conclusions, one could argue that such rejection serves no meaningful
+purpose.</p>
+<p>Second it is important to point out a fundamental difference between
+Mendel’s pea experiment and the geochronological context. Mendel’s pea
+experiment —and <span class="citation" data-cites="fisher1936">Fisher
+(1936)</span>’s reanalysis— tested a ‘natural’ binary hypothesis, aiming
+to find out if selected traits of peas are random or inherited. Prior to
+the experiment, there was a real probability that the null hypothesis
+(random allocation of traits) was true. In contrast, the
+geochronological null hypothesis (the data are perfectly homogeneous)
+cannot be true <span class="citation"
+data-cites="vermeesch2025c">(Pieter Vermeesch 2025)</span>. Therefore,
+the purpose of geochronological chi-squared tests is not to test
+<em>if</em> the data are overdispersed, but to test whether the
+overdispersion is <em>statistically significant</em>. In statistical
+terms, the probability of committing a Type I error was 5% for Mendel’s
+experiment, and 0% for geochronological experiments. Consequently, the
+probability of committing a Type II error is much higher for
+geochronological datasets then for Mendel’s pea data.</p>
+<p>Third, attention should be drawn to the important phenomenon of the
+‘bias-variance’ tradeof in mathematical statistics. When estimating a
+numerical quantity such as the mean, slope or intercept of a collection
+of measurements, statistical precision (‘variance’) and accuracy
+(‘bias’) tend to be competing goals. A classic example is the Bessel
+correction of the sample standard deviation. Given a collection of <span
+class="math inline">\(n\)</span> measurements <span
+class="math inline">\(\{x_1,\ldots,x_n\}\)</span> drawn from a normal
+distribution with mean <span class="math inline">\(\mu\)</span> and
+standard deviation <span class="math inline">\(\sigma\)</span>, the mean
+can be estimated as <span class="math inline">\(\hat{\mu} = \sum_{i=1}^n
+x_i\)</span> and the standard deviation as <span
+class="math inline">\(\hat{\sigma} =
+\sum_{i=1}^{n}(x_i-\mu)^2/n\)</span> if <span
+class="math inline">\(\mu\)</span> is known, <em>or</em> as <span
+class="math inline">\(\hat{\sigma} =
+\sum_{i=1}^{n}(x_i-\hat{\mu})^2/(n-1)\)</span> if <span
+class="math inline">\(\mu\)</span> is unknown. The denominator <span
+class="math inline">\(n-1\)</span> in the latter case inflates the
+variance (and hence reduces the precision) but reduces the bias (and
+increases the accuracy) of the estimate for <span
+class="math inline">\(\sigma\)</span>.</p>
+<p>Underdispersion creates the opposite situation, whereby excessive
+outlier rejection artificially improves precision<a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> at
+the expense of accuracy. This is particularly pertinent for the Geologic
+Time Scale. As reviewed in Section <a href="#sec:GTS2020"
+data-reference-type="ref" data-reference="sec:GTS2020">6.3</a>, great
+efforts are made to improve the precision of the chronostratigraphic
+calibration that underlies the GTS. It would be unfortunate if this
+focus on precision came at the expense of accuracy, which is arguably
+more important. When accuracy is not guaranteed, precision loses its
+meaning. Fortunately, the overall degree of overdispersion of the GTS is
+relatively small compared to some of the other case studies.
+Nevertheless, the underdispersion of the Ar–Ar data is concerning.</p>
+<p>Fourth, when data appear too good to be true, it suggests that valid
+measurements have been improperly excluded, leading to the loss of
+potentially valuable information. Overdispersion can reflect processes
+such as magma residence times <span class="citation"
+data-cites="rioux2012">(Rioux et al. 2012)</span> or cooling rates
+during tectonic exhumation <span class="citation"
+data-cites="galbraith1993">(Galbraith and Laslett 1993)</span>. Thanks
+to advances in mass spectrometry, geochronologists are increasingly
+capable of detecting such subtle complexities <span class="citation"
+data-cites="phillips2013">(Phillips and Matchan 2013)</span>.
+Overdispersion is not a flaw to be eliminated but a feature to be
+measured and interpreted <span class="citation"
+data-cites="kalsbeek1992 vermeesch2025c">(Kalsbeek 1992; Pieter
+Vermeesch 2025)</span>. Excessive outlier rejection discards all this
+information, representing an opportunity cost for scientific
+discovery.</p>
+<p><span id="sec:conclusions" label="sec:conclusions"></span></p>
+<p>This paper has introduced a new graphical method to detect
+underdispersion in collections of geochronological data. The frequency
+distribution of the p-values for sample homogeneity may be negatively
+skewed with respect to a uniform distribution but must not be positively
+skewed. The area below the 1:1 line of a cumulative distribution plot
+marks a ‘forbidden zone’, reflecting the presence of samples whose
+internal consistency is unrealistically good.</p>
+<p>Underdispersion can arise from incorrect error propagation or from
+overzealous outlier rejection. Application of the p-value method to
+synthetic and real datasets shows that it affects all geochronometers.
+30% of the fission track data in the <code>geochron.org</code> database,
+15% of the datasets published in <em>Nature</em> journals, and 25% of
+the data underpinning the Geological Time Scale (GTS2020) plot in the
+‘forbidden zone’ of the diagnostic plot. To consistently push such
+substantial segments of the p-value distribution into the ‘forbidden
+zone’ requires extreme levels of outlier rejection in which researchers
+actively aim to push their MSWD to zero.</p>
+<p>This study has not made an attempt to assess if the observed
+underdispersion has led to incorrect scientific conclusions. Doing so
+would require highlighting specific underdispersed studies, which could
+be perceived as pointed criticism at specific authors. As explained in
+Section <a href="#sec:real" data-reference-type="ref"
+data-reference="sec:real">6</a>, that is not the intention of this
+study.</p>
+<p>In the case of the Geologic Time Scale, underdispersion has two
+negative effects. First, it leads to unrealistic uncertainty estimates,
+giving geochronologists false confidence in the chronostratigraphy.
+Second, and more importantly, the inflated precision comes at the cost
+of reduced accuracy. The magnitude of this problem varies across the
+timescale, depending on the degree of underdispersion of the underlying
+geochronological datasets.</p>
+<p>Some of the underdispersed datasets in the GTS are old (pre-2000) and
+predate the increased awareness of overdispersion as a fact of life,
+rather than a nuisance to be removed by outlier rejection. However,
+these old studies have a lasting effect on the practice of
+geochronology. Extreme levels of outlier rejection persist in modern
+time scale studies because modern datasets are expected to have better
+age precision than old datasets. To break out of this self-perpetuating
+situation, it is important to recognise that the precision of some age
+boundaries is not limited by analytical uncertainty, but by geological
+complexity. Therefore, geochronologists should not be afraid to update
+GTS tie points with new data that are less precise (but more
+accurate).</p>
+<p>Going forward, the p-value distribution can be used to help
+geochronologists identify when outlier rejection has gone too far. An
+even better solution would be to abandon the misconception that
+overdispersion is inherently ‘bad’. In fact, a case could be made that
+the opposite is true, and that low MSWD values should be treated with
+suspicion, not praise <span class="citation"
+data-cites="vermeesch2025c">(Pieter Vermeesch 2025)</span>. However, in
+the author’s experience, overdispersed datasets are currently more
+likely to be rejected during peer review than tightly clustered ones,
+which directly and indirectly promotes underdispersion. Poorly informed
+reviewers may reject such datasets outright, skewing the literature
+toward high p-values <span class="citation"
+data-cites="ioannidis2005">(publication bias; Ioannidis 2005)</span>. In
+turn, the difficulty of publishing low p-value results incentivises
+aggressive outlier rejection. Peer pressure to produce ‘perfect’ data
+may partially or completely explain the prevalence of underdispersed
+geochronology data in high profile publications such as
+<em>Nature</em>.</p>
+<p>In the case of LA-ICP-MS signal window selection, outlier rejection
+occurs in early stages of the data processing pipeline, before the
+isotopic ratios are calculated. Unless the raw mass spectrometer data of
+such data are shared, it is impossible to undo this source of
+underdispersion. Fixing this problem will require the adoption of FAIR
+(Findable, Accessible, Interoperable, and Reusable) data processing
+pipelines <span class="citation" data-cites="wilkinson2016">(Wilkinson
+et al. 2016)</span>. Currently, geochronological results are typically
+reported as small tables of processed isotopic ratios and uncertainties.
+The raw mass spectrometer data and complete data processing algorithms
+used to derive these results are rarely shared. This lack of
+transparency creates opportunities for underdispersion. A new generation
+of data reduction software such as <code>geochron@home</code> <span
+class="citation" data-cites="vermeesch2026">(Pieter Vermeesch et al.
+2026)</span> and <code>KJ</code> <span class="citation"
+data-cites="vermeeschKJ">(P. Vermeesch 2026)</span> show that this is
+possible.</p>
+<p>Finally, it is important to emphasise that outlier rejection is not
+always bad. Indeed, it is often unavoidable when accounting for the
+geological complexities inherent in the analysis of natural materials.
+It is desirable for such outlier rejection to be guided by auxiliary
+information such as mineral textures, geochemical information, or
+geologic relationships, rather than by a hard p-value or MSWD cutoff
+<span class="citation" data-cites="schoene2013">(Schoene et al.
+2013)</span>. Ideally, the assessment of such geological factors should
+be done blindly, without looking at the p-values. This is the only way
+to avoid human-induced biases. Such blind decision-making procedures are
+routinely enforced in the life sciences, but are difficult to enforce in
+the geosciences.</p>
+<h1 data-number="8" id="type-i-and-type-ii-cherry-picking"><span
+class="header-section-number">8</span> Type I and Type II cherry
+picking</h1>
+<p>Two types of cherry picking can be distinguished, each aligned with
+one side of the statistical significance dichotomy and named by analogy
+with related concepts in mathematical statistics. Type I cherry picking
+involves selecting data that contradict a pre-defined hypothesis.
+Type II cherry picking selects data that support a hypothesis.</p>
+<p>As a concrete example of Type I cherry picking, consider a
+multivariate dataset (e.g., the concentration of <span
+class="math inline">\(N\)</span> chemical species in <span
+class="math inline">\(M\)</span> samples). It is common practice in
+exploratory data analysis to plot all pairs of variables against each
+other in an <span class="math inline">\(N\times{M}\)</span> grid of
+scatter plots. When doing this it is inevitable that some of these pairs
+exhibit a statistically significant correlation.</p>
+<p>Figure <a href="#fig:type1" data-reference-type="ref"
+data-reference="fig:type1">11</a> shows 18 pairs of data, drawn from a
+random uniform population with no correlation. Hence, the correlation
+coefficient of the population (<span
+class="math inline">\(\rho\)</span>) is zero. However, the estimated
+correlation coefficient of the data (<span
+class="math inline">\(r\)</span>) is not. It varies between <span
+class="math inline">\(-1\)</span> and <span
+class="math inline">\(+1\)</span> as a result of random sampling
+variability. The degree of correlation can be formally evaluated by
+formulating a test statistic <span class="math inline">\(t \equiv
+r\sqrt{n-2}/\sqrt{1-r^2}\)</span>. We can then formulate the following
+hypotheses:</p>
+<div class="description">
+<p><span><span class="math inline">\(H_0\)</span>:</span> <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> are independent (<span
+class="math inline">\(\rho = 0\)</span>)</p>
+<p><span><span class="math inline">\(H_a\)</span>:</span> <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> are correlated (<span
+class="math inline">\(\rho \neq 0\)</span>)</p>
+</div>
+<p><span class="math inline">\(H_0\)</span> is true for the synthetic
+example, and any rejection of this hypothesis constitutes a Type I
+error. The probability of incurring such an error is defined by the
+significance cutoff <span class="math inline">\(\alpha\)</span>.
+However, Section <a href="#sec:ecdf" data-reference-type="ref"
+data-reference="sec:ecdf">4</a> showed that the probability of
+committing a Type I error increases to <span class="math inline">\(1 -
+(1 - \alpha)^n\)</span> when the number of tests is increased from 1 to
+<span class="math inline">\(n\)</span>. When <span
+class="math inline">\(n&gt;14\)</span>, the probability of committing a
+Type I error exceeds that of not committing one.</p>
+<p>Failure or refusal to account for this phenomenon is sometimes
+referred to as ‘p-hacking’ or ‘data dredging’. Because it increases the
+probability of committing a Type I error, this paper labels the
+phenomenon as ‘Type I cherry picking’, to emphasise the difference with
+the geochronologicaly context, in which data are not manipulated to
+lower the p-value, but to boost it.</p>
+<p>The occurrence of Type I cherry picking is difficult to prove. It
+requires repeating the entire experiment to verify if the same result is
+obtained. Type II cherry picking is easier to detect, and radiometric
+geochronology is uniquely suited for this purpose. Unlike other research
+fields (such as genetics, say) it offers no incentives for Type I cherry
+picking, but ample opportunities for Type II cherry picking (Section <a
+href="#sec:synthetic" data-reference-type="ref"
+data-reference="sec:synthetic">5</a>). This paper promotes the
+cumulative distribution of the p-values as a graphical device to detect
+Type II cherry picking.</p>
+<figure id="fig:type1">
+<a href="figures/type1.png"><img src="figures/type1.png" /></a>
+<figcaption>18 scatter plots of bivariate random uniform data, with
+indication of the coefficient of determination (<span
+class="math inline">\(r^2\)</span>) and the p-value for correlation. The
+one ‘significant’ result (p-value = 0.00063) is a Type I
+error.</figcaption>
+</figure>
+<div class="acknowledgements">
+<p>This research has been supported by the Natural Environment Research
+Council (grant no. NE/T001518/1). The paper benefitted from informal
+feedback by Andy Carter and Birk Härtel, and from constructive reviews
+by Marco Colombo and Blair Schoene, who also reviewed an earlier version
+of the paper, as did Dan Condon. Murat Tamer is thanked for his
+encouragement to move this work forward.</p>
+</div>
+<h1 id="references">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-amrhein2019" class="csl-entry" role="listitem">
+Amrhein, Valentin, Sander Greenland, and Blake McShane. 2019.
+<span>“<span class="nocase">Retire statistical
+significance</span>.”</span> <em>Nature</em> 567 (7748): 305–7.
+</div>
+<div id="ref-boone2025" class="csl-entry" role="listitem">
+Boone, Samuel C, Ling Chung, Noel Faux, Usha Nattala, Thomas Church,
+Chenghao Jiang, Malcolm McMillan, et al. 2025. <span>“Raising the Bar:
+Deep Learning on Comprehensive Database Sets New Benchmark for Automated
+Fission-Track Detection.”</span> <em>Computers &amp; Geosciences</em>,
+106096. <a
+href="https://doi.org/10.1016/j.cageo.2025.106096">https://doi.org/10.1016/j.cageo.2025.106096</a>.
+</div>
+<div id="ref-brooks1972" class="csl-entry" role="listitem">
+Brooks, Christopher, S R_ Hart, and Imold Wendt. 1972. <span>“<span
+class="nocase">Realistic use of two-error regression treatments as
+applied to Rubidium-Strontium data</span>.”</span> <em>Reviews of
+Geophysics</em> 10 (2): 551–77.
+</div>
+<div id="ref-chayes1949" class="csl-entry" role="listitem">
+Chayes, Felix. 1949. <span>“On Ratio Correlation in Petrography.”</span>
+<em>The Journal of Geology</em> 57 (3): 239–54.
+</div>
+<div id="ref-dalrymple1969" class="csl-entry" role="listitem">
+Dalrymple, G. B., and M. A. Lanphere. 1969. <em><span>Potassium-Argon
+Dating</span></em>. Freeman, San Francisco.
+</div>
+<div id="ref-fisher1936" class="csl-entry" role="listitem">
+Fisher, R. A. 1936. <span>“<span class="nocase">Has Mendel’s work been
+rediscovered?</span>”</span> <em>Annals of Science</em> 1 (2): 115–37.
+</div>
+<div id="ref-galbraith1981" class="csl-entry" role="listitem">
+Galbraith, R. F. 1981. <span>“On Statistical Models for Fission Track
+Counts.”</span> <em>Journal of the International Association for
+Mathematical Geology</em> 13 (6): 471–78.
+</div>
+<div id="ref-galbraith1993" class="csl-entry" role="listitem">
+Galbraith, R. F., and G. M. Laslett. 1993. <span>“Statistical Models for
+Mixed Fission Track Ages.”</span> <em>Nuclear Tracks and Radiation
+Measurements</em> 21 (4): 459–70.
+</div>
+<div id="ref-gradstein2020" class="csl-entry" role="listitem">
+Gradstein, Felix M, James G Ogg, Mark D Schmitz, and Gabi Ogg. 2020.
+<em>The Geologic Time Scale 2020</em>. Walthman: Elsevier.
+</div>
+<div id="ref-green1981b" class="csl-entry" role="listitem">
+Green, PF. 1981. <span>“A New Look at Statistics in Fission-Track
+Dating.”</span> <em>Nuclear Tracks</em> 5 (1-2): 77–86.
+</div>
+<div id="ref-harzing2010" class="csl-entry" role="listitem">
+Harzing, Anne-Wil. 2010. <em>The Publish or Perish Book</em>. Tarma
+Software Research, Melbourne.
+</div>
+<div id="ref-holmes1947" class="csl-entry" role="listitem">
+Holmes, Arthur. 1947. <span>“<span class="nocase">The Construction of a
+Geological Time-Scale</span>.”</span> <em>Transactions of the Geological
+Society of Glasgow</em> 21 (1): 117–52.
+</div>
+<div id="ref-horstwood2016" class="csl-entry" role="listitem">
+Horstwood, Matthew SA, Jan Košler, George Gehrels, Simon E Jackson, Noah
+M McLean, Chad Paton, Norman J Pearson, et al. 2016. <span>“<span
+class="nocase">Community-Derived Standards for LA-ICP-MS U-(Th-) Pb
+Geochronology–Uncertainty Propagation, Age Interpretation and Data
+Reporting</span>.”</span> <em>Geostandards and Geoanalytical
+Research</em> 40 (3): 311–32.
+</div>
+<div id="ref-hurford1983" class="csl-entry" role="listitem">
+Hurford, A. J., and P. F. Green. 1983. <span>“The Zeta Age Calibration
+of Fission-Track Dating.”</span> <em>Chemical Geology</em> 41: 285–317.
+<a
+href="https://doi.org/10.1016/S0009-2541(83)80026-6">https://doi.org/10.1016/S0009-2541(83)80026-6</a>.
+</div>
+<div id="ref-ioannidis2005" class="csl-entry" role="listitem">
+Ioannidis, John PA. 2005. <span>“Why Most Published Research Findings
+Are False.”</span> <em>PLoS Medicine</em> 2 (8): e124.
+</div>
+<div id="ref-iwano2018" class="csl-entry" role="listitem">
+Iwano, Hideki, Tohru Danhara, and Takafumi Hirata. 2018. <span>“<span
+class="nocase">Standardless fission-track ages of the IUGS age
+standards</span>.”</span> <em>Chemical Geology</em> 488: 87–104.
+</div>
+<div id="ref-jackson2004" class="csl-entry" role="listitem">
+Jackson, Simon E., Norman J. Pearson, William L. Griffin, and Elena A.
+Belousova. 2004. <span>“<span class="nocase">The application of laser
+ablation-inductively coupled plasma-mass spectrometry to in situ U–Pb
+zircon geochronology</span>.”</span> <em>Chemical Geology</em> 211
+(1-2): 47–69. <a
+href="https://doi.org/10.1016/j.chemgeo.2004.06.017">https://doi.org/10.1016/j.chemgeo.2004.06.017</a>.
+</div>
+<div id="ref-jourdan2009" class="csl-entry" role="listitem">
+Jourdan, Fred, PR Renne, and WU Reimold. 2009. <span>“An Appraisal of
+the Ages of Terrestrial Impact Structures.”</span> <em>Earth and
+Planetary Science Letters</em> 286 (1-2): 1–13.
+</div>
+<div id="ref-kalsbeek1992" class="csl-entry" role="listitem">
+Kalsbeek, Feiko. 1992. <span>“<span class="nocase">The statistical
+distribution of the mean squared weighted deviation – Comment:
+Isochrons, errorchrons, and the use of MSWD-values</span>.”</span>
+<em>Chemical Geology</em> 94 (3): 241–42.
+</div>
+<div id="ref-keller2018" class="csl-entry" role="listitem">
+Keller, C Brenhin, Blair Schoene, and Kyle M Samperton. 2018. <span>“A
+Stochastic Sampling Approach to Zircon Eruption Age
+Interpretation.”</span> <em>Geochemical Perspectives Letters</em> 8
+(LLNL-JRNL-738859).
+</div>
+<div id="ref-klein2024" class="csl-entry" role="listitem">
+Klein, Benjamin Z, and Michael P Eddy. 2024. <span>“<span
+class="nocase">What’s in an age? Calculation and interpretation of ages
+and durations from U-Pb zircon geochronology of igneous
+rocks</span>.”</span> <em>Bulletin</em> 136 (1-2): 93–109.
+</div>
+<div id="ref-li2021" class="csl-entry" role="listitem">
+Li, Yang, and Pieter Vermeesch. 2021. <span>“<span
+class="nocase">Inverse isochron regression for Re–Os, K–Ca and other
+chronometers</span>.”</span> <em>Geochronology</em> 3 (2): 415–20.
+</div>
+<div id="ref-ludwig1998" class="csl-entry" role="listitem">
+Ludwig, Kenneth R. 1998. <span>“<span class="nocase">On the treatment of
+concordant uranium-lead ages</span>.”</span> <em>Geochimica Et
+Cosmochimica Acta</em> 62: 665–76. <a
+href="https://doi.org/10.1016/S0016-7037(98)00059-3">https://doi.org/10.1016/S0016-7037(98)00059-3</a>.
+</div>
+<div id="ref-mcintyre1966" class="csl-entry" role="listitem">
+McIntyre, G. A., C. Brooks, W. Compston, and A. Turek. 1966.
+<span>“<span class="nocase">The Statistical Assessment of Rb-Sr
+Isochrons</span>.”</span> <em>Journal of Geophysical Research</em> 71:
+5459–68.
+</div>
+<div id="ref-mclean2016" class="csl-entry" role="listitem">
+McLean, Noah M, James F Bowring, and George Gehrels. 2016. <span>“<span
+class="nocase">Algorithms and software for U-Pb geochronology by
+LA-ICPMS</span>.”</span> <em>Geochemistry, Geophysics, Geosystems</em>
+17 (7): 2480–96.
+</div>
+<div id="ref-mendel1866" class="csl-entry" role="listitem">
+Mendel, Gregor. 1866. <span>“<span class="nocase">Versuche <span
+class="nocase">ü</span>ber Pflanzenhybriden</span>.”</span>
+<em>Verhandlungen Des Naturforschenden Vereins in Brünn</em> 10 (1).
+</div>
+<div id="ref-nachtergaele2021" class="csl-entry" role="listitem">
+Nachtergaele, Simon, and Johan De Grave. 2021. <span>“<span
+class="nocase">AI-Track-tive: open-source software for automated
+recognition and counting of surface semi-tracks using computer vision
+(artificial intelligence)</span>.”</span> <em>Geochronology</em> 3 (1):
+383–94. <a
+href="https://doi.org/10.5194/gchron-3-383-2021">https://doi.org/10.5194/gchron-3-383-2021</a>.
+</div>
+<div id="ref-pearson1896" class="csl-entry" role="listitem">
+Pearson, Karl. 1896. <span>“Mathematical Contributions to the Theory of
+Evolution.–on a Form of Spurious Correlation Which May Arise When
+Indices Are Used in the Measurement of Organs.”</span> <em>Proceedings
+of the Royal Society of London</em> 60 (359-367): 489–98.
+</div>
+<div id="ref-pearson1900" class="csl-entry" role="listitem">
+———. 1900. <span>“<span class="nocase">On the criterion that a given
+system of deviations from the probable in the case of a correlated
+system of variables is such that it can be reasonably supposed to have
+arisen from random sampling</span>.”</span> <em>The London, Edinburgh,
+and Dublin Philosophical Magazine and Journal of Science</em> 50 (302):
+157–75.
+</div>
+<div id="ref-petrus2012" class="csl-entry" role="listitem">
+Petrus, Joseph A, and Balz S Kamber. 2012. <span>“<span
+class="nocase">VizualAge: A novel approach to laser ablation ICP-MS U-Pb
+geochronology data reduction</span>.”</span> <em>Geostandards and
+Geoanalytical Research</em> 36 (3): 247–70.
+</div>
+<div id="ref-phillips2013" class="csl-entry" role="listitem">
+Phillips, D, and EL Matchan. 2013. <span>“<span
+class="nocase">Ultra-high precision <span
+class="math inline">\(^{40}\)</span>Ar/<span
+class="math inline">\(^{39}\)</span>Ar ages for Fish Canyon Tuff and
+Alder Creek Rhyolite sanidine: new dating standards
+required?</span>”</span> <em>Geochimica Et Cosmochimica Acta</em> 121:
+229–39.
+</div>
+<div id="ref-popper1959" class="csl-entry" role="listitem">
+Popper, K. R. 1959. <em>The Logic of Scientific Discovery</em>. London:
+Hutchinson.
+</div>
+<div id="ref-radick2015" class="csl-entry" role="listitem">
+Radick, Gregory. 2015. <span>“<span class="nocase">Beyond the
+<span>‘Mendel-Fisher controversy’</span></span>.”</span>
+<em>Science</em> 350 (6257): 159–60.
+</div>
+<div id="ref-renne1998" class="csl-entry" role="listitem">
+Renne, Paul R, Carl C Swisher, Alan L Deino, Daniel B Karner, Thomas L
+Owens, and Donald J DePaolo. 1998. <span>“<span
+class="nocase">Intercalibration of standards, absolute ages and
+uncertainties in <span class="math inline">\(^{40}\)</span>Ar/<span
+class="math inline">\(^{39}\)</span>Ar dating</span>.”</span>
+<em>Chemical Geology</em> 145 (1): 117–52.
+</div>
+<div id="ref-rioux2012" class="csl-entry" role="listitem">
+Rioux, Matthew, C Johan Lissenberg, Noah M McLean, Samuel A Bowring,
+Christopher J MacLeod, Eric Hellebrand, and Nobumichi Shimizu. 2012.
+<span>“<span class="nocase">Protracted timescales of lower crustal
+growth at the fast-spreading East Pacific Rise</span>.”</span>
+<em>Nature Geoscience</em> 5 (4): 275–78.
+</div>
+<div id="ref-schmitz2020" class="csl-entry" role="listitem">
+Schmitz, M. D. 2020. <span>“Appendix 2 - Radioisotopic Ages Used in
+GTS2020.”</span> In <em>Geologic Time Scale 2020</em>, edited by Felix
+M. Gradstein, James G. Ogg, Mark D. Schmitz, and Gabi M. Ogg, 1285–1349.
+Elsevier. https://doi.org/<a
+href="https://doi.org/10.1016/B978-0-12-824360-2.00046-2">https://doi.org/10.1016/B978-0-12-824360-2.00046-2</a>.
+</div>
+<div id="ref-schoene2013" class="csl-entry" role="listitem">
+Schoene, B., D. J. Condon, L. Morgan, and N. McLean. 2013.
+<span>“Precision and Accuracy in Geochronology.”</span>
+<em>Elements</em> 9: 19–24.
+</div>
+<div id="ref-slama2008" class="csl-entry" role="listitem">
+Sláma, J., J. Košler, D. J. Condon, J. L. Crowley, A. Gerdes, J. M.
+Hanchar, M. S. A. Horstwood, et al. 2008. <span>“Ple<span>š</span>ovice
+Zircon – a New Natural Reference Material for
+<span>U</span>-<span>P</span>b and <span>H</span>f Isotopic
+Microanalysis.”</span> <em>Chemical Geology</em> 249: 1–35.
+</div>
+<div id="ref-tamer2025" class="csl-entry" role="listitem">
+Tamer, M. T., L. Chung, R. A. Ketcham, and A. J. W. Gleadow. 2025.
+<span>“The Need for Fission-Track Data Transparency and Sharing.”</span>
+<em>Geochronology</em> 7 (1): 45–58. <a
+href="https://doi.org/10.5194/gchron-7-45-2025">https://doi.org/10.5194/gchron-7-45-2025</a>.
+</div>
+<div id="ref-vermeesch2018c" class="csl-entry" role="listitem">
+Vermeesch, P. 2018. <span>“<span class="nocase"><code>IsoplotR</code>: a
+free and open toolbox for geochronology</span>.”</span> <em>Geoscience
+Frontiers</em> 9: 1479–93. <a
+href="https://doi.org/10.1016/j.gsf.2018.04.001">https://doi.org/10.1016/j.gsf.2018.04.001</a>.
+</div>
+<div id="ref-vermeeschKJ" class="csl-entry" role="listitem">
+———. 2026. <span>“<span>KJ</span>: A Physics-Based Algorithm for
+Geochronology by LA-ICP-MS.”</span> Zenodo. <a
+href="https://doi.org/10.5281/zenodo.19693372">https://doi.org/10.5281/zenodo.19693372</a>.
+</div>
+<div id="ref-vermeesch2025c" class="csl-entry" role="listitem">
+Vermeesch, Pieter. 2025. <span>“<span class="nocase">High MSWDs are not
+the problem, low ones are</span>.”</span> <em>Natl. Sci. Rev</em> 10. <a
+href="https://doi.org/10.1093/nsr/nwaf036">https://doi.org/10.1093/nsr/nwaf036</a>.
+</div>
+<div id="ref-vermeesch2026c" class="csl-entry" role="listitem">
+———. 2026. <span>“FAIR Code and Data for "Too Good to Be True:
+Underdispersion in Geochronology".”</span> Zenodo. <a
+href="https://doi.org/10.5281/zenodo.20186900">https://doi.org/10.5281/zenodo.20186900</a>.
+</div>
+<div id="ref-vermeesch2026" class="csl-entry" role="listitem">
+Vermeesch, Pieter, Tim Band, Jiangping He, Rex Galbraith, and Andrew
+Carter. 2026. <span>“<span class="nocase">FAIR fission track analysis
+with geochron@ home</span>.”</span> <em>Geochronology</em> 8 (1):
+109–18.
+</div>
+<div id="ref-wendt1991" class="csl-entry" role="listitem">
+Wendt, Immo, and Claudia Carl. 1991. <span>“The Statistical Distribution
+of the Mean Squared Weighted Deviation.”</span> <em>Chemical Geology:
+Isotope Geoscience Section</em> 86 (4): 275–85.
+</div>
+<div id="ref-wiedenbeck1995" class="csl-entry" role="listitem">
+Wiedenbeck, MAPC, P Alle, Fy Corfu, WL Griffin, M Meier, F v Oberli, A
+von Quadt, JC Roddick, and W Spiegel. 1995. <span>“<span
+class="nocase">Three natural zircon standards for U-Th-Pb, Lu-Hf, trace
+element and REE analyses</span>.”</span> <em>Geostandards
+Newsletter</em> 19 (1): 1–23.
+</div>
+<div id="ref-wilkinson2016" class="csl-entry" role="listitem">
+Wilkinson, Mark D, Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle
+Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al. 2016.
+<span>“<span class="nocase">The FAIR Guiding Principles for scientific
+data management and stewardship</span>.”</span> <em>Scientific Data</em>
+3 (1): 1–9.
+</div>
+<div id="ref-york2004" class="csl-entry" role="listitem">
+York, Derek, Norman M Evensen, Margarita López Martínez, and Jonás De
+Basabe Delgado. 2004. <span>“<span class="nocase">Unified equations for
+the slope, intercept, and standard errors of the best straight
+line</span>.”</span> <em>American Journal of Physics</em> 72 (3):
+367–75.
+</div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Statistical power is defined as the probability of
+rejecting a false hypothesis. A powered test specifies in advance the
+sample size needed to detect a particular effect – for example, a 50%
+reduction in mortality.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In statistics, the increased occurrence of type-I errors
+caused by multi-testing is usually addressed by adjusting the cutoff
+limit, e.g. by reducing <span class="math inline">\(\alpha\)</span> to
+<span class="math inline">\(\alpha/n\)</span> (a Bonferroni
+correction).<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Note that selecting a single analysis out of a
+collection of multiple measurements could be considered the ultimate
+degree of cherry picking. However, single grain analyses were omitted
+from this study, resulting in a conservative (optimistic) picture of
+outlier rejection.<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>In theory, outlier rejection can also lower precision as
+it reduces sample size. However, in practice cherry picking nearly
+always improves precision as its main purpose is to reduce the scatter
+of the data.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
